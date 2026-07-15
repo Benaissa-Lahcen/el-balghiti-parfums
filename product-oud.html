@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oud Al-Balghiti - Maison de Parfum. Discover our signature dark, nocturnal extrait de parfum.">
+  <title>EL BALGHITI — Oud Al-Balghiti</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/output.css">
+</head>
+<body class="bg-[var(--t-bg)] text-[var(--t-text)] transition-colors duration-500 min-h-screen flex flex-col">
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <header id="main-header">
+    <nav class="nav-fixed" id="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner relative px-4 md:px-12 py-3 md:py-5 flex items-center justify-between w-full">
+        
+        <!-- Left: Hamburger (Mobile) & Links (Desktop) -->
+        <div class="nav-left flex items-center justify-start gap-4">
+          <button class="mobile-menu-btn md:hidden" id="mobile-menu-btn" aria-label="Open mobile menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="shop.html" class="nav-link" id="nav-collections" data-i18n="collections">Collections</a>
+            <a href="index.html#atelier-section" class="nav-link" id="nav-about" data-i18n="about">About</a>
+          </div>
+        </div>
+
+        <!-- Center: Logo (Always EL BALGHITI, dynamically scaled via CSS clamp) -->
+        <div class="nav-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
+          <a href="index.html" class="logo-text" id="nav-logo" aria-label="El Balghiti Parfums — Home">
+            EL BALGHITI
+          </a>
+        </div>
+
+        <!-- Right: Toggles & Cart -->
+        <div class="nav-right flex items-center justify-end gap-2 md:gap-6">
+          <a href="#" class="nav-link nav-cart-icon" id="nav-cart" aria-label="Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+          </a>
+          
+          <div class="nav-divider hidden md:block" aria-hidden="true"></div>
+          
+          <div class="flex items-center gap-1.5 md:gap-3">
+            <!-- Language Toggle -->
+            <button class="nav-toggle" id="lang-toggle" aria-label="Toggle Language">
+              <span id="lang-text">AR</span>
+            </button>
+            
+            <!-- Theme Toggle -->
+            <button class="nav-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path id="theme-icon" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close mobile menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="mobile-menu-links">
+          <a href="shop.html" class="mobile-link" data-i18n="collections">Collections</a>
+          <a href="index.html#atelier-section" class="mobile-link" data-i18n="about">About</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRODUCT DETAIL MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="flex-grow pt-32 md:pt-40 pb-24 px-6 md:px-16 w-full max-w-[1400px] mx-auto">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-16 lg:gap-24 items-start max-w-screen-2xl mx-auto">
+      
+      <!-- Left Column: The Visuals -->
+      <div class="product-image-container bg-[var(--t-bg-secondary)] aspect-[4/5] md:aspect-[3/4] flex items-center justify-center p-8 md:p-16 border border-[var(--t-border-subtle)] relative overflow-hidden group mb-12 md:mb-0 transition-colors duration-500">
+        <img src="assets/images/bottle-oud.png" alt="OUD AL-BALGHITI bottle" class="max-h-full max-w-full object-contain transition-transform duration-700 hover:scale-102">
+      </div>
+
+      <!-- Right Column: The Information & Purchase -->
+      <div class="product-info-container flex flex-col">
+        
+        <!-- Product Title -->
+        <h1 class="font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl tracking-[0.15em] uppercase mb-4 text-[var(--t-text)]" data-i18n="oudPageTitle">
+          OUD AL-BALGHITI
+        </h1>
+        
+        <!-- Monospace Label Code -->
+        <p class="font-mono text-xs tracking-wider text-[var(--t-text-muted)] mb-6" data-i18n="oudInspiration">
+          Inspiration: Noir 29 / Batch: 001
+        </p>
+        
+        <!-- Price -->
+        <p class="font-montserrat font-medium text-2xl tracking-wide mb-8 text-[var(--t-text-soft)]" data-i18n="oudPrice">
+          450 DH
+        </p>
+        
+        <!-- Story / Editorial Paragraph -->
+        <p class="font-cormorant text-xl md:text-2xl leading-relaxed text-[var(--t-text-secondary)] italic mb-10 pb-8 border-b border-[var(--t-border)]" data-i18n="oudStory">
+          Oud Al-Balghiti is a dark, nocturnal study of Moroccan leather and precious oud. Inspired by the dense, smoke-filled air of ancient medinas, it weaves together the raw depth of cedarwood, vetiver, and black tea, balanced by the fleeting sweetness of ripe fig. It is a fragrance that exists in the shadows, lingering close to the skin, whispering secrets of wood and spice.
+        </p>
+        
+        <!-- Olfactive Notes Breakdown -->
+        <div class="olfactive-notes mb-12">
+          
+          <!-- Top Notes -->
+          <div class="flex flex-col sm:flex-row sm:items-center py-4 border-b border-[var(--t-border-subtle)]">
+            <span class="font-montserrat font-bold text-xs tracking-widest uppercase w-full sm:w-36 mb-1 sm:mb-0 text-[var(--t-text)]" data-i18n="topNotesTitle">
+              Top Notes
+            </span>
+            <span class="font-cormorant text-lg text-[var(--t-text-soft)]" data-i18n="topNotesContent">
+              Bergamot, Black Tea, Fig
+            </span>
+          </div>
+
+          <!-- Heart Notes -->
+          <div class="flex flex-col sm:flex-row sm:items-center py-4 border-b border-[var(--t-border-subtle)]">
+            <span class="font-montserrat font-bold text-xs tracking-widest uppercase w-full sm:w-36 mb-1 sm:mb-0 text-[var(--t-text)]" data-i18n="heartNotesTitle">
+              Heart Notes
+            </span>
+            <span class="font-cormorant text-lg text-[var(--t-text-soft)]" data-i18n="heartNotesContent">
+              Cedar, Vetiver, Musk
+            </span>
+          </div>
+
+          <!-- Base Notes -->
+          <div class="flex flex-col sm:flex-row sm:items-center py-4 border-b border-[var(--t-border-subtle)]">
+            <span class="font-montserrat font-bold text-xs tracking-widest uppercase w-full sm:w-36 mb-1 sm:mb-0 text-[var(--t-text)]" data-i18n="baseNotesTitle">
+              Base Notes
+            </span>
+            <span class="font-cormorant text-lg text-[var(--t-text-soft)]" data-i18n="baseNotesContent">
+              Amber, Oud, Leather
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="w-full py-4 border border-[var(--t-text)] bg-[var(--t-text)] text-[var(--t-bg)] font-montserrat font-semibold text-xs tracking-[0.25em] transition-all duration-300 uppercase hover:bg-transparent hover:text-[var(--t-text)] cursor-pointer" data-i18n="addToCart">
+          ADD TO CART
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

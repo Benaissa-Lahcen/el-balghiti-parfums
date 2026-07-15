@@ -29,7 +29,20 @@ const translations = {
     jasmineTitle: "Jasmine Noir",
     jasmineNotes: "Night-blooming Jasmine, Sandalwood",
     discoveryTrioTitle: "The Discovery Trio",
-    discoveryTrioNotes: "Experience our signatures"
+    discoveryTrioNotes: "Experience our signatures",
+    
+    // Single Product - Oud
+    oudPageTitle: "OUD AL-BALGHITI",
+    oudInspiration: "Inspiration: Noir 29 / Batch: 001",
+    oudPrice: "450 DH",
+    oudStory: "Oud Al-Balghiti is a dark, nocturnal study of Moroccan leather and precious oud. Inspired by the dense, smoke-filled air of ancient medinas, it weaves together the raw depth of cedarwood, vetiver, and black tea, balanced by the fleeting sweetness of ripe fig. It is a fragrance that exists in the shadows, lingering close to the skin, whispering secrets of wood and spice.",
+    topNotesTitle: "Top Notes",
+    topNotesContent: "Bergamot, Black Tea, Fig",
+    heartNotesTitle: "Heart Notes",
+    heartNotesContent: "Cedar, Vetiver, Musk",
+    baseNotesTitle: "Base Notes",
+    baseNotesContent: "Amber, Oud, Leather",
+    addToCart: "ADD TO CART"
   },
   ar: {
     collections: "المجموعات",
@@ -56,7 +69,20 @@ const translations = {
     jasmineTitle: "ياسمين نوار",
     jasmineNotes: "ياسمين ليلي، خشب الصندل",
     discoveryTrioTitle: "ثلاثية الاستكشاف",
-    discoveryTrioNotes: "اكتشف عطورنا المميزة"
+    discoveryTrioNotes: "اكتشف عطورنا المميزة",
+    
+    // Single Product - Oud
+    oudPageTitle: "عود البلغيتي",
+    oudInspiration: "الإلهام: نوار 29 / الدفعة: 001",
+    oudPrice: "450 درهم",
+    oudStory: "عود البلغيتي هو دراسة ليلية داكنة للجلود المغربية والعود الثمين. مستوحى من الهواء الكثيف المليء بالدخان في المدن القديمة، يمزج بين العمق الخام لخشب الأرز، نجيل الهند والشاي الأسود، متوازناً مع حلاوة التين الناضج العابرة. عطر يعيش في الظلال، يستقر قريباً من البشرة، ويهمس بأسرار الخشب والتوابل.",
+    topNotesTitle: "المكونات العليا",
+    topNotesContent: "برغموت، شاي أسود، تين",
+    heartNotesTitle: "المكونات الوسطى",
+    heartNotesContent: "خشب الأرز، نجيل الهند، مسك",
+    baseNotesTitle: "المكونات الأساسية",
+    baseNotesContent: "عنبر، عود، جلد",
+    addToCart: "أضف إلى السلة"
   }
 };
 
