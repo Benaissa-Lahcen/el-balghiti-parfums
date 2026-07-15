@@ -1,0 +1,19 @@
+{
+  "name": "el-balghiti-parfums",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i assets/css/input.css -o assets/css/output.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i assets/css/input.css -o assets/css/output.css --watch",
+    "dev": "npx @tailwindcss/cli -i assets/css/input.css -o assets/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
+}

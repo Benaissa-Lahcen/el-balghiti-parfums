@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El Balghiti Parfums — The Collection. Explore our complete catalog of artisanal luxury fragrances.">
+  <title>EL BALGHITI — The Collection</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="assets/css/output.css">
+</head>
+<body class="bg-[var(--t-bg)] text-[var(--t-text)] transition-colors duration-500 min-h-screen flex flex-col">
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <header id="main-header">
+    <nav class="nav-fixed" id="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner relative px-4 md:px-12 py-3 md:py-5 flex items-center justify-between w-full">
+        
+        <!-- Left: Hamburger (Mobile) & Links (Desktop) -->
+        <div class="nav-left flex items-center justify-start gap-4">
+          <button class="mobile-menu-btn md:hidden" id="mobile-menu-btn" aria-label="Open mobile menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="shop.html" class="nav-link" id="nav-collections" data-i18n="collections">Collections</a>
+            <a href="index.html#atelier-section" class="nav-link" id="nav-about" data-i18n="about">About</a>
+          </div>
+        </div>
+
+        <!-- Center: Logo (Always EL BALGHITI, dynamically scaled via CSS clamp) -->
+        <div class="nav-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
+          <a href="index.html" class="logo-text" id="nav-logo" aria-label="El Balghiti Parfums — Home">
+            EL BALGHITI
+          </a>
+        </div>
+
+        <!-- Right: Toggles & Cart -->
+        <div class="nav-right flex items-center justify-end gap-2 md:gap-6">
+          <a href="#" class="nav-link nav-cart-icon" id="nav-cart" aria-label="Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+          </a>
+          
+          <div class="nav-divider hidden md:block" aria-hidden="true"></div>
+          
+          <div class="flex items-center gap-1.5 md:gap-3">
+            <!-- Language Toggle -->
+            <button class="nav-toggle" id="lang-toggle" aria-label="Toggle Language">
+              <span id="lang-text">AR</span>
+            </button>
+            
+            <!-- Theme Toggle -->
+            <button class="nav-toggle" id="theme-toggle" aria-label="Toggle Theme">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path id="theme-icon" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close mobile menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="mobile-menu-links">
+          <a href="shop.html" class="mobile-link" data-i18n="collections">Collections</a>
+          <a href="index.html#atelier-section" class="mobile-link" data-i18n="about">About</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHOP MAIN CONTENT
+       ═══════════════════════════════════════════════════════ -->
+  <main class="flex-grow pt-32 md:pt-40 pb-24 px-6 md:px-16 w-full max-w-[1400px] mx-auto">
+    
+    <!-- Page Header & Filters -->
+    <section class="mb-16 md:mb-24 text-center">
+      <h1 class="font-montserrat font-semibold text-sm md:text-base tracking-[0.45em] uppercase text-[var(--t-text)] mb-12" data-i18n="pageTitleCollection">THE COLLECTION</h1>
+      
+      <!-- Scrollable Filters -->
+      <div class="w-full overflow-x-auto whitespace-nowrap hide-scrollbar border-b border-[var(--t-border)] pb-2 flex justify-start md:justify-center gap-8 md:gap-16">
+        <a href="#" class="font-cormorant text-xl tracking-wide text-[var(--t-text)] border-b border-black dark:border-white pb-2" data-i18n="filterAll">All</a>
+        <a href="#" class="font-cormorant text-xl tracking-wide text-[var(--t-text-muted)] hover:text-[var(--t-text)] transition-colors pb-2" data-i18n="filterExtraits">Extraits de Parfum</a>
+        <a href="#" class="font-cormorant text-xl tracking-wide text-[var(--t-text-muted)] hover:text-[var(--t-text)] transition-colors pb-2" data-i18n="filterRawOils">Raw Oils</a>
+        <a href="#" class="font-cormorant text-xl tracking-wide text-[var(--t-text-muted)] hover:text-[var(--t-text)] transition-colors pb-2" data-i18n="filterDiscovery">Discovery Packs</a>
+      </div>
+    </section>
+
+    <!-- Catalog Grid (6 Items) -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-16">
+      
+      <!-- Card 1 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Oud Al-Balghiti">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-oud.png" alt="Oud Al-Balghiti" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="oudTitle">Oud Al-Balghiti</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="oudNotes">Oud, Leather, Patchouli</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Rose de Fès">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-rose.png" alt="Rose de Fès" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="roseTitle">Rose de Fès</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="roseNotes">Damask Rose, Saffron, Amber</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Ambre Saharien">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-amber.png" alt="Ambre Saharien" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="amberTitle">Ambre Saharien</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="amberNotes">Amber, Benzoin, Vanilla</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Neroli d'Atlas">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-amber.png" alt="Neroli d'Atlas placeholder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="neroliTitle">Néroli d'Atlas</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="neroliNotes">Neroli, Cedarwood, Musk</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Jasmine Noir">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-rose.png" alt="Jasmine Noir placeholder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="jasmineTitle">Jasmine Noir</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="jasmineNotes">Night-blooming Jasmine, Sandalwood</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="product-card group">
+        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover The Discovery Trio">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
+            <img src="assets/images/bottle-oud.png" alt="Discovery Trio placeholder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity">
+          </div>
+        </a>
+        <div class="text-center">
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="discoveryTrioTitle">The Discovery Trio</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="discoveryTrioNotes">Experience our signatures</p>
+          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
