@@ -51,7 +51,24 @@ const translations = {
     noteLeatherTitle: "MOROCCAN LEATHER",
     noteLeatherDesc: "Adds a warm, smoky, animalic depth that captures the spirit of Moroccan heritage.",
     noteOudTitle: "AGARWOOD (OUD)",
-    noteOudDesc: "The dark, resinous foundation. Woody, mysterious, and incredibly long-lasting."
+    noteOudDesc: "The dark, resinous foundation. Woody, mysterious, and incredibly long-lasting.",
+
+    // Fragrance Pyramid & Ratings
+    pyramidTitle: "FRAGRANCE PYRAMID",
+    noteBergamotName: "Bergamot",
+    noteBlackTeaName: "Black Tea",
+    noteFigName: "Fig",
+    noteCedarName: "Cedar",
+    noteVetiverName: "Vetiver",
+    noteMuskName: "Musk",
+    noteAmberName: "Amber",
+    noteOudName: "Oud",
+    noteLeatherName: "Leather",
+    ratingsTitle: "RATINGS",
+    ratingScent: "SCENT",
+    ratingLongevity: "LONGEVITY",
+    ratingSillage: "SILLAGE",
+    ratingBottle: "BOTTLE"
   },
   ar: {
     collections: "المجموعات",
@@ -100,7 +117,24 @@ const translations = {
     noteLeatherTitle: "الجلد المغربي",
     noteLeatherDesc: "يضيف عمقاً دافئاً ودخانياً يعبر عن روح التراث المغربي.",
     noteOudTitle: "خشب العود",
-    noteOudDesc: "الأساس الداكن والراتنجي. خشبي وغامض ويدوم طويلاً بشكل مذهل."
+    noteOudDesc: "الأساس الداكن والراتنجي. خشبي وغامض ويدوم طويلاً بشكل مذهل.",
+
+    // Fragrance Pyramid & Ratings
+    pyramidTitle: "الهرم العطري",
+    noteBergamotName: "برغموت",
+    noteBlackTeaName: "شاي أسود",
+    noteFigName: "تين",
+    noteCedarName: "خشب الأرز",
+    noteVetiverName: "نجيل الهند",
+    noteMuskName: "مسك",
+    noteAmberName: "عنبر",
+    noteOudName: "عود",
+    noteLeatherName: "جلد",
+    ratingsTitle: "التقييمات",
+    ratingScent: "الرائحة",
+    ratingLongevity: "الثبات",
+    ratingSillage: "الفوحان",
+    ratingBottle: "الزجاجة"
   }
 };
 
