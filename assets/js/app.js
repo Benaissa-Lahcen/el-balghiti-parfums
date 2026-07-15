@@ -42,7 +42,16 @@ const translations = {
     heartNotesContent: "Cedar, Vetiver, Musk",
     baseNotesTitle: "Base Notes",
     baseNotesContent: "Amber, Oud, Leather",
-    addToCart: "ADD TO CART"
+    addToCart: "ADD TO CART",
+    
+    // Dosage & Composition Details
+    dosageSectionTitle: "COMPOSITION & DOSAGE",
+    noteFigTitle: "FIG & BLACK TEA",
+    noteFigDesc: "Provides a sweet, green, and slightly earthy brightness to balance the heavy resins.",
+    noteLeatherTitle: "MOROCCAN LEATHER",
+    noteLeatherDesc: "Adds a warm, smoky, animalic depth that captures the spirit of Moroccan heritage.",
+    noteOudTitle: "AGARWOOD (OUD)",
+    noteOudDesc: "The dark, resinous foundation. Woody, mysterious, and incredibly long-lasting."
   },
   ar: {
     collections: "المجموعات",
@@ -82,7 +91,16 @@ const translations = {
     heartNotesContent: "خشب الأرز، نجيل الهند، مسك",
     baseNotesTitle: "المكونات الأساسية",
     baseNotesContent: "عنبر، عود، جلد",
-    addToCart: "أضف إلى السلة"
+    addToCart: "أضف إلى السلة",
+
+    // Dosage & Composition Details
+    dosageSectionTitle: "التركيب والنسب",
+    noteFigTitle: "التين والشاي الأسود",
+    noteFigDesc: "يضفي إشراقة حلوة وخضراء وترابية خفيفة لموازنة الصموغ الثقيلة.",
+    noteLeatherTitle: "الجلد المغربي",
+    noteLeatherDesc: "يضيف عمقاً دافئاً ودخانياً يعبر عن روح التراث المغربي.",
+    noteOudTitle: "خشب العود",
+    noteOudDesc: "الأساس الداكن والراتنجي. خشبي وغامض ويدوم طويلاً بشكل مذهل."
   }
 };
 
