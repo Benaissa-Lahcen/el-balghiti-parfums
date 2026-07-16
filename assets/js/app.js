@@ -130,7 +130,19 @@ const translations = {
     firstNamePlaceholder: "First Name",
     lastNamePlaceholder: "Last Name",
     addressPlaceholder: "Address",
-    cityPlaceholder: "City"
+    cityPlaceholder: "City",
+
+    // Our Story Keys
+    ourStoryLink: "Our Story",
+    storyTitlePage: "Our Story — El Balghiti Parfums",
+    storyHeader: "OUR HERITAGE.",
+    storyBadge: "EST. 2006 — CASABLANCA, MOROCCO",
+    originsTitle: "THE BEGINNING",
+    originsBody: "The El Balghiti legacy began in 2004. Two brothers, Moustapha and Hicham Elbelghiti, driven by a profound obsession for olfactory craftsmanship, began their journey working within the very first generic perfume boutique in Morocco. By 2006, they opened the first independent El Balghiti store. The mission was absolute: uncompromising quality and a relentless devotion to the client.",
+    sourcingTitle: "FROM FRANCE TO MOROCCO",
+    sourcingBody: "A great fragrance is only as good as its raw materials. We exclusively source the highest-rated, pure raw oils directly from the historic perfume houses of France. These premium extracts are then brought to our laboratories, where they are meticulously measured, blended, and aged by hand to create the perfect extrait de parfum.",
+    legacyTitle: "TWO DECADES OF EXCELLENCE",
+    legacyBody: "Today, with over five dedicated boutiques across Casablanca and throughout Morocco, El Balghiti Parfums remains an independent, family-driven house. We do not compromise on our process, and we continue to bottle memories for those who demand the exceptional."
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -257,7 +269,19 @@ const translations = {
     firstNamePlaceholder: "الاسم الأول",
     lastNamePlaceholder: "اسم العائلة",
     addressPlaceholder: "العنوان",
-    cityPlaceholder: "المدينة"
+    cityPlaceholder: "المدينة",
+
+    // Our Story Keys
+    ourStoryLink: "قصتنا",
+    storyTitlePage: "قصتنا — عطور البلغيتي",
+    storyHeader: "تراثنا.",
+    storyBadge: "تأسس عام ٢٠٠٦ — الدار البيضاء، المغرب",
+    originsTitle: "البداية",
+    originsBody: "بدأ إرث البلغيتي في عام ٢٠٠٤. بدأ شقيقان، مصطفى وهشام البلغيتي، مدفوعين بشغف عميق بصناعة العطور، رحلتهما بالعمل داخل أول متجر عطور عام في المغرب. وبحلول عام ٢٠٠٦، افتتحا أول متجر مستقل للبلغيتي. كانت المهمة مطلقة: جودة لا تضاهى وتفانٍ لا هوادة فيه للعميل.",
+    sourcingTitle: "من فرنسا إلى المغرب",
+    sourcingBody: "إن جودة العطر تكمن في جودة مواده الخام. نحن نستورد حصرياً الزيوت الخام النقية الأعلى تقييماً مباشرةً من بيوت العطور التاريخية في فرنسا. ثم يتم جلب هذه المستخلصات الفاخرة إلى مختبراتنا، حيث يتم قياسها ومزجها وتعتيقها بعناية فائقة يدوياً لابتكار خلاصة العطر المثالية.",
+    legacyTitle: "عقدان من التميز",
+    legacyBody: "اليوم، ومع وجود أكثر من خمسة متاجر متخصصة في الدار البيضاء ومختلف أنحاء المغرب، تظل عطور البلغيتي داراً مستقلة تديرها العائلة. نحن لا نساوم على طريقتنا في العمل، ونستمر في تعبئة الذكريات لأولئك الذين يطلبون التميز."
   }
 };
 
