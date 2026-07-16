@@ -208,7 +208,7 @@
           <div>
             <label class="block font-mono text-[0.65rem] tracking-wider uppercase text-[var(--t-text-muted)] mb-1.5" data-i18n="selectSize">Size</label>
             <div class="relative w-full">
-              <select class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3 text-xs font-mono uppercase rounded-sm appearance-none outline-none cursor-pointer">
+              <select id="product-size" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3 text-xs font-mono uppercase rounded-sm appearance-none outline-none cursor-pointer">
                 <option value="50">50 ml</option>
                 <option value="100">100 ml</option>
               </select>
@@ -222,7 +222,7 @@
           <div>
             <label class="block font-mono text-[0.65rem] tracking-wider uppercase text-[var(--t-text-muted)] mb-1.5" data-i18n="selectQuantity">Quantity</label>
             <div class="relative w-full">
-              <select class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3 text-xs font-mono rounded-sm appearance-none outline-none cursor-pointer">
+              <select id="product-qty" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3 text-xs font-mono rounded-sm appearance-none outline-none cursor-pointer">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -247,7 +247,7 @@
 
         <!-- Add to Cart Button -->
         <div class="mb-8">
-          <button class="w-full py-4 bg-[#3c3c3c] dark:bg-[#eaeaea] text-white dark:text-black font-mono font-semibold text-xs tracking-[0.25em] transition-all duration-300 uppercase hover:opacity-90 cursor-pointer border border-[#3c3c3c] dark:border-[#eaeaea] rounded-sm" data-i18n="addToCart">
+          <button id="add-to-cart-btn" class="w-full py-4 bg-[#3c3c3c] dark:bg-[#eaeaea] text-white dark:text-black font-mono font-semibold text-xs tracking-[0.25em] transition-all duration-300 uppercase hover:opacity-90 cursor-pointer border border-[#3c3c3c] dark:border-[#eaeaea] rounded-sm" data-i18n="addToCart">
             ADD TO CART
           </button>
           <p class="text-[0.6rem] sm:text-[0.65rem] text-[var(--t-text-muted)] font-mono mt-3 text-center uppercase tracking-wider" data-i18n="afterpayText">

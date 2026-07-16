@@ -325,4 +325,166 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', closeMobileMenu);
     });
   }
+
+  // --- Cart System Logic ---
+  const updateCartCounts = () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalQty = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartSpans = document.querySelectorAll('a[aria-label="Cart"] span');
+    cartSpans.forEach(span => {
+      span.textContent = `(${totalQty})`;
+    });
+  };
+
+  const showLuxuryToast = (productName) => {
+    const existingToast = document.getElementById('luxury-toast');
+    if (existingToast) existingToast.remove();
+    
+    const toast = document.createElement('div');
+    toast.id = 'luxury-toast';
+    toast.className = "fixed bottom-8 right-8 z-50 bg-[#3c3c3c] dark:bg-[#eaeaea] text-white dark:text-black px-6 py-4 border border-t-[var(--t-border-subtle)] shadow-xl font-mono text-[0.65rem] tracking-widest uppercase transition-all duration-500 transform translate-y-10 opacity-0 rounded-sm";
+    
+    const lang = localStorage.getItem('lang') || 'en';
+    if (lang === 'ar') {
+      toast.textContent = `تمت إضافة [${productName}] إلى السلة.`;
+      toast.style.right = 'auto';
+      toast.style.left = '2rem';
+    } else {
+      toast.textContent = `[${productName}] added to cart.`;
+    }
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.classList.remove('translate-y-10', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+    }, 10);
+    
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-10', 'opacity-0');
+      setTimeout(() => toast.remove(), 500);
+    }, 3000);
+  };
+
+  // Initialize count on load
+  updateCartCounts();
+
+  // 1. Primary Add to Cart Button (Oud Page Detail)
+  const addToCartBtn = document.getElementById('add-to-cart-btn');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', () => {
+      const sizeSelect = document.getElementById('product-size');
+      const qtySelect = document.getElementById('product-qty');
+      const personalInput = document.getElementById('personalization-input');
+      
+      const size = sizeSelect ? sizeSelect.value : '50';
+      const qty = qtySelect ? parseInt(qtySelect.value, 10) : 1;
+      const personalization = personalInput ? personalInput.value.trim() : '';
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const prodName = 'OUD AL-BALGHITI';
+      
+      const existingItemIndex = cart.findIndex(item => 
+        item.id === 'oud-al-balghiti' && 
+        item.size === size && 
+        item.personalization === personalization
+      );
+      
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += qty;
+      } else {
+        cart.push({
+          id: 'oud-al-balghiti',
+          name: prodName,
+          size: size,
+          quantity: qty,
+          personalization: personalization
+        });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCounts();
+
+      // Muted luxury button feedback
+      const originalText = addToCartBtn.textContent;
+      const originalI18n = addToCartBtn.getAttribute('data-i18n');
+      
+      addToCartBtn.textContent = 'ADDED';
+      addToCartBtn.removeAttribute('data-i18n');
+      addToCartBtn.style.opacity = '0.8';
+      
+      setTimeout(() => {
+        addToCartBtn.textContent = originalText;
+        if (originalI18n) {
+          addToCartBtn.setAttribute('data-i18n', originalI18n);
+          const currentLang = localStorage.getItem('lang') || 'en';
+          if (translations[currentLang] && translations[currentLang][originalI18n]) {
+            addToCartBtn.textContent = translations[currentLang][originalI18n];
+          }
+        }
+        addToCartBtn.style.opacity = '';
+      }, 1500);
+
+      showLuxuryToast(prodName);
+    });
+  }
+
+  // 2. Recommendations Add to Cart Links
+  const recAddToCartLinks = document.querySelectorAll('[data-i18n="recAddToCart"]');
+  recAddToCartLinks.forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const prodId = idx === 0 ? 'oud-lotion' : 'oud-shower-gel';
+      const prodName = idx === 0 ? 'OUD AL-BALGHITI BODY LOTION' : 'OUD AL-BALGHITI SHOWER GEL';
+      
+      const existingItemIndex = cart.findIndex(item => item.id === prodId);
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: prodId,
+          name: prodName,
+          size: '237ml',
+          quantity: 1,
+          personalization: ''
+        });
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCounts();
+      
+      showLuxuryToast(prodName);
+    });
+  });
+
+  // 3. Sample Add to Cart Links
+  const addSampleLinks = document.querySelectorAll('[data-i18n="addSample"]');
+  addSampleLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const prodId = 'oud-sample';
+      const prodName = 'OUD AL-BALGHITI SAMPLE';
+      
+      const existingItemIndex = cart.findIndex(item => item.id === prodId);
+      if (existingItemIndex > -1) {
+        cart[existingItemIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: prodId,
+          name: prodName,
+          size: '1.5ml',
+          quantity: 1,
+          personalization: ''
+        });
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCounts();
+      
+      showLuxuryToast(prodName);
+    });
+  });
 });
