@@ -110,7 +110,20 @@ const translations = {
     cartTitle: "YOUR CART",
     cartSubtotal: "Subtotal",
     cartTaxesDesc: "Shipping and taxes calculated at checkout.",
-    checkoutBtn: "PROCEED TO CHECKOUT"
+    checkoutBtn: "PROCEED TO CHECKOUT",
+
+    // Checkout Page Keys
+    checkoutHeader: "CHECKOUT",
+    contactInfoTitle: "CONTACT INFORMATION",
+    shippingAddressTitle: "SHIPPING ADDRESS",
+    shippingMethodTitle: "SHIPPING METHOD",
+    standardShipping: "Standard Shipping (3-7 days)",
+    freeStandard: "Free",
+    paymentMethodTitle: "PAYMENT",
+    codTitle: "Cash on Delivery",
+    codDesc: "Pay with cash upon delivery to your doorstep.",
+    completeOrderBtn: "COMPLETE ORDER",
+    summaryTitle: "ORDER SUMMARY"
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -217,7 +230,20 @@ const translations = {
     cartTitle: "سلتك",
     cartSubtotal: "المجموع الفرعي",
     cartTaxesDesc: "يتم حساب الشحن والضرائب عند الدفع.",
-    checkoutBtn: "المتابعة لإتمام الطلب"
+    checkoutBtn: "المتابعة لإتمام الطلب",
+
+    // Checkout Page Keys
+    checkoutHeader: "إتمام الطلب",
+    contactInfoTitle: "معلومات الاتصال",
+    shippingAddressTitle: "عنوان الشحن",
+    shippingMethodTitle: "طريقة الشحن",
+    standardShipping: "الشحن القياسي (٣-٧ أيام)",
+    freeStandard: "مجاني",
+    paymentMethodTitle: "طريقة الدفع",
+    codTitle: "الدفع عند الاستلام",
+    codDesc: "ادفع نقداً عند استلام طلبك عند عتبة بابك.",
+    completeOrderBtn: "إكمال الطلب",
+    summaryTitle: "ملخص الطلب"
   }
 };
 
@@ -629,6 +655,21 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCartCounts();
       
       openCartDrawer();
+    });
+  });
+
+  // 4. Proceed to Checkout Redirection Handler
+  const checkoutBtns = document.querySelectorAll('[data-i18n="checkoutBtn"]');
+  checkoutBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart.length > 0) {
+        window.location.href = 'checkout.html';
+      } else {
+        const lang = localStorage.getItem('lang') || 'en';
+        alert(lang === 'ar' ? 'سلتك فارغة حالياً.' : 'Your cart is currently empty.');
+      }
     });
   });
 });
