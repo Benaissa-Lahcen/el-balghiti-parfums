@@ -114,10 +114,8 @@ const translations = {
 
     // Checkout Page Keys
     checkoutHeader: "CHECKOUT",
-    contactInfoTitle: "CONTACT INFORMATION",
     shippingAddressTitle: "SHIPPING ADDRESS",
-    shippingMethodTitle: "SHIPPING METHOD",
-    standardShipping: "Standard Shipping (3-7 days)",
+    shippingSummaryLabel: "Shipping",
     freeStandard: "Free",
     paymentMethodTitle: "PAYMENT",
     codTitle: "Cash on Delivery",
@@ -234,10 +232,8 @@ const translations = {
 
     // Checkout Page Keys
     checkoutHeader: "إتمام الطلب",
-    contactInfoTitle: "معلومات الاتصال",
     shippingAddressTitle: "عنوان الشحن",
-    shippingMethodTitle: "طريقة الشحن",
-    standardShipping: "الشحن القياسي (٣-٧ أيام)",
+    shippingSummaryLabel: "الشحن",
     freeStandard: "مجاني",
     paymentMethodTitle: "طريقة الدفع",
     codTitle: "الدفع عند الاستلام",

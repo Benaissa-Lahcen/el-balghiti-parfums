@@ -65,22 +65,7 @@
       <div class="lg:col-span-7 flex flex-col gap-10">
         
         <form id="checkout-form" class="flex flex-col gap-10">
-          <!-- 1. Contact Information -->
-          <section>
-            <h2 class="font-montserrat font-bold text-xs tracking-[0.25em] uppercase text-[var(--t-text)] mb-4" data-i18n="contactInfoTitle">
-              CONTACT INFORMATION
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <input type="email" id="checkout-email" required placeholder="Email Address" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
-              </div>
-              <div>
-                <input type="tel" id="checkout-phone" required placeholder="Phone Number" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
-              </div>
-            </div>
-          </section>
-
-          <!-- 2. Shipping Address -->
+          <!-- Shipping Address -->
           <section>
             <h2 class="font-montserrat font-bold text-xs tracking-[0.25em] uppercase text-[var(--t-text)] mb-4" data-i18n="shippingAddressTitle">
               SHIPPING ADDRESS
@@ -97,28 +82,9 @@
               <div>
                 <input type="text" id="checkout-address" required placeholder="Address" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <input type="text" id="checkout-city" required placeholder="City" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
-                </div>
-                <div>
-                  <input type="text" id="checkout-zip" required placeholder="Postal Code" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
-                </div>
+              <div>
+                <input type="text" id="checkout-city" required placeholder="City" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] hover:border-[var(--t-text)] focus:border-[var(--t-text)] transition-colors px-4 py-3.5 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)]">
               </div>
-            </div>
-          </section>
-
-          <!-- 3. Shipping Method -->
-          <section>
-            <h2 class="font-montserrat font-bold text-xs tracking-[0.25em] uppercase text-[var(--t-text)] mb-4" data-i18n="shippingMethodTitle">
-              SHIPPING METHOD
-            </h2>
-            <div class="border border-[var(--t-border-subtle)] p-4 flex justify-between items-center font-mono text-[0.65rem] tracking-wider text-[var(--t-text)] bg-[var(--t-bg-secondary)] rounded-sm">
-              <div class="flex items-center gap-3">
-                <input type="radio" checked id="shipping-standard" class="accent-[var(--t-text)]">
-                <label for="shipping-standard" class="font-bold cursor-pointer" data-i18n="standardShipping">Standard Shipping (3-7 days)</label>
-              </div>
-              <span class="font-bold" data-i18n="freeStandard">Free</span>
             </div>
           </section>
 
@@ -166,7 +132,7 @@
             <span id="checkout-subtotal" class="font-bold">0 DH</span>
           </div>
           <div class="flex justify-between items-center">
-            <span class="text-[var(--t-text-muted)]" data-i18n="shippingMethodTitle">Shipping</span>
+            <span class="text-[var(--t-text-muted)]" data-i18n="shippingSummaryLabel">Shipping</span>
             <span class="font-bold text-[var(--t-text-muted)]" data-i18n="freeStandard">Free</span>
           </div>
           <div class="flex justify-between items-center border-t border-[var(--t-border)] pt-3 text-sm font-bold">
