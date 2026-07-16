@@ -21,68 +21,112 @@
   <!-- ═══════════════════════════════════════════════════════
        NAVIGATION
        ═══════════════════════════════════════════════════════ -->
-  <header id="main-header">
-    <nav class="nav-fixed" id="main-nav" role="navigation" aria-label="Main navigation">
-      <div class="nav-inner relative px-4 md:px-12 py-3 md:py-5 flex items-center justify-between w-full">
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <header id="main-header" class="w-full fixed top-0 left-0 z-50 bg-[var(--t-bg)] border-b border-[var(--t-border-subtle)]">
+    <!-- Top Monospace Promo Banner -->
+    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase" data-i18n="promoBannerText">
+      Every El Balghiti creation is fresh hand-blended.
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav" role="navigation" aria-label="Main navigation" class="w-full">
+      <div class="max-w-7xl mx-auto px-4 md:px-12 py-3.5 sm:py-5 flex flex-col md:gap-4 justify-between w-full">
         
-        <!-- Left: Hamburger (Mobile) & Links (Desktop) -->
-        <div class="nav-left flex items-center justify-start gap-4">
-          <button class="mobile-menu-btn md:hidden" id="mobile-menu-btn" aria-label="Open mobile menu">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-          <div class="hidden md:flex items-center gap-8">
-            <a href="shop.html" class="nav-link" id="nav-collections" data-i18n="collections">Collections</a>
-            <a href="index.html#atelier-section" class="nav-link" id="nav-about" data-i18n="about">About</a>
-          </div>
-        </div>
-
-        <!-- Center: Logo (Always EL BALGHITI, dynamically scaled via CSS clamp) -->
-        <div class="nav-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
-          <a href="index.html" class="logo-text" id="nav-logo" aria-label="El Balghiti Parfums — Home">
-            EL BALGHITI
-          </a>
-        </div>
-
-        <!-- Right: Toggles & Cart -->
-        <div class="nav-right flex items-center justify-end gap-2 md:gap-6">
-          <a href="#" class="nav-link nav-cart-icon" id="nav-cart" aria-label="Cart">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-            </svg>
-          </a>
-          
-          <div class="nav-divider hidden md:block" aria-hidden="true"></div>
-          
-          <div class="flex items-center gap-1.5 md:gap-3">
-            <!-- Language Toggle -->
-            <button class="nav-toggle" id="lang-toggle" aria-label="Toggle Language">
-              <span id="lang-text">AR</span>
-            </button>
-            
-            <!-- Theme Toggle -->
-            <button class="nav-toggle" id="theme-toggle" aria-label="Toggle Theme">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path id="theme-icon" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        <!-- Row 1: Left (Mobile Hamburger, Desktop Search), Center (Logo), Right (Cart/Toggles) -->
+        <div class="flex items-center justify-between w-full relative">
+          <!-- Left: Mobile Menu Button & Search, Desktop Search -->
+          <div class="flex items-center gap-3">
+            <button class="mobile-menu-btn md:hidden text-[var(--t-text)] cursor-pointer" id="mobile-menu-btn" aria-label="Open mobile menu">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
+            
+            <button class="md:hidden text-[var(--t-text)] cursor-pointer" aria-label="Search">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+
+            <!-- Desktop Search Box -->
+            <div class="hidden md:flex items-center gap-2 text-xs tracking-wider text-[var(--t-text-muted)] cursor-pointer hover:text-[var(--t-text)] transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              <span class="font-mono uppercase text-[0.7rem] tracking-widest">Search</span>
+            </div>
+          </div>
+
+          <!-- Center Logo (EL BALGHITI, dynamic clamp font size) -->
+          <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
+            <a href="index.html" class="logo-text text-xl sm:text-2xl font-montserrat tracking-[0.25em] font-semibold text-[var(--t-text)] hover:opacity-80 transition-opacity" id="nav-logo" aria-label="El Balghiti Parfums — Home">
+              EL BALGHITI
+            </a>
+          </div>
+
+          <!-- Right: Desktop and Mobile Cart / actions -->
+          <div class="flex items-center gap-4 sm:gap-6 font-mono text-[0.7rem] uppercase">
+            <!-- Desktop/Mobile Cart -->
+            <a href="#" class="flex items-center gap-1.5 hover:underline text-[var(--t-text)] font-semibold" aria-label="Cart">
+              <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+              </svg>
+              <span>(0)</span>
+            </a>
+
+            <!-- Desktop-only Lang / Theme Toggles (Sleek text-based) -->
+            <div class="hidden md:flex items-center gap-4 border-l border-[var(--t-border-subtle)] pl-4">
+              <button class="lang-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
+                <span class="lang-text">AR</span>
+              </button>
+              <button class="theme-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
+                <span class="theme-text">DARK</span>
+              </button>
+            </div>
           </div>
         </div>
+
+        <!-- Row 2: Desktop centered category links -->
+        <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
+          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
+          <a href="index.html#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+        </div>
+
       </div>
     </nav>
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close mobile menu">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <div class="mobile-menu-links">
-          <a href="shop.html" class="mobile-link" data-i18n="collections">Collections</a>
-          <a href="index.html#atelier-section" class="mobile-link" data-i18n="about">About</a>
+      <div class="mobile-menu-inner p-6 flex flex-col justify-between h-full bg-[var(--t-bg)]">
+        <div>
+          <!-- Close button -->
+          <div class="flex justify-end w-full mb-8">
+            <button class="mobile-menu-close text-[var(--t-text)] cursor-pointer" id="mobile-menu-close" aria-label="Close mobile menu">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Links -->
+          <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
+            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
+            <a href="index.html#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+          </div>
+        </div>
+
+        <!-- Drawer Footer: Toggles -->
+        <div class="flex flex-col gap-4 border-t border-[var(--t-border-subtle)] pt-6 font-mono text-xs uppercase tracking-widest">
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--t-text-muted)]">Language</span>
+            <button class="lang-toggle text-[var(--t-text)] font-semibold cursor-pointer">
+              <span class="lang-text">AR</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-[var(--t-text-muted)]">Theme</span>
+            <button class="theme-toggle text-[var(--t-text)] font-semibold cursor-pointer">
+              <span class="theme-text">DARK</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -91,7 +135,7 @@
   <!-- ═══════════════════════════════════════════════════════
        SHOP MAIN CONTENT
        ═══════════════════════════════════════════════════════ -->
-  <main class="flex-grow pt-32 md:pt-40 pb-24 px-6 md:px-16 w-full max-w-[1400px] mx-auto">
+  <main class="flex-grow pt-36 sm:pt-48 pb-24 px-6 md:px-16 w-full max-w-[1400px] mx-auto">
     
     <!-- Page Header & Filters -->
     <section class="mb-16 md:mb-24 text-center">
@@ -195,6 +239,121 @@
 
     </section>
   </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (Le Labo Style Newsletter & Accordions)
+       ═══════════════════════════════════════════════════════ -->
+  <footer class="w-full border-t border-[var(--t-border-subtle)] bg-[var(--t-bg)] mt-20 pt-16 pb-12 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      
+      <!-- Newsletter Block -->
+      <div class="w-full max-w-xl text-center mb-16">
+        <h2 class="font-montserrat font-bold text-xs tracking-[0.3em] uppercase mb-4 text-[var(--t-text)]" data-i18n="newsletterTitle">
+          JOIN OUR NEWSLETTER
+        </h2>
+        <p class="font-sans text-xs text-[var(--t-text-secondary)] leading-relaxed mb-6" data-i18n="newsletterDesc">
+          By entering your email and clicking "Sign Up", you agree to receive personalized updates on our creations, craftsmanship, and Medinas workshops.
+        </p>
+        <div class="flex flex-col gap-3">
+          <input type="email" placeholder="Enter your email address" class="w-full bg-[var(--t-bg)] text-[var(--t-text)] border border-[var(--t-border)] px-4 py-3 text-xs font-mono rounded-sm outline-none placeholder:text-[var(--t-text-muted)] focus:border-[var(--t-text)] text-center">
+          <button class="w-full py-3 bg-[#3c3c3c] dark:bg-[#eaeaea] text-white dark:text-black font-mono font-semibold text-xs tracking-[0.25em] transition-all duration-300 uppercase hover:opacity-90 cursor-pointer rounded-sm" data-i18n="signUpBtn">
+            SIGN UP
+          </button>
+        </div>
+      </div>
+
+      <!-- Footer Accordion Columns -->
+      <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-8 border-t border-[var(--t-border-subtle)] pt-10">
+        
+        <!-- Accordion 1: About -->
+        <div class="border-b border-[var(--t-border-subtle)] md:border-b-0 py-4 md:py-0">
+          <button class="footer-accordion-header w-full md:pointer-events-none flex justify-between items-center text-[var(--t-text)] font-semibold font-mono text-[0.65rem] tracking-widest uppercase cursor-pointer" onclick="toggleFooterAccordion(this)">
+            <span data-i18n="footerAboutTitle">About El Balghiti</span>
+            <span class="md:hidden transition-transform duration-300 transform accordion-plus">+</span>
+          </button>
+          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
+            <a href="#" class="block hover:text-[var(--t-text)]">About Us</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Our Atelier</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Refill Program</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Craftsmanship</a>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Client Care -->
+        <div class="border-b border-[var(--t-border-subtle)] md:border-b-0 py-4 md:py-0">
+          <button class="footer-accordion-header w-full md:pointer-events-none flex justify-between items-center text-[var(--t-text)] font-semibold font-mono text-[0.65rem] tracking-widest uppercase cursor-pointer" onclick="toggleFooterAccordion(this)">
+            <span data-i18n="footerCareTitle">Client Care</span>
+            <span class="md:hidden transition-transform duration-300 transform accordion-plus">+</span>
+          </button>
+          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
+            <a href="#" class="block hover:text-[var(--t-text)]">Contact Us</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Shipping & Handling</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Same-Day Delivery</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">FAQ</a>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Privacy & Terms -->
+        <div class="border-b border-[var(--t-border-subtle)] md:border-b-0 py-4 md:py-0">
+          <button class="footer-accordion-header w-full md:pointer-events-none flex justify-between items-center text-[var(--t-text)] font-semibold font-mono text-[0.65rem] tracking-widest uppercase cursor-pointer" onclick="toggleFooterAccordion(this)">
+            <span data-i18n="footerTermsTitle">Privacy & Terms</span>
+            <span class="md:hidden transition-transform duration-300 transform accordion-plus">+</span>
+          </button>
+          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
+            <a href="#" class="block hover:text-[var(--t-text)]">Privacy Policy</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Terms of Service</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Accessibility Statement</a>
+          </div>
+        </div>
+
+        <!-- Accordion 4: Visit Us -->
+        <div class="border-b border-[var(--t-border-subtle)] md:border-b-0 py-4 md:py-0">
+          <button class="footer-accordion-header w-full md:pointer-events-none flex justify-between items-center text-[var(--t-text)] font-semibold font-mono text-[0.65rem] tracking-widest uppercase cursor-pointer" onclick="toggleFooterAccordion(this)">
+            <span data-i18n="footerVisitTitle">Visit Us</span>
+            <span class="md:hidden transition-transform duration-300 transform accordion-plus">+</span>
+          </button>
+          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
+            <a href="#" class="block hover:text-[var(--t-text)]">Store Locator</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">In-Store Pickup</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Phone Orders</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Socials row -->
+      <div class="w-full border-t border-[var(--t-border-subtle)] mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 font-mono text-[0.6rem] sm:text-[0.65rem] text-[var(--t-text-muted)] uppercase tracking-widest">
+        <div>
+          <span>© 2026 El Balghiti Parfums. All Rights Reserved.</span>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-[var(--t-text)]">Instagram</a>
+          <a href="#" class="hover:text-[var(--t-text)]">Pinterest</a>
+          <a href="#" class="hover:text-[var(--t-text)]">Facebook</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function toggleFooterAccordion(btn) {
+      const plusSpan = btn.querySelector('.accordion-plus');
+      if (plusSpan) {
+        plusSpan.textContent = plusSpan.textContent === '+' ? '−' : '+';
+        plusSpan.classList.toggle('rotate-90');
+      }
+      const content = btn.nextElementSibling;
+      if (content) {
+        content.classList.toggle('hidden');
+        content.classList.toggle('flex');
+        content.classList.toggle('flex-col');
+        content.classList.toggle('pl-2');
+        content.classList.toggle('pt-3');
+        content.classList.toggle('pb-2');
+      }
+    }
+  </script>
 
   <script src="assets/js/app.js"></script>
 

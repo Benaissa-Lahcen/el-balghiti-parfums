@@ -5,6 +5,7 @@
 
 const translations = {
   en: {
+    promoBannerText: "Every El Balghiti creation is fresh hand-blended.",
     collections: "Collections",
     about: "About",
     cart: "Cart (0)",
@@ -68,9 +69,44 @@ const translations = {
     ratingScent: "SCENT",
     ratingLongevity: "LONGEVITY",
     ratingSillage: "SILLAGE",
-    ratingBottle: "BOTTLE"
-  },
-  ar: {
+    ratingBottle: "BOTTLE",
+    
+    // Checkout Form Keys
+    oudSubtitleMono: "extrait de parfum",
+    selectSize: "Size",
+    selectQuantity: "Quantity",
+    personalizationLabel: "For",
+    afterpayText: "or 4 interest-free payments of 112.50 DH with afterpay",
+    homeDelivery: "Home Delivery",
+    inStorePickup: "In-store Pickup",
+    viewStores: "View stores",
+    notReady: "Not ready to commit?",
+    addSample: "add sample to cart",
+    haveOldBottle: "Have an old bottle?",
+    refillHere: "refill here",
+    needHelp: "Need help?",
+    contactUs: "Contact Us",
+
+    // Recommendations Keys
+    recommendationsTitle: "Recommendations for you",
+    recLotionTitle: "OUD AL-BALGHITI",
+    recLotionDesc: "237 ml perfuming body lotion",
+    recLotionPrice: "USD $97.00",
+    recShowerTitle: "OUD AL-BALGHITI",
+    recShowerDesc: "237 ml perfuming shower gel",
+    recShowerPrice: "USD $67.00",
+    recAddToCart: "Add to Cart",
+
+    // Footer Keys
+    newsletterTitle: "JOIN OUR NEWSLETTER",
+    newsletterDesc: "By entering your email and clicking \"Sign Up\", you agree to receive personalized updates on our creations, craftsmanship, and Medinas workshops.",
+    signUpBtn: "SIGN UP",
+    footerAboutTitle: "About El Balghiti",
+    footerCareTitle: "Client Care",
+    footerTermsTitle: "Privacy & Terms",
+    footerVisitTitle: "Visit Us"
+  }, ar: {
+    promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
     about: "عنا",
     cart: "سلة التسوق (0)",
@@ -134,14 +170,49 @@ const translations = {
     ratingScent: "الرائحة",
     ratingLongevity: "الثبات",
     ratingSillage: "الفوحان",
-    ratingBottle: "الزجاجة"
+    ratingBottle: "الزجاجة",
+
+    // Checkout Form Keys
+    oudSubtitleMono: "خلاصة عطر",
+    selectSize: "الحجم",
+    selectQuantity: "الكمية",
+    personalizationLabel: "مخصص لـ",
+    afterpayText: "أو 4 دفعات بدون فوائد بقيمة 112.50 درهم مع afterpay",
+    homeDelivery: "التوصيل للمنزل",
+    inStorePickup: "الاستلام من المتجر",
+    viewStores: "عرض المتاجر",
+    notReady: "غير مستعد للشراء الآن؟",
+    addSample: "أضف عينة للسلة",
+    haveOldBottle: "هل لديك زجاجة قديمة؟",
+    refillHere: "أعد التعبئة هنا",
+    needHelp: "هل تحتاج لمساعدة؟",
+    contactUs: "اتصل بنا",
+
+    // Recommendations Keys
+    recommendationsTitle: "عطور مقترحة لك",
+    recLotionTitle: "عود البلغيتي",
+    recLotionDesc: "٢٣٧ مل لوشن معطر للجسم",
+    recLotionPrice: "٩٧ درهم",
+    recShowerTitle: "عود البلغيتي",
+    recShowerDesc: "٢٣٧ مل جل استحمام معطر",
+    recShowerPrice: "٦٧ درهم",
+    recAddToCart: "أضف إلى السلة",
+
+    // Footer Keys
+    newsletterTitle: "اشترك في نشرتنا الإخبارية",
+    newsletterDesc: "عبر إدخال بريدك الإلكتروني والضغط على \"اشتراك\"، فإنك توافق على تلقي تحديثات مخصصة حول ابتكاراتنا وحرفيتنا وورش عملنا في المدينة.",
+    signUpBtn: "اشتراك",
+    footerAboutTitle: "عن البلغيتي",
+    footerCareTitle: "عناية العملاء",
+    footerTermsTitle: "الخصوصية والشروط",
+    footerVisitTitle: "قم بزيارتنا"
   }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   // --- Theme Toggle Logic ---
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+  const themeIcons = document.querySelectorAll('.theme-icon');
   
   // SVG paths for Sun (Light Mode) and Moon (Dark Mode)
   const sunPath = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z";
@@ -152,24 +223,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyTheme = (theme) => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
-      themeIcon.setAttribute('d', sunPath);
+      themeIcons.forEach(icon => {
+        if (icon.tagName.toLowerCase() === 'path') {
+          icon.setAttribute('d', sunPath);
+        }
+      });
+      themeToggleBtns.forEach(btn => {
+        const textSpan = btn.querySelector('.theme-text');
+        if (textSpan) textSpan.textContent = 'LIGHT';
+      });
     } else {
       document.documentElement.classList.remove('dark');
-      themeIcon.setAttribute('d', moonPath);
+      themeIcons.forEach(icon => {
+        if (icon.tagName.toLowerCase() === 'path') {
+          icon.setAttribute('d', moonPath);
+        }
+      });
+      themeToggleBtns.forEach(btn => {
+        const textSpan = btn.querySelector('.theme-text');
+        if (textSpan) textSpan.textContent = 'DARK';
+      });
     }
   };
 
   applyTheme(currentTheme);
 
-  themeToggleBtn.addEventListener('click', () => {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', currentTheme);
-    applyTheme(currentTheme);
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', currentTheme);
+      applyTheme(currentTheme);
+    });
   });
 
   // --- Language Toggle Logic ---
-  const langToggleBtn = document.getElementById('lang-toggle');
-  const langText = document.getElementById('lang-text');
+  const langToggleBtns = document.querySelectorAll('.lang-toggle');
   
   let currentLang = localStorage.getItem('lang') || 'en';
 
@@ -179,13 +267,17 @@ document.addEventListener('DOMContentLoaded', () => {
       document.documentElement.setAttribute('dir', 'rtl');
       document.documentElement.lang = 'ar';
       document.documentElement.classList.add('lang-ar');
-      langText.textContent = 'EN';
     } else {
       document.documentElement.setAttribute('dir', 'ltr');
       document.documentElement.lang = 'en';
       document.documentElement.classList.remove('lang-ar');
-      langText.textContent = 'AR';
     }
+
+    // Update all language toggle buttons' texts
+    langToggleBtns.forEach(btn => {
+      const langText = btn.querySelector('.lang-text') || btn;
+      langText.textContent = lang === 'ar' ? 'EN' : 'AR';
+    });
 
     // 2. Translate Text Content
     const elements = document.querySelectorAll('[data-i18n]');
@@ -199,10 +291,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyLanguage(currentLang);
 
-  langToggleBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
-    localStorage.setItem('lang', currentLang);
-    applyLanguage(currentLang);
+  langToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
+      localStorage.setItem('lang', currentLang);
+      applyLanguage(currentLang);
+    });
   });
 
   // --- Mobile Menu Logic ---
