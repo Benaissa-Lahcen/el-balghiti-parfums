@@ -121,7 +121,15 @@ const translations = {
     codTitle: "Cash on Delivery",
     codDesc: "Pay with cash upon delivery to your doorstep.",
     completeOrderBtn: "COMPLETE ORDER",
-    summaryTitle: "ORDER SUMMARY"
+    summaryTitle: "ORDER SUMMARY",
+
+    // Input Placeholders
+    personalizePlaceholder: "personalize here...",
+    newsletterEmailPlaceholder: "Enter your email address",
+    firstNamePlaceholder: "First Name",
+    lastNamePlaceholder: "Last Name",
+    addressPlaceholder: "Address",
+    cityPlaceholder: "City"
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -239,7 +247,15 @@ const translations = {
     codTitle: "الدفع عند الاستلام",
     codDesc: "ادفع نقداً عند استلام طلبك عند عتبة بابك.",
     completeOrderBtn: "إكمال الطلب",
-    summaryTitle: "ملخص الطلب"
+    summaryTitle: "ملخص الطلب",
+
+    // Input Placeholders
+    personalizePlaceholder: "اكتب التخصيص هنا...",
+    newsletterEmailPlaceholder: "أدخل بريدك الإلكتروني",
+    firstNamePlaceholder: "الاسم الأول",
+    lastNamePlaceholder: "اسم العائلة",
+    addressPlaceholder: "العنوان",
+    cityPlaceholder: "المدينة"
   }
 };
 
@@ -319,6 +335,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (translations[lang] && translations[lang][key]) {
         el.textContent = translations[lang][key];
+      }
+    });
+
+    // 3. Translate Placeholders
+    const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholderElements.forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute('placeholder', translations[lang][key]);
       }
     });
   };
