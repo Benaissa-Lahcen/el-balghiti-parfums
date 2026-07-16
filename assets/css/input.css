@@ -798,8 +798,11 @@ html[dir="rtl"] .mobile-menu-close {
   text-decoration: none;
 }
 
-html.lang-ar .mobile-link {
-  font-family: var(--font-tajawal);
+html.lang-ar,
+html.lang-ar * {
+  font-family: var(--font-tajawal), sans-serif !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
 }
 
 /* Hide nav links on small screens */
