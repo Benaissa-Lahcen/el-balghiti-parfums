@@ -104,7 +104,13 @@ const translations = {
     footerAboutTitle: "About El Balghiti",
     footerCareTitle: "Client Care",
     footerTermsTitle: "Privacy & Terms",
-    footerVisitTitle: "Visit Us"
+    footerVisitTitle: "Visit Us",
+
+    // Cart Drawer Keys
+    cartTitle: "YOUR CART",
+    cartSubtotal: "Subtotal",
+    cartTaxesDesc: "Shipping and taxes calculated at checkout.",
+    checkoutBtn: "PROCEED TO CHECKOUT"
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -205,7 +211,13 @@ const translations = {
     footerAboutTitle: "عن البلغيتي",
     footerCareTitle: "عناية العملاء",
     footerTermsTitle: "الخصوصية والشروط",
-    footerVisitTitle: "قم بزيارتنا"
+    footerVisitTitle: "قم بزيارتنا",
+
+    // Cart Drawer Keys
+    cartTitle: "سلتك",
+    cartSubtotal: "المجموع الفرعي",
+    cartTaxesDesc: "يتم حساب الشحن والضرائب عند الدفع.",
+    checkoutBtn: "المتابعة لإتمام الطلب"
   }
 };
 
@@ -326,6 +338,138 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Cart Drawer System Logic ---
+  const cartDrawer = document.getElementById('cart-drawer');
+  const cartDrawerOverlay = document.getElementById('cart-drawer-overlay');
+  const cartDrawerClose = document.getElementById('cart-drawer-close');
+  const cartDrawerItems = document.getElementById('cart-drawer-items');
+  const cartDrawerSubtotal = document.getElementById('cart-drawer-subtotal');
+  const cartIconBtns = document.querySelectorAll('a[aria-label="Cart"]');
+
+  const openCartDrawer = () => {
+    if (cartDrawer && cartDrawerOverlay) {
+      renderCartDrawerItems();
+      cartDrawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      cartDrawerOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      cartDrawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeCartDrawer = () => {
+    if (cartDrawer && cartDrawerOverlay) {
+      cartDrawerOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+      cartDrawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+      cartDrawer.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (cartDrawerClose && cartDrawerOverlay) {
+    cartDrawerClose.addEventListener('click', closeCartDrawer);
+    cartDrawerOverlay.addEventListener('click', closeCartDrawer);
+  }
+
+  cartIconBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openCartDrawer();
+    });
+  });
+
+  const getProductPrice = (productId) => {
+    if (productId === 'oud-al-balghiti') return 450;
+    if (productId === 'oud-lotion') return 97;
+    if (productId === 'oud-shower-gel') return 67;
+    if (productId === 'oud-sample') return 15;
+    return 450;
+  };
+
+  const renderCartDrawerItems = () => {
+    if (!cartDrawerItems) return;
+    
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartDrawerItems.innerHTML = '';
+    
+    const lang = localStorage.getItem('lang') || 'en';
+    
+    if (cart.length === 0) {
+      const emptyMsg = document.createElement('div');
+      emptyMsg.className = "flex flex-col items-center justify-center h-48 text-[var(--t-text-muted)] font-mono text-xs uppercase tracking-widest";
+      emptyMsg.textContent = lang === 'ar' ? 'سلتك فارغة.' : 'Your cart is empty.';
+      cartDrawerItems.appendChild(emptyMsg);
+      if (cartDrawerSubtotal) cartDrawerSubtotal.textContent = '0 DH';
+      return;
+    }
+    
+    let subtotal = 0;
+    
+    cart.forEach((item, index) => {
+      const price = getProductPrice(item.id);
+      const itemTotal = price * item.quantity;
+      subtotal += itemTotal;
+      
+      const itemEl = document.createElement('div');
+      itemEl.className = "flex gap-4 pb-6 border-b border-[var(--t-border-subtle)] items-start justify-between";
+      
+      let imgUrl = "assets/images/bottle-oud.png";
+      if (item.id === 'oud-lotion') imgUrl = "assets/images/rec-lotion.png";
+      if (item.id === 'oud-shower-gel') imgUrl = "assets/images/rec-shower.png";
+      if (item.id === 'oud-sample') imgUrl = "assets/images/note-oud.png";
+      
+      itemEl.innerHTML = `
+        <div class="flex gap-4 items-center">
+          <div class="w-16 h-16 bg-[var(--t-bg-secondary)] border border-[var(--t-border-subtle)] flex items-center justify-center p-2 rounded-sm overflow-hidden flex-shrink-0">
+            <img src="${imgUrl}" alt="${item.name}" class="max-h-full max-w-full object-contain">
+          </div>
+          <div class="flex flex-col font-mono text-[0.65rem] tracking-wider uppercase text-[var(--t-text)]">
+            <span class="font-bold">${item.name}</span>
+            <span class="text-[var(--t-text-muted)] lowercase">${item.size ? item.size : ''}</span>
+            ${item.personalization ? `<span class="text-[var(--t-text-soft)] text-[0.6rem] mt-1 normal-case leading-tight">${lang === 'ar' ? 'مخصص لـ' : 'For'}: "${item.personalization}"</span>` : ''}
+            
+            <div class="flex items-center gap-2 mt-2 border border-[var(--t-border-subtle)] w-max p-1 bg-[var(--t-bg-secondary)]">
+              <button class="px-1.5 hover:opacity-75 cursor-pointer font-bold" onclick="updateItemQty(${index}, -1)">−</button>
+              <span class="px-1 text-[var(--t-text-soft)]">${item.quantity}</span>
+              <button class="px-1.5 hover:opacity-75 cursor-pointer font-bold" onclick="updateItemQty(${index}, 1)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-2 font-mono text-[0.65rem]">
+          <span class="font-bold text-[var(--t-text)]">${itemTotal} DH</span>
+          <button class="underline hover:text-[var(--t-text)] text-[var(--t-text-muted)] cursor-pointer tracking-wider" onclick="removeItemFromCart(${index})">${lang === 'ar' ? 'إزالة' : 'REMOVE'}</button>
+        </div>
+      `;
+      cartDrawerItems.appendChild(itemEl);
+    });
+    
+    if (cartDrawerSubtotal) {
+      cartDrawerSubtotal.textContent = `${subtotal} DH`;
+    }
+  };
+
+  window.updateItemQty = (index, delta) => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (!cart[index]) return;
+    
+    cart[index].quantity += delta;
+    if (cart[index].quantity <= 0) {
+      cart.splice(index, 1);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCounts();
+    renderCartDrawerItems();
+  };
+
+  window.removeItemFromCart = (index) => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCounts();
+    renderCartDrawerItems();
+  };
+
   // --- Cart System Logic ---
   const updateCartCounts = () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -426,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addToCartBtn.style.opacity = '';
       }, 1500);
 
-      showLuxuryToast(prodName);
+      openCartDrawer();
     });
   }
 
@@ -455,7 +599,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCounts();
       
-      showLuxuryToast(prodName);
+      openCartDrawer();
     });
   });
 
@@ -484,7 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCounts();
       
-      showLuxuryToast(prodName);
+      openCartDrawer();
     });
   });
 });
