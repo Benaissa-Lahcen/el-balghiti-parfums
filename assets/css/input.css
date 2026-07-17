@@ -896,3 +896,10 @@ html[dir="rtl"] #cart-drawer.open {
   translate: 0 0 !important;
   --tw-translate-x: 0% !important;
 }
+
+summary::-webkit-details-marker {
+  display: none !important;
+}
+summary {
+  list-style: none !important;
+}

@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="El Balghiti Parfums — Maison de Parfum. Artisanal luxury fragrances crafted with rare and precious ingredients from around the world.">
-  <title>EL BALGHITI — Maison de Parfum</title>
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-  <!-- Compiled Tailwind CSS -->
+  <title data-i18n="privacyTitlePage">Privacy Policy — El Balghiti Parfums</title>
+  
+  <!-- CSS Output (Tailwind compiled) -->
   <link rel="stylesheet" href="assets/css/output.css">
+  
+  <!-- Accessibility & Theme Script (blocking to prevent flash) -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light';
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+      const lang = localStorage.getItem('lang') || 'en';
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.lang = 'ar';
+        document.documentElement.classList.add('lang-ar');
+      }
+    })();
+  </script>
 </head>
-<body>
+<body class="bg-[var(--t-bg)] text-[var(--t-text)] min-h-screen flex flex-col transition-colors duration-500 font-montserrat">
 
-  <!-- ═══════════════════════════════════════════════════════
-       NAVIGATION
-       ═══════════════════════════════════════════════════════ -->
-  <!-- ═══════════════════════════════════════════════════════
-       NAVIGATION
-       ═══════════════════════════════════════════════════════ -->
+  <!-- Promo announcement banner -->
+  <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase z-50 transition-colors" data-i18n="promoBannerText">
+    Every El Balghiti creation is fresh hand-blended.
+  </div>
+
+  <!-- Global Header -->
   <header id="main-header" class="w-full fixed top-0 left-0 z-50 bg-[var(--t-bg)] border-b border-[var(--t-border-subtle)]">
-    <!-- Top Monospace Promo Banner -->
-    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase" data-i18n="promoBannerText">
-      Every El Balghiti creation is fresh hand-blended.
-    </div>
-
-    <!-- Navigation Bar -->
     <nav id="main-nav" role="navigation" aria-label="Main navigation" class="w-full">
       <div class="max-w-7xl mx-auto px-4 md:px-12 py-3.5 sm:py-5 flex flex-col md:gap-4 justify-between w-full">
         
-        <!-- Row 1: Left (Mobile Hamburger, Desktop Search), Center (Logo), Right (Cart/Toggles) -->
+        <!-- Row 1: Mobile Hamburger, Logo, Cart/Toggles -->
         <div class="flex items-center justify-between w-full relative">
-          <!-- Left: Mobile Menu Button & Search, Desktop Search -->
           <div class="flex items-center gap-3">
             <button class="mobile-menu-btn md:hidden text-[var(--t-text)] cursor-pointer" id="mobile-menu-btn" aria-label="Open mobile menu">
               <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -55,16 +56,15 @@
             </div>
           </div>
 
-          <!-- Center Logo (EL BALGHITI, dynamic clamp font size) -->
+          <!-- Logo -->
           <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
             <a href="index.html" class="logo-text text-xl sm:text-2xl font-montserrat tracking-[0.25em] font-semibold text-[var(--t-text)] hover:opacity-80 transition-opacity" id="nav-logo" aria-label="El Balghiti Parfums — Home">
               EL BALGHITI
             </a>
           </div>
 
-          <!-- Right: Desktop and Mobile Cart / actions -->
+          <!-- Actions -->
           <div class="flex items-center gap-4 sm:gap-6 font-mono text-[0.7rem] uppercase">
-            <!-- Desktop/Mobile Cart -->
             <a href="#" class="flex items-center gap-1.5 hover:underline text-[var(--t-text)] font-semibold" aria-label="Cart">
               <svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -72,7 +72,6 @@
               <span>(0)</span>
             </a>
 
-            <!-- Desktop-only Lang / Theme Toggles (Sleek text-based) -->
             <div class="hidden md:flex items-center gap-4 border-l border-[var(--t-border-subtle)] pl-4">
               <button class="lang-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
                 <span class="lang-text">AR</span>
@@ -84,11 +83,11 @@
           </div>
         </div>
 
-        <!-- Row 2: Desktop centered category links -->
+        <!-- Desktop navigation -->
         <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
           <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
           <a href="our-story.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
-          <a href="#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+          <a href="index.html#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
         </div>
 
       </div>
@@ -98,7 +97,6 @@
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <div class="mobile-menu-inner p-6 flex flex-col justify-between h-full bg-[var(--t-bg)]">
         <div>
-          <!-- Close button -->
           <div class="flex justify-end w-full mb-8">
             <button class="mobile-menu-close text-[var(--t-text)] cursor-pointer" id="mobile-menu-close" aria-label="Close mobile menu">
               <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -107,15 +105,13 @@
             </button>
           </div>
 
-          <!-- Links -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
             <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
             <a href="our-story.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
-            <a href="#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+            <a href="index.html#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
           </div>
         </div>
 
-        <!-- Drawer Footer: Toggles -->
         <div class="flex flex-col gap-4 border-t border-[var(--t-border-subtle)] pt-6 font-mono text-xs uppercase tracking-widest">
           <div class="flex items-center justify-between">
             <span class="text-[var(--t-text-muted)]">Language</span>
@@ -134,126 +130,37 @@
     </div>
   </header>
 
-  <!-- ═══════════════════════════════════════════════════════
-       HERO — Cinematic Full-screen
-       ═══════════════════════════════════════════════════════ -->
-  <main>
-    <section class="hero-cinematic" id="hero-section" aria-label="Hero">
+  <!-- Editorial Policy Main Container -->
+  <main class="flex-grow pt-40 pb-24 w-full bg-[var(--t-bg)] transition-colors duration-500 font-sans">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Title -->
+      <h1 class="font-montserrat font-bold text-2xl sm:text-3xl tracking-[0.2em] text-center text-[var(--t-text)] uppercase pb-6 border-b border-[var(--t-border-subtle)] mb-12" data-i18n="privacyHeader">
+        PRIVACY POLICY
+      </h1>
 
-      <!-- Background Image with Ken Burns cinematic animation -->
-      <div class="hero-image-wrapper" id="hero-image-container" aria-hidden="true">
-        <img
-          src="assets/images/hero-bg.png"
-          alt=""
-          class="hero-image"
-          id="hero-image"
-        >
+      <!-- Content -->
+      <div class="flex flex-col">
+        <h2 class="font-montserrat font-bold text-xs tracking-[0.25em] uppercase text-[var(--t-text)] mt-12 mb-4" data-i18n="privacySection1Title">
+          1. INFORMATION WE COLLECT
+        </h2>
+        <p class="font-cormorant text-lg leading-relaxed text-[var(--t-text-secondary)] italic" data-i18n="privacySection1Body">
+          We collect information you provide directly to us when placing an order, subscribing to our newsletter, or contacting customer service. This includes name, delivery address, phone number, and communication history.
+        </p>
+
+        <h2 class="font-montserrat font-bold text-xs tracking-[0.25em] uppercase text-[var(--t-text)] mt-12 mb-4" data-i18n="privacySection2Title">
+          2. HOW WE USE YOUR INFORMATION
+        </h2>
+        <p class="font-cormorant text-lg leading-relaxed text-[var(--t-text-secondary)] italic" data-i18n="privacySection2Body">
+          Your information is used strictly to process and confirm orders, coordinate cash on delivery, and send newsletter updates if subscribed. We do not sell or share your data with third parties.
+        </p>
       </div>
 
-      <!-- Gradient Overlay -->
-      <div class="hero-overlay-gradient" aria-hidden="true"></div>
-
-      <!-- Centered Content -->
-      <div class="hero-content" id="hero-content">
-        <h1 class="hero-logo text-4xl sm:text-6xl md:text-7xl tracking-[0.35em]">EL BALGHITI</h1>
-        <div class="hero-divider" aria-hidden="true"></div>
-        <p class="hero-subtitle text-xs sm:text-sm tracking-[0.4em] md:tracking-[0.65em]" data-i18n="heroSubtitle">Maison de Parfum</p>
-      </div>
-
-      <!-- Scroll to Discover -->
-      <div class="scroll-indicator" id="scroll-indicator" aria-label="Scroll to discover">
-        <span class="scroll-indicator-text" data-i18n="discover">Discover</span>
-        <div class="scroll-indicator-line" aria-hidden="true"></div>
-      </div>
-
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         THE ART OF EXTRACTION (Replaced Brand Philosophy)
-         ═══════════════════════════════════════════════════════ -->
-    <section class="atelier-section" id="atelier-section" aria-label="Craftsmanship">
-      <div class="atelier-inner grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Image Side -->
-        <div class="atelier-image-wrapper">
-          <img src="assets/images/craftsmanship.png" alt="Perfume ingredients processing" class="atelier-image">
-        </div>
-        <!-- Text Side -->
-        <div class="atelier-content md:px-16">
-          <h2 class="atelier-title text-sm md:text-base tracking-[0.45em]" data-i18n="atelierTitle">The Art of Extraction</h2>
-          <p class="atelier-text text-xl sm:text-2xl lg:text-3xl" data-i18n="atelierText">
-            Crafted in the heart of Morocco, our extraits de parfum are an intimate study of raw materials, shadows, and skin. We do not blend for the masses; we bottle memories.
-          </p>
-          <a href="#" class="product-discover mt-8 text-xs md:text-sm" data-i18n="discover">Discover</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         FEATURED COLLECTION
-         ═══════════════════════════════════════════════════════ -->
-    <section class="collection-section" id="collection-section" aria-label="Signature Collection">
-      <div class="collection-inner">
-
-        <!-- Section Header -->
-        <div class="collection-header mb-12 md:mb-20" id="collection-header">
-          <span class="collection-title text-xs md:text-sm tracking-[0.45em]" data-i18n="signatureScents">Signature Scents</span>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-16" id="product-grid">
-
-          <!-- Card 1 — Oud Al-Balghiti -->
-          <article class="product-card" id="product-oud">
-            <a href="product-oud.html" class="product-image-link" aria-label="Discover Oud Al-Balghiti">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-oud.png" alt="Oud Al-Balghiti perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="oudTitle">Oud Al-Balghiti</h3>
-              <p class="product-notes" data-i18n="oudNotes">Oud, Leather, Patchouli</p>
-              <a href="product-oud.html" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
-          <!-- Card 2 — Rose de Fès -->
-          <article class="product-card" id="product-rose">
-            <a href="#" class="product-image-link" aria-label="Discover Rose de Fès">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-rose.png" alt="Rose de Fès perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="roseTitle">Rose de Fès</h3>
-              <p class="product-notes" data-i18n="roseNotes">Damask Rose, Saffron, Amber</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
-          <!-- Card 3 — Ambre Saharien -->
-          <article class="product-card" id="product-amber">
-            <a href="#" class="product-image-link" aria-label="Discover Ambre Saharien">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-amber.png" alt="Ambre Saharien perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="amberTitle">Ambre Saharien</h3>
-              <p class="product-notes" data-i18n="amberNotes">Amber, Benzoin, Vanilla Absolute</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
-  <!-- ═══════════════════════════════════════════════════════
-       FOOTER (Le Labo Style Newsletter & Accordions)
-       ═══════════════════════════════════════════════════════ -->
-  <footer class="w-full border-t border-[var(--t-border-subtle)] bg-[var(--t-bg)] mt-20 pt-16 pb-12 px-6 md:px-16">
+  <!-- Global Footer -->
+  <footer class="w-full border-t border-[var(--t-border-subtle)] bg-[var(--t-bg)] pt-16 pb-12 px-6 md:px-16 font-montserrat">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       
       <!-- Newsletter Block -->
@@ -297,9 +204,9 @@
           </button>
           <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
             <a href="#" class="block hover:text-[var(--t-text)]">Contact Us</a>
-            <a href="shipping.html" class="block hover:text-[var(--t-text)]">Shipping & Handling</a>
-            <a href="#" class="block hover:text-[var(--t-text)]">Same-Day Delivery</a>
-            <a href="faq.html" class="block hover:text-[var(--t-text)]">FAQ</a>
+            <a href="shipping.html" class="block hover:text-[var(--t-text)]">Shipping & Returns</a>
+            <a href="faq.html" class="block hover:text-[var(--t-text)]">Faq</a>
+            <a href="#" class="block hover:text-[var(--t-text)]">Boutique Appointments</a>
           </div>
         </div>
 
@@ -317,15 +224,15 @@
         </div>
 
         <!-- Accordion 4: Visit Us -->
-        <div class="border-b border-[var(--t-border-subtle)] md:border-b-0 py-4 md:py-0">
+        <div class="py-4 md:py-0">
           <button class="footer-accordion-header w-full md:pointer-events-none flex justify-between items-center text-[var(--t-text)] font-semibold font-mono text-[0.65rem] tracking-widest uppercase cursor-pointer" onclick="toggleFooterAccordion(this)">
             <span data-i18n="footerVisitTitle">Visit Us</span>
             <span class="md:hidden transition-transform duration-300 transform accordion-plus">+</span>
           </button>
-          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase">
-            <a href="#" class="block hover:text-[var(--t-text)]">Store Locator</a>
-            <a href="#" class="block hover:text-[var(--t-text)]">In-Store Pickup</a>
-            <a href="#" class="block hover:text-[var(--t-text)]">Phone Orders</a>
+          <div class="footer-accordion-content hidden md:block mt-4 flex flex-col gap-2 font-mono text-[0.65rem] tracking-wider text-[var(--t-text-muted)] uppercase leading-relaxed normal-case">
+            <p>RUE DES APOTHÉCAIRES, CASABLANCA</p>
+            <p class="mt-2">BOUTIQUE HOURS:</p>
+            <p>MON - SAT: 10:00 AM - 7:00 PM</p>
           </div>
         </div>
 
@@ -342,61 +249,8 @@
           <a href="#" class="hover:text-[var(--t-text)]">Facebook</a>
         </div>
       </div>
-
     </div>
   </footer>
-
-  <script>
-    function toggleFooterAccordion(btn) {
-      const plusSpan = btn.querySelector('.accordion-plus');
-      if (plusSpan) {
-        plusSpan.textContent = plusSpan.textContent === '+' ? '−' : '+';
-        plusSpan.classList.toggle('rotate-90');
-      }
-      const content = btn.nextElementSibling;
-      if (content) {
-        content.classList.toggle('hidden');
-        content.classList.toggle('flex');
-        content.classList.toggle('flex-col');
-        content.classList.toggle('pl-2');
-        content.classList.toggle('pt-3');
-        content.classList.toggle('pb-2');
-      }
-    }
-  </script>
-
-  <!-- ═══════════════════════════════════════════════════════
-       SCRIPTS
-       ═══════════════════════════════════════════════════════ -->
-  <script>
-    // Navigation scroll effect
-    const nav = document.getElementById('main-nav');
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 60) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    }, { passive: true });
-
-    // Smooth fade-out of scroll indicator on scroll
-    const scrollIndicator = document.getElementById('scroll-indicator');
-    window.addEventListener('scroll', () => {
-      const scrollY = window.pageYOffset;
-      const fadeStart = 50;
-      const fadeEnd = 300;
-
-      if (scrollY <= fadeStart) {
-        scrollIndicator.style.opacity = '';
-      } else if (scrollY >= fadeEnd) {
-        scrollIndicator.style.opacity = '0';
-        scrollIndicator.style.pointerEvents = 'none';
-      } else {
-        const progress = (scrollY - fadeStart) / (fadeEnd - fadeStart);
-        scrollIndicator.style.opacity = String(1 - progress);
-      }
-    }, { passive: true });
-  </script>
 
   <!-- Cart Drawer Overlay -->
   <div id="cart-drawer-overlay" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>

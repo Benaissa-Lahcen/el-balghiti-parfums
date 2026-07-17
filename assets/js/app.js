@@ -142,7 +142,41 @@ const translations = {
     sourcingTitle: "FROM FRANCE TO MOROCCO",
     sourcingBody: "A great fragrance is only as good as its raw materials. We exclusively source the highest-rated, pure raw oils directly from the historic perfume houses of France. These premium extracts are then brought to our laboratories, where they are meticulously measured, blended, and aged by hand to create the perfect extrait de parfum.",
     legacyTitle: "TWO DECADES OF EXCELLENCE",
-    legacyBody: "Today, with over five dedicated boutiques across Casablanca and throughout Morocco, El Balghiti Parfums remains an independent, family-driven house. We do not compromise on our process, and we continue to bottle memories for those who demand the exceptional."
+    legacyBody: "Today, with over five dedicated boutiques across Casablanca and throughout Morocco, El Balghiti Parfums remains an independent, family-driven house. We do not compromise on our process, and we continue to bottle memories for those who demand the exceptional.",
+
+    // Privacy Page Keys
+    privacyTitlePage: "Privacy Policy — El Balghiti Parfums",
+    privacyHeader: "PRIVACY POLICY",
+    privacySection1Title: "1. INFORMATION WE COLLECT",
+    privacySection1Body: "We collect information you provide directly to us when placing an order, subscribing to our newsletter, or contacting customer service. This includes name, delivery address, phone number, and communication history.",
+    privacySection2Title: "2. HOW WE USE YOUR INFORMATION",
+    privacySection2Body: "Your information is used strictly to process and confirm orders, coordinate cash on delivery, and send newsletter updates if subscribed. We do not sell or share your data with third parties.",
+
+    // Terms Page Keys
+    termsTitlePage: "Terms of Service — El Balghiti Parfums",
+    termsHeader: "TERMS OF SERVICE",
+    termsSection1Title: "1. AGREEMENT TO TERMS",
+    termsSection1Body: "By accessing our website and placing cash-on-delivery orders, you agree to be bound by these Terms of Service. Please review them carefully before checkout.",
+    termsSection2Title: "2. CASH ON DELIVERY & CONFIRMATION",
+    termsSection2Body: "All orders are subject to telephone confirmation. If we cannot reach you within 48 hours to confirm the shipping details, your order will be cancelled automatically.",
+
+    // Shipping Page Keys
+    shippingTitlePage: "Shipping & Delivery — El Balghiti Parfums",
+    shippingHeader: "SHIPPING & DELIVERY",
+    shippingSection1Title: "1. MOROCCAN CASH ON DELIVERY",
+    shippingSection1Body: "Complimentary Cash on Delivery across Morocco. All orders are hand-blended in our laboratories upon request. Please expect a confirmation call within 24 hours of placing your order. Standard delivery times are 1-2 business days for Casablanca, and 3-5 business days for all other regions.",
+
+    // FAQ Page Keys
+    faqTitlePage: "FAQ — El Balghiti Parfums",
+    faqHeader: "FREQUENTLY ASKED QUESTIONS",
+    faqQ1: "Where do you source your raw ingredients?",
+    faqA1: "We exclusively source our highly-rated, pure raw oils directly from historic perfume houses in Grasse, France. These extracts are then aged and hand-blended in our Casablanca laboratories.",
+    faqQ2: "How does the Cash on Delivery (COD) process work?",
+    faqA2: "Once you complete your checkout, we will call you to confirm your address details. We then package your hand-blended fragrance and ship it. You pay in cash to the courier only when the package is delivered to your doorstep.",
+    faqQ3: "What bottle sizes do you offer?",
+    faqA3: "Our signature scents are offered in standard 15ml, 50ml, and 100ml apothecary glass bottles. We also offer 1.5ml samples for exploration before committing to a full size.",
+    faqQ4: "Can I personalize the label on my bottle?",
+    faqA4: "Yes, we offer custom typewriter personalization (up to 23 characters) on the label for our 50ml and 100ml bottles at checkout. It makes for a truly unique gift."
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -281,7 +315,41 @@ const translations = {
     sourcingTitle: "من فرنسا إلى المغرب",
     sourcingBody: "إن جودة العطر تكمن في جودة مواده الخام. نحن نستورد حصرياً الزيوت الخام النقية الأعلى تقييماً مباشرةً من بيوت العطور التاريخية في فرنسا. ثم يتم جلب هذه المستخلصات الفاخرة إلى مختبراتنا، حيث يتم قياسها ومزجها وتعتيقها بعناية فائقة يدوياً لابتكار خلاصة العطر المثالية.",
     legacyTitle: "عقدان من التميز",
-    legacyBody: "اليوم، ومع وجود أكثر من خمسة متاجر متخصصة في الدار البيضاء ومختلف أنحاء المغرب، تظل عطور البلغيتي داراً مستقلة تديرها العائلة. نحن لا نساوم على طريقتنا في العمل، ونستمر في تعبئة الذكريات لأولئك الذين يطلبون التميز."
+    legacyBody: "اليوم، ومع وجود أكثر من خمسة متاجر متخصصة في الدار البيضاء ومختلف أنحاء المغرب، تظل عطور البلغيتي داراً مستقلة تديرها العائلة. نحن لا نساوم على طريقتنا في العمل، ونستمر في تعبئة الذكريات لأولئك الذين يطلبون التميز.",
+
+    // Privacy Page Keys
+    privacyTitlePage: "سياسة الخصوصية — عطور البلغيتي",
+    privacyHeader: "سياسة الخصوصية",
+    privacySection1Title: "١. المعلومات التي نجمعها",
+    privacySection1Body: "نحن نجمع المعلومات التي تقدمها لنا مباشرة عند تقديم طلب، أو الاشتراك في نشرتنا الإخبارية، أو الاتصال بخدمة العملاء. ويشمل ذلك الاسم، وعنوان التسليم، ورقم الهاتف، وسجل الاتصالات.",
+    privacySection2Title: "٢. كيف نستخدم معلوماتك",
+    privacySection2Body: "تُستخدم معلوماتك بشكل صارم لمعالجة الطلبات وتأكيدها، وتنسيق الدفع عند الاستلام، وإرسال تحديثات النشرة الإخبارية في حال الاشتراك. نحن لا نبيع أو نشارك بياناتك مع أطراف ثالثة.",
+
+    // Terms Page Keys
+    termsTitlePage: "شروط الخدمة — عطور البلغيتي",
+    termsHeader: "شروط الخدمة",
+    termsSection1Title: "١. الموافقة على الشروط",
+    termsSection1Body: "من خلال الوصول إلى موقعنا وتقديم طلبات الدفع عند الاستلام، فإنك توافق على الالتزام بشروط الخدمة هذه. يرجى مراجعتها بعناية قبل الدفع.",
+    termsSection2Title: "٢. الدفع عند الاستلام والتأكيد",
+    termsSection2Body: "تخضع جميع الطلبات للتأكيد الهاتفي. إذا لم نتمكن من الوصول إليك في غضون ٤٨ ساعة لتأكيد تفاصيل الشحن، فسيتم إلغاء طلبك تلقائياً.",
+
+    // Shipping Page Keys
+    shippingTitlePage: "الشحن والتوصيل — عطور البلغيتي",
+    shippingHeader: "الشحن والتوصيل",
+    shippingSection1Title: "١. الدفع عند الاستلام بالمغرب",
+    shippingSection1Body: "شحن وتوصيل مجاني مع ميزة الدفع عند الاستلام في جميع أنحاء المغرب. يتم خلط جميع الطلبات يدوياً في مختبراتنا بناءً على الطلب. يرجى توقع مكالمة تأكيد في غضون ٢٤ ساعة من تقديم طلبك. أوقات التوصيل القياسية هي ١-٢ أيام عمل للدار البيضاء، و ٣-٥ أيام عمل لجميع المناطق الأخرى.",
+
+    // FAQ Page Keys
+    faqTitlePage: "الأسئلة الشائعة — عطور البلغيتي",
+    faqHeader: "الأسئلة الشائعة",
+    faqQ1: "من أين تستوردون مكوناتكم الخام؟",
+    faqA1: "نحن نستورد حصرياً زيوتنا الخام النقية الأعلى تقييماً مباشرةً من بيوت العطور التاريخية في غراس، فرنسا. ثم يتم تعتيق هذه المستخلصات ومزجها يدوياً في مختبراتنا بالدار البيضاء.",
+    faqQ2: "كيف تعمل عملية الدفع عند الاستلام (COD)؟",
+    faqA2: "بمجرد إتمام الدفع، سنتصل بك لتأكيد تفاصيل عنوانك. ثم نقوم بتعبئة عطرك الممزوج يدوياً وشحنه. وتدفع نقداً للمندوب فقط عندما يتم تسليم الطرد إلى عتبة بابك.",
+    faqQ3: "ما هي أحجام الزجاجات التي تقدمونها؟",
+    faqA3: "تتوفر عطورنا المميزة بأحجام قياسية تبلغ ١٥ مل، و ٥٠ مل، و ١٠0 مل في زجاجات صيدلانية. كما نقدم عينات بحجم ١.٥ مل للاستكشاف قبل الشراء.",
+    faqQ4: "هل يمكنني تخصيص الملصق على زجاجتي؟",
+    faqA4: "نعم، نحن نقدم تخصيصاً بالآلة الكاتبة (حتى ٢٣ حرفاً) على الملصق لزجاجاتنا بحجم ٥٠ مل و ١٠٠ مل عند الدفع. مما يجعلها هدية فريدة حقاً."
   }
 };
 
