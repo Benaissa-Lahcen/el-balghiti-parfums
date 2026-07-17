@@ -175,8 +175,43 @@ const translations = {
     faqA2: "Once you complete your checkout, we will call you to confirm your address details. We then package your hand-blended fragrance and ship it. You pay in cash to the courier only when the package is delivered to your doorstep.",
     faqQ3: "What bottle sizes do you offer?",
     faqA3: "Our signature scents are offered in standard 15ml, 50ml, and 100ml apothecary glass bottles. We also offer 1.5ml samples for exploration before committing to a full size.",
-    faqQ4: "Can I personalize the label on my bottle?",
-    faqA4: "Yes, we offer custom typewriter personalization (up to 23 characters) on the label for our 50ml and 100ml bottles at checkout. It makes for a truly unique gift."
+    faqA4: "Yes, we offer custom typewriter personalization (up to 23 characters) on the label for our 50ml and 100ml bottles at checkout. It makes for a truly unique gift.",
+
+    // Atelier Page Keys
+    atelierTitlePage: "Our Atelier — El Balghiti Parfums",
+    atelierHeader: "OUR ATELIER",
+    atelierSection1Title: "1. THE CASABLANCA LAB",
+    atelierSection1Body: "Our primary atelier is located in Casablanca, Morocco. Here, our perfumers combine raw oil extracts from Grasse, France with local elements to blend and mature each fragrance by hand.",
+
+    // Refill Page Keys
+    refillTitlePage: "Refill Program — El Balghiti Parfums",
+    refillHeader: "REFILL PROGRAM",
+    refillSection1Title: "1. SUSTAINABLE LUXURY",
+    refillSection1Body: "Bring your empty El Balghiti apothecary bottle back to any of our boutiques for a fresh hand-blended refill at a reduced cost. We sterilize and reuse the premium glass container.",
+
+    // Craftsmanship Page Keys
+    craftsmanshipTitlePage: "Craftsmanship — El Balghiti Parfums",
+    craftsmanshipHeader: "CRAFTSMANSHIP",
+    craftsmanshipSection1Title: "1. THE ART OF SLOWNESS",
+    craftsmanshipSection1Body: "We do not rush. Each batch of perfume matures for several weeks in temperature-controlled dark chambers. This slow maceration process ensures that the natural oils develop their full, rich character.",
+
+    // Contact Page Keys
+    contactTitlePage: "Contact Us — El Balghiti Parfums",
+    contactHeader: "CONTACT US",
+    contactSection1Title: "1. CLIENT RELATIONS",
+    contactSection1Body: "For inquiries regarding custom blending, private workshops, or order tracking, please contact our Casablanca atelier at support@elbalghiti.com or via telephone at +212 522-000000.",
+
+    // Appointments Page Keys
+    appointmentsTitlePage: "Boutique Appointments — El Balghiti Parfums",
+    appointmentsHeader: "BOUTIQUE APPOINTMENTS",
+    appointmentsSection1Title: "1. PRIVATE SESSIONS",
+    appointmentsSection1Body: "Book a private olfactory consultation at our Casablanca boutique. Our master perfumers will guide you through a selection of raw oils to discover your signature scent profile.",
+
+    // Accessibility Page Keys
+    accessibilityTitlePage: "Accessibility Statement — El Balghiti Parfums",
+    accessibilityHeader: "ACCESSIBILITY STATEMENT",
+    accessibilitySection1Title: "1. DIGITAL INCLUSION",
+    accessibilitySection1Body: "El Balghiti Parfums is dedicated to ensuring digital accessibility for all visitors. We continuously optimize our web experience to match modern accessibility guidelines."
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -348,8 +383,43 @@ const translations = {
     faqA2: "بمجرد إتمام الدفع، سنتصل بك لتأكيد تفاصيل عنوانك. ثم نقوم بتعبئة عطرك الممزوج يدوياً وشحنه. وتدفع نقداً للمندوب فقط عندما يتم تسليم الطرد إلى عتبة بابك.",
     faqQ3: "ما هي أحجام الزجاجات التي تقدمونها؟",
     faqA3: "تتوفر عطورنا المميزة بأحجام قياسية تبلغ ١٥ مل، و ٥٠ مل، و ١٠0 مل في زجاجات صيدلانية. كما نقدم عينات بحجم ١.٥ مل للاستكشاف قبل الشراء.",
-    faqQ4: "هل يمكنني تخصيص الملصق على زجاجتي؟",
-    faqA4: "نعم، نحن نقدم تخصيصاً بالآلة الكاتبة (حتى ٢٣ حرفاً) على الملصق لزجاجاتنا بحجم ٥٠ مل و ١٠٠ مل عند الدفع. مما يجعلها هدية فريدة حقاً."
+    faqA4: "نعم، نحن نقدم تخصيصاً بالآلة الكاتبة (حتى ٢٣ حرفاً) على الملصق لزجاجاتنا بحجم ٥٠ مل و ١٠٠ مل عند الدفع. مما يجعلها هدية فريدة حقاً.",
+
+    // Atelier Page Keys
+    atelierTitlePage: "مختبرنا — عطور البلغيتي",
+    atelierHeader: "مختبرنا",
+    atelierSection1Title: "١. مختبر الدار البيضاء",
+    atelierSection1Body: "يقع مختبرنا الرئيسي في الدار البيضاء، المغرب. هنا، يجمع خبراؤنا بين مستخلصات الزيوت الخام من غراس بفرنسا مع العناصر المحلية لمزج وتعتيق كل عطر يدوياً.",
+
+    // Refill Page Keys
+    refillTitlePage: "برنامج إعادة التعبئة — عطور البلغيتي",
+    refillHeader: "برنامج إعادة التعبئة",
+    refillSection1Title: "١. الفخامة المستدامة",
+    refillSection1Body: "أحضر زجاجة عطور البلغيتي الفارغة إلى أي من متاجرنا للحصول على إعادة تعبئة جديدة ممزوجة يدوياً بسعر مخفض. نحن نقوم بتعقيم وإعادة استخدام الحاوية الزجاجية الفاخرة.",
+
+    // Craftsmanship Page Keys
+    craftsmanshipTitlePage: "الحرفية — عطور البلغيتي",
+    craftsmanshipHeader: "الحرفية",
+    craftsmanshipSection1Title: "١. فن التأني",
+    craftsmanshipSection1Body: "نحن لا نستعجل. كل دفعة من العطور تعتق لعدة أسابيع في غرف مظلمة خاضعة للتحكم في درجة الحرارة. تضمن عملية التعتيق البطيئة هذه أن تطور الزيوت الطبيعية طابعها الكامل والغني.",
+
+    // Contact Page Keys
+    contactTitlePage: "اتصل بنا — عطور البلغيتي",
+    contactHeader: "اتصل بنا",
+    contactSection1Title: "١. علاقات العملاء",
+    contactSection1Body: "للاستفسارات المتعلقة بالمزج المخصص، أو ورش العمل الخاصة، أو تتبع الطلبات، يرجى الاتصال بمختبرنا في الدار البيضاء على support@elbalghiti.com أو عبر الهاتف على 000000-522 212+.",
+
+    // Appointments Page Keys
+    appointmentsTitlePage: "مواعيد المتجر — عطور البلغيتي",
+    appointmentsHeader: "مواعيد المتجر",
+    appointmentsSection1Title: "١. جلسات خاصة",
+    appointmentsSection1Body: "احجز استشارة عطرية خاصة في متجرنا بالدار البيضاء. سيقوم خبراؤنا بإرشادك عبر مجموعة مختارة من الزيوت الخام لاكتشاف طابعك العطري المميز.",
+
+    // Accessibility Page Keys
+    accessibilityTitlePage: "بيان إمكانية الوصول — عطور البلغيتي",
+    accessibilityHeader: "بيان إمكانية الوصول",
+    accessibilitySection1Title: "١. الدمج الرقمي",
+    accessibilitySection1Body: "تلتزم عطور البلغيتي بضمان إمكانية الوصول الرقمي لجميع الزوار. نحن نواصل تحسين تجربة موقعنا لتتوافق مع إرشادات إمكانية الوصول الحديثة."
   }
 };
 
