@@ -208,10 +208,31 @@ const translations = {
     appointmentsSection1Body: "Book a private olfactory consultation at our Casablanca boutique. Our master perfumers will guide you through a selection of raw oils to discover your signature scent profile.",
 
     // Accessibility Page Keys
-    accessibilityTitlePage: "Accessibility Statement — El Balghiti Parfums",
-    accessibilityHeader: "ACCESSIBILITY STATEMENT",
-    accessibilitySection1Title: "1. DIGITAL INCLUSION",
-    accessibilitySection1Body: "El Balghiti Parfums is dedicated to ensuring digital accessibility for all visitors. We continuously optimize our web experience to match modern accessibility guidelines."
+    accessibilitySection1Body: "El Balghiti Parfums is dedicated to ensuring digital accessibility for all visitors. We continuously optimize our web experience to match modern accessibility guidelines.",
+
+    // Packs Page Keys
+    packsTitlePage: "Discovery Sets — El Balghiti Parfums",
+    packsHeader: "THE DISCOVERY WARDROBE",
+    packsSubtitle: "Experience our freshly hand-blended extraits in curated trios, or build your own signature collection.",
+    curatedPacksTitle: "CURATED COLLECTION BUNDLES",
+    bestSellersTrioTitle: "THE BEST SELLERS TRIO",
+    trioSizeDesc: "3x 50ml bottles",
+    bestSellersTrioDesc: "A selection of our three most loved creations. Includes Oud Al-Balghiti, فاس Rose, and Desert Amber. Perfectly hand-blended and bottled to order.",
+    oudArchiveTitle: "THE OUD ARCHIVE",
+    oudArchiveDesc: "A deep exploration of the most mystical wood. Featuring our raw Oud Al-Balghiti oil, alongside custom variations blending dark leather and Moroccan spices.",
+    customTrioHeader: "BUILD YOUR CUSTOM TRIO",
+    customTrioSubtitle: "Choose three 50ml extraits de parfum to create your custom discovery wardrobe.",
+    selectScent1: "Select Scent 1...",
+    selectScent2: "Select Scent 2...",
+    selectScent3: "Select Scent 3...",
+    scentGodOfFire: "Inspired by God of Fire",
+    scentBaccarat: "Inspired by Baccarat Rouge",
+    scentOmbre: "Inspired by Ombre Nomade",
+    scentBlackPhantom: "Inspired by Black Phantom",
+    scentLostCherry: "Inspired by Lost Cherry",
+    customSetLabel: "CUSTOM SET",
+    addCustomPackBtn: "ADD CUSTOM PACK TO CART",
+    packs: "Packs"
   }, ar: {
     promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
     collections: "المجموعات",
@@ -416,10 +437,31 @@ const translations = {
     appointmentsSection1Body: "احجز استشارة عطرية خاصة في متجرنا بالدار البيضاء. سيقوم خبراؤنا بإرشادك عبر مجموعة مختارة من الزيوت الخام لاكتشاف طابعك العطري المميز.",
 
     // Accessibility Page Keys
-    accessibilityTitlePage: "بيان إمكانية الوصول — عطور البلغيتي",
-    accessibilityHeader: "بيان إمكانية الوصول",
-    accessibilitySection1Title: "١. الدمج الرقمي",
-    accessibilitySection1Body: "تلتزم عطور البلغيتي بضمان إمكانية الوصول الرقمي لجميع الزوار. نحن نواصل تحسين تجربة موقعنا لتتوافق مع إرشادات إمكانية الوصول الحديثة."
+    accessibilitySection1Body: "تلتزم عطور البلغيتي بضمان إمكانية الوصول الرقمي لجميع الزوار. نحن نواصل تحسين تجربة موقعنا لتتوافق مع إرشادات إمكانية الوصول الحديثة.",
+
+    // Packs Page Keys
+    packsTitlePage: "مجموعات الاستكشاف — عطور البلغيتي",
+    packsHeader: "خزانة الاستكشاف",
+    packsSubtitle: "اختبر خلاصات عطورنا المركزة الممزوجة يدوياً طازجة في ثلاثيات منسقة، أو ابنِ مجموعتك الخاصة المميزة.",
+    curatedPacksTitle: "مجموعات منسقة فاخرة",
+    bestSellersTrioTitle: "ثلاثية الأكثر مبيعاً",
+    trioSizeDesc: "٣ زجاجات بحجم ٥٠ مل",
+    bestSellersTrioDesc: "مجموعة مختارة من إبداعاتنا الثلاثة الأكثر طلباً. تتضمن عود البلغيتي، ورد فاس، وعنبر الصحراء. خُلِطت يدوياً وعُبِّئت حسب الطلب.",
+    oudArchiveTitle: "أرشيف العود",
+    oudArchiveDesc: "استكشاف عميق لأكثر الأخشاب غموضاً. تتميز بزيت عود البلغيتي الخام، إلى جانب لمسات مخصصة تمزج بين الجلد الداكن والتوابل المغربية.",
+    customTrioHeader: "ابنِ ثلاثيتك المخصصة",
+    customTrioSubtitle: "اختر ثلاثة خلاصات عطور مركزة بحجم ٥٠ مل لتصميم خزانة الاستكشاف المخصصة لك.",
+    selectScent1: "اختر العطر الأول...",
+    selectScent2: "اختر العطر الثاني...",
+    selectScent3: "اختر العطر الثالث...",
+    scentGodOfFire: "مستوحى من جاد أوف فاير",
+    scentBaccarat: "مستوحى من باكارات روج",
+    scentOmbre: "مستوحى من أومبر نوماد",
+    scentBlackPhantom: "مستوحى من بلاك فانتوم",
+    scentLostCherry: "مستوحى من لوست شيري",
+    customSetLabel: "مجموعة مخصصة",
+    addCustomPackBtn: "إضافة المجموعة المخصصة للسلة",
+    packs: "المجموعات"
   }
 };
 
@@ -593,6 +635,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (productId === 'oud-lotion') return 97;
     if (productId === 'oud-shower-gel') return 67;
     if (productId === 'oud-sample') return 15;
+    if (productId === 'best-sellers-trio') return 950;
+    if (productId === 'oud-archive-trio') return 1100;
+    if (productId === 'custom-trio-pack') return 950;
     return 450;
   };
 
@@ -627,6 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (item.id === 'oud-lotion') imgUrl = "assets/images/rec-lotion.png";
       if (item.id === 'oud-shower-gel') imgUrl = "assets/images/rec-shower.png";
       if (item.id === 'oud-sample') imgUrl = "assets/images/note-oud.png";
+      if (item.id === 'best-sellers-trio' || item.id === 'oud-archive-trio' || item.id === 'custom-trio-pack') imgUrl = "assets/images/discovery-set.png";
       
       itemEl.innerHTML = `
         <div class="flex gap-4 items-center">
@@ -636,7 +682,13 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="flex flex-col font-mono text-[0.65rem] tracking-wider uppercase text-[var(--t-text)]">
             <span class="font-bold">${item.name}</span>
             <span class="text-[var(--t-text-muted)] lowercase">${item.size ? item.size : ''}</span>
-            ${item.personalization ? `<span class="text-[var(--t-text-soft)] text-[0.6rem] mt-1 normal-case leading-tight">${lang === 'ar' ? 'مخصص لـ' : 'For'}: "${item.personalization}"</span>` : ''}
+            ${item.id === 'custom-trio-pack' ? 
+              `<span class="text-[var(--t-text-soft)] text-[0.6rem] mt-1 normal-case leading-tight block">${lang === 'ar' ? 'مكونات المجموعة:' : 'Scents included:'}</span>
+               <ul class="list-disc list-inside text-[var(--t-text-soft)] text-[0.55rem] normal-case mt-0.5 pl-1 leading-normal">
+                 ${item.personalization.split(', ').map(scent => `<li>${scent}</li>`).join('')}
+               </ul>` : 
+              (item.personalization ? `<span class="text-[var(--t-text-soft)] text-[0.6rem] mt-1 normal-case leading-tight">${lang === 'ar' ? 'مخصص لـ' : 'For'}: "${item.personalization}"</span>` : '')
+            }
             
             <div class="flex items-center gap-2 mt-2 border border-[var(--t-border-subtle)] w-max p-1 bg-[var(--t-bg-secondary)]">
               <button class="px-1.5 hover:opacity-75 cursor-pointer font-bold" onclick="updateItemQty(${index}, -1)">−</button>
@@ -857,4 +909,143 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // --- Discovery Page Curated & Custom Packs Logic ---
+  const addBestSellersBtn = document.getElementById('add-best-sellers-btn');
+  const addOudArchiveBtn = document.getElementById('add-oud-archive-btn');
+
+  const addPreMadePackToCart = (prodId, prodName, size) => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingIndex = cart.findIndex(item => item.id === prodId);
+    if (existingIndex > -1) {
+      cart[existingIndex].quantity += 1;
+    } else {
+      cart.push({
+        id: prodId,
+        name: prodName,
+        size: size,
+        quantity: 1,
+        personalization: ''
+      });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCounts();
+    showLuxuryToast(prodName);
+    openCartDrawer();
+  };
+
+  if (addBestSellersBtn) {
+    addBestSellersBtn.addEventListener('click', () => {
+      addPreMadePackToCart('best-sellers-trio', 'THE BEST SELLERS TRIO', '3x 50ml');
+    });
+  }
+
+  if (addOudArchiveBtn) {
+    addOudArchiveBtn.addEventListener('click', () => {
+      addPreMadePackToCart('oud-archive-trio', 'THE OUD ARCHIVE', '3x 50ml');
+    });
+  }
+
+  // Custom Trio Builder Interaction
+  const scentSelects = document.querySelectorAll('.custom-scent-select');
+  const addCustomPackBtn = document.getElementById('add-custom-pack-btn');
+
+  const updateSilhouetteUI = (slotNum, selectedScent) => {
+    const slotEl = document.getElementById(`bottle-slot-${slotNum}`);
+    if (!slotEl) return;
+    const labelEl = slotEl.querySelector('.slot-label');
+    const labelTextEl = slotEl.querySelector('.slot-label-text');
+    const plusIcon = slotEl.querySelector('.plus-icon');
+
+    if (selectedScent) {
+      plusIcon.classList.add('hidden');
+      labelEl.classList.remove('hidden');
+      labelTextEl.textContent = selectedScent;
+      slotEl.style.opacity = '1';
+      slotEl.style.borderStyle = 'solid';
+    } else {
+      plusIcon.classList.remove('hidden');
+      labelEl.classList.add('hidden');
+      slotEl.style.opacity = '0.4';
+      slotEl.style.borderStyle = 'dashed';
+    }
+  };
+
+  const checkBuilderSelections = () => {
+    let allSelected = true;
+    const selectedScents = [];
+
+    scentSelects.forEach(select => {
+      if (!select.value) {
+        allSelected = false;
+      } else {
+        selectedScents.push(`Inspired by ${select.value}`);
+      }
+    });
+
+    if (addCustomPackBtn) {
+      if (allSelected) {
+        addCustomPackBtn.disabled = false;
+        addCustomPackBtn.classList.remove('bg-gray-300', 'dark:bg-neutral-800', 'text-gray-500', 'dark:text-neutral-500', 'cursor-not-allowed');
+        addCustomPackBtn.classList.add('bg-[#3c3c3c]', 'dark:bg-[#eaeaea]', 'text-white', 'dark:text-black', 'hover:opacity-90', 'cursor-pointer');
+      } else {
+        addCustomPackBtn.disabled = true;
+        addCustomPackBtn.classList.add('bg-gray-300', 'dark:bg-neutral-800', 'text-gray-500', 'dark:text-neutral-500', 'cursor-not-allowed');
+        addCustomPackBtn.classList.remove('bg-[#3c3c3c]', 'dark:bg-[#eaeaea]', 'text-white', 'dark:text-black', 'hover:opacity-90', 'cursor-pointer');
+      }
+    }
+
+    return { allSelected, selectedScents };
+  };
+
+  scentSelects.forEach(select => {
+    select.addEventListener('change', (e) => {
+      const slotNum = e.target.getAttribute('data-slot');
+      updateSilhouetteUI(slotNum, e.target.value);
+      checkBuilderSelections();
+    });
+  });
+
+  if (addCustomPackBtn) {
+    addCustomPackBtn.addEventListener('click', () => {
+      const { allSelected, selectedScents } = checkBuilderSelections();
+      if (!allSelected) return;
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const prodId = 'custom-trio-pack';
+      const prodName = 'CUSTOM TRIO PACK';
+      const personalizationStr = selectedScents.join(', ');
+
+      const existingIndex = cart.findIndex(item => 
+        item.id === prodId && 
+        item.personalization === personalizationStr
+      );
+
+      if (existingIndex > -1) {
+        cart[existingIndex].quantity += 1;
+      } else {
+        cart.push({
+          id: prodId,
+          name: prodName,
+          size: '3x 50ml',
+          quantity: 1,
+          personalization: personalizationStr
+        });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCounts();
+      showLuxuryToast(prodName);
+      
+      // Reset builder selections
+      scentSelects.forEach(select => {
+        select.value = '';
+        const slotNum = select.getAttribute('data-slot');
+        updateSilhouetteUI(slotNum, '');
+      });
+      checkBuilderSelections();
+
+      openCartDrawer();
+    });
+  }
 });

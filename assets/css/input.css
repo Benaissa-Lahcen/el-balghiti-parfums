@@ -903,3 +903,9 @@ summary::-webkit-details-marker {
 summary {
   list-style: none !important;
 }
+
+/* Custom Scent Select Dropdown Options styling */
+select.custom-scent-select option {
+  background-color: var(--t-bg-secondary);
+  color: var(--t-text);
+}

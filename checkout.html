@@ -210,6 +210,9 @@
         if (productId === 'oud-lotion') return 97;
         if (productId === 'oud-shower-gel') return 67;
         if (productId === 'oud-sample') return 15;
+        if (productId === 'best-sellers-trio') return 950;
+        if (productId === 'oud-archive-trio') return 1100;
+        if (productId === 'custom-trio-pack') return 950;
         return 450;
       };
 
@@ -233,6 +236,7 @@
           if (item.id === 'oud-lotion') imgUrl = "assets/images/rec-lotion.png";
           if (item.id === 'oud-shower-gel') imgUrl = "assets/images/rec-shower.png";
           if (item.id === 'oud-sample') imgUrl = "assets/images/note-oud.png";
+          if (item.id === 'best-sellers-trio' || item.id === 'oud-archive-trio' || item.id === 'custom-trio-pack') imgUrl = "assets/images/discovery-set.png";
 
           const itemEl = document.createElement('div');
           itemEl.className = "flex justify-between items-center gap-4 border-b border-[var(--t-border-subtle)] pb-4";
@@ -244,7 +248,13 @@
               <div class="flex flex-col font-mono text-[0.6rem] tracking-wider uppercase text-[var(--t-text)] leading-tight">
                 <span class="font-bold">${item.name} <span class="text-[var(--t-text-muted)] font-normal">x${item.quantity}</span></span>
                 <span class="text-[var(--t-text-muted)] lowercase">${item.size ? item.size : ''}</span>
-                ${item.personalization ? `<span class="text-[var(--t-text-soft)] text-[0.55rem] normal-case mt-0.5">For: "${item.personalization}"</span>` : ''}
+                ${item.id === 'custom-trio-pack' ? 
+                  `<span class="text-[var(--t-text-soft)] text-[0.55rem] normal-case mt-0.5 block">Scents:</span>
+                   <ul class="list-disc list-inside text-[var(--t-text-soft)] text-[0.5rem] normal-case pl-1 leading-normal">
+                     ${item.personalization.split(', ').map(scent => `<li>${scent}</li>`).join('')}
+                   </ul>` : 
+                  (item.personalization ? `<span class="text-[var(--t-text-soft)] text-[0.55rem] normal-case mt-0.5">For: "${item.personalization}"</span>` : '')
+                }
               </div>
             </div>
             <span class="font-mono text-[0.65rem] font-bold text-[var(--t-text)] flex-shrink-0">${itemTotal} DH</span>
