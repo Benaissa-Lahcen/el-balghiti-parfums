@@ -19,8 +19,8 @@ add_action( 'after_setup_theme', 'el_balghiti_setup' );
  * Enqueue scripts and styles
  */
 function el_balghiti_scripts() {
-    // Enqueue main stylesheet (which imports Tailwind CSS)
-    wp_enqueue_style( 'el-balghiti-style', get_stylesheet_uri(), array(), '1.0.0' );
+    // Enqueue compiled Tailwind CSS directly
+    wp_enqueue_style( 'el-balghiti-tailwind', get_template_directory_uri() . '/assets/css/main.css', array(), '1.0.0' );
 
     // Enqueue custom JavaScript app.js in the footer
     wp_enqueue_script( 'el-balghiti-app', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.0', true );
