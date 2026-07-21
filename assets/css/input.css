@@ -905,7 +905,10 @@ summary {
 }
 
 /* Custom Scent Select Dropdown Options styling */
-select.custom-scent-select option {
-  background-color: var(--t-bg-secondary);
+.dropdown-option {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.dropdown-option:hover {
+  background-color: var(--t-border-subtle);
   color: var(--t-text);
 }

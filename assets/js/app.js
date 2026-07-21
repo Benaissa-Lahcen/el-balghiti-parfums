@@ -552,6 +552,21 @@ document.addEventListener('DOMContentLoaded', () => {
         el.setAttribute('placeholder', translations[lang][key]);
       }
     });
+
+    // 4. Update dropdown inputs text values to match translated options
+    const dropdownInputs = document.querySelectorAll('.dropdown-search-input');
+    dropdownInputs.forEach(input => {
+      const selectedVal = input.getAttribute('data-selected-value');
+      if (selectedVal) {
+        const parent = input.closest('.custom-searchable-dropdown');
+        if (parent) {
+          const matchedOpt = parent.querySelector(`.dropdown-option[data-value="${selectedVal}"]`);
+          if (matchedOpt) {
+            input.value = matchedOpt.textContent;
+          }
+        }
+      }
+    });
   };
 
   applyLanguage(currentLang);
@@ -947,7 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Custom Trio Builder Interaction
-  const scentSelects = document.querySelectorAll('.custom-scent-select');
+  const dropdownInputs = document.querySelectorAll('.dropdown-search-input');
   const addCustomPackBtn = document.getElementById('add-custom-pack-btn');
 
   const updateSilhouetteUI = (slotNum, selectedScent) => {
@@ -975,11 +990,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let allSelected = true;
     const selectedScents = [];
 
-    scentSelects.forEach(select => {
-      if (!select.value) {
+    dropdownInputs.forEach(input => {
+      const selectedValue = input.getAttribute('data-selected-value');
+      if (!selectedValue) {
         allSelected = false;
       } else {
-        selectedScents.push(`Inspired by ${select.value}`);
+        selectedScents.push(`Inspired by ${selectedValue}`);
       }
     });
 
@@ -998,12 +1014,74 @@ document.addEventListener('DOMContentLoaded', () => {
     return { allSelected, selectedScents };
   };
 
-  scentSelects.forEach(select => {
-    select.addEventListener('change', (e) => {
-      const slotNum = e.target.getAttribute('data-slot');
-      updateSilhouetteUI(slotNum, e.target.value);
-      checkBuilderSelections();
+  dropdownInputs.forEach(input => {
+    const parent = input.closest('.custom-searchable-dropdown');
+    if (!parent) return;
+    const panel = parent.querySelector('.dropdown-panel');
+    const options = panel.querySelectorAll('.dropdown-option');
+    const slotNum = parent.getAttribute('data-slot');
+
+    input.addEventListener('focus', () => {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.add('hidden'));
+      panel.classList.remove('hidden');
+      filterOptions(input.value);
     });
+
+    input.addEventListener('input', (e) => {
+      panel.classList.remove('hidden');
+      filterOptions(e.target.value);
+    });
+
+    function filterOptions(query) {
+      const q = query.trim().toLowerCase();
+      options.forEach(opt => {
+        const text = opt.textContent.toLowerCase();
+        if (text.includes(q)) {
+          opt.style.display = 'block';
+        } else {
+          opt.style.display = 'none';
+        }
+      });
+    }
+
+    options.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const value = opt.getAttribute('data-value');
+        const text = opt.textContent;
+        
+        input.value = text;
+        input.setAttribute('data-selected-value', value);
+        
+        panel.classList.add('hidden');
+        
+        updateSilhouetteUI(slotNum, value);
+        checkBuilderSelections();
+      });
+    });
+
+    input.addEventListener('blur', () => {
+      setTimeout(() => {
+        const currentVal = input.getAttribute('data-selected-value');
+        if (currentVal) {
+          const matchedOpt = Array.from(options).find(opt => opt.getAttribute('data-value') === currentVal);
+          if (matchedOpt) {
+            input.value = matchedOpt.textContent;
+          }
+        } else {
+          input.value = '';
+          updateSilhouetteUI(slotNum, '');
+        }
+        panel.classList.add('hidden');
+        checkBuilderSelections();
+      }, 250);
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-searchable-dropdown')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.add('hidden'));
+    }
   });
 
   if (addCustomPackBtn) {
@@ -1037,11 +1115,14 @@ document.addEventListener('DOMContentLoaded', () => {
       updateCartCounts();
       showLuxuryToast(prodName);
       
-      // Reset builder selections
-      scentSelects.forEach(select => {
-        select.value = '';
-        const slotNum = select.getAttribute('data-slot');
-        updateSilhouetteUI(slotNum, '');
+      dropdownInputs.forEach(input => {
+        input.value = '';
+        input.setAttribute('data-selected-value', '');
+        const parent = input.closest('.custom-searchable-dropdown');
+        if (parent) {
+          const slotNum = parent.getAttribute('data-slot');
+          updateSilhouetteUI(slotNum, '');
+        }
       });
       checkBuilderSelections();
 
