@@ -9,7 +9,7 @@
       <!-- Background Image with Ken Burns cinematic animation -->
       <div class="hero-image-wrapper" id="hero-image-container" aria-hidden="true">
         <img
-          src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-bg.png"
+          src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-bg.png"
           alt=""
           class="hero-image"
           id="hero-image"
@@ -41,7 +41,7 @@
       <div class="atelier-inner grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <!-- Image Side -->
         <div class="atelier-image-wrapper">
-          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/craftsmanship.png" alt="Perfume ingredients processing" class="atelier-image">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/craftsmanship.png" alt="Perfume ingredients processing" class="atelier-image">
         </div>
         <!-- Text Side -->
         <div class="atelier-content md:px-16">
@@ -49,7 +49,7 @@
           <p class="atelier-text text-xl sm:text-2xl lg:text-3xl" data-i18n="atelierText">
             Crafted in the heart of Morocco, our extraits de parfum are an intimate study of raw materials, shadows, and skin. We do not blend for the masses; we bottle memories.
           </p>
-          <a href="#" class="product-discover mt-8 text-xs md:text-sm" data-i18n="discover">Discover</a>
+          <a href="<?php echo home_url('/our-story/'); ?>" class="product-discover mt-8 text-xs md:text-sm" data-i18n="discover">Discover</a>
         </div>
       </div>
     </section>
@@ -70,43 +70,43 @@
 
           <!-- Card 1 — Oud Al-Balghiti -->
           <article class="product-card" id="product-oud">
-            <a href="product-oud.html" class="product-image-link" aria-label="Discover Oud Al-Balghiti">
+            <a href="<?php echo home_url('/product-oud/'); ?>" class="product-image-link" aria-label="Discover Oud Al-Balghiti">
               <div class="product-image-wrapper">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bottle-oud.png" alt="Oud Al-Balghiti perfume bottle" class="product-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bottle-oud.png" alt="Oud Al-Balghiti perfume bottle" class="product-image">
               </div>
             </a>
             <div class="product-info">
               <h3 class="product-title" data-i18n="oudTitle">Oud Al-Balghiti</h3>
               <p class="product-notes" data-i18n="oudNotes">Oud, Leather, Patchouli</p>
-              <a href="product-oud.html" class="product-discover" data-i18n="discover">Discover</a>
+              <a href="<?php echo home_url('/product-oud/'); ?>" class="product-discover" data-i18n="discover">Discover</a>
             </div>
           </article>
 
           <!-- Card 2 — Rose de Fès -->
           <article class="product-card" id="product-rose">
-            <a href="#" class="product-image-link" aria-label="Discover Rose de Fès">
+            <a href="<?php echo home_url('/shop/'); ?>" class="product-image-link" aria-label="Discover Rose de Fès">
               <div class="product-image-wrapper">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bottle-rose.png" alt="Rose de Fès perfume bottle" class="product-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bottle-rose.png" alt="Rose de Fès perfume bottle" class="product-image">
               </div>
             </a>
             <div class="product-info">
               <h3 class="product-title" data-i18n="roseTitle">Rose de Fès</h3>
               <p class="product-notes" data-i18n="roseNotes">Damask Rose, Saffron, Amber</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
+              <a href="<?php echo home_url('/shop/'); ?>" class="product-discover" data-i18n="discover">Discover</a>
             </div>
           </article>
 
           <!-- Card 3 — Ambre Saharien -->
           <article class="product-card" id="product-amber">
-            <a href="#" class="product-image-link" aria-label="Discover Ambre Saharien">
+            <a href="<?php echo home_url('/shop/'); ?>" class="product-image-link" aria-label="Discover Ambre Saharien">
               <div class="product-image-wrapper">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bottle-amber.png" alt="Ambre Saharien perfume bottle" class="product-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bottle-amber.png" alt="Ambre Saharien perfume bottle" class="product-image">
               </div>
             </a>
             <div class="product-info">
               <h3 class="product-title" data-i18n="amberTitle">Ambre Saharien</h3>
               <p class="product-notes" data-i18n="amberNotes">Amber, Benzoin, Vanilla Absolute</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
+              <a href="<?php echo home_url('/shop/'); ?>" class="product-discover" data-i18n="discover">Discover</a>
             </div>
           </article>
 

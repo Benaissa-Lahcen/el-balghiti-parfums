@@ -52,7 +52,7 @@
 
           <!-- Center Logo (EL BALGHITI, dynamic clamp font size) -->
           <div class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex items-center justify-center">
-            <a href="index.html" class="logo-text text-xl sm:text-2xl font-montserrat tracking-[0.25em] font-semibold text-[var(--t-text)] hover:opacity-80 transition-opacity" id="nav-logo" aria-label="El Balghiti Parfums — Home">
+            <a href="<?php echo home_url('/'); ?>" class="logo-text text-xl sm:text-2xl font-montserrat tracking-[0.25em] font-semibold text-[var(--t-text)] hover:opacity-80 transition-opacity" id="nav-logo" aria-label="El Balghiti Parfums — Home">
               EL BALGHITI
             </a>
           </div>
@@ -81,10 +81,10 @@
 
         <!-- Row 2: Desktop centered category links -->
         <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
-          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
-          <a href="packs.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="packs">Packs</a>
-          <a href="our-story.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
-          <a href="#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+          <a href="<?php echo home_url('/shop/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
+          <a href="<?php echo home_url('/packs/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="packs">Packs</a>
+          <a href="<?php echo home_url('/our-story/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
+          <a href="<?php echo home_url('/#atelier-section'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
         </div>
 
       </div>
@@ -105,10 +105,10 @@
 
           <!-- Links -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
-            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
-            <a href="packs.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="packs">Packs</a>
-            <a href="our-story.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
-            <a href="#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+            <a href="<?php echo home_url('/shop/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
+            <a href="<?php echo home_url('/packs/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="packs">Packs</a>
+            <a href="<?php echo home_url('/our-story/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
+            <a href="<?php echo home_url('/#atelier-section'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
           </div>
         </div>
 
