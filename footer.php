@@ -180,8 +180,51 @@
     const checkoutUrl = "<?php echo home_url('/checkout/'); ?>";
 /**
  * El Balghiti Parfums - Application Logic
- * Handles Theme (Light/Dark) and Language (EN/AR) toggles
+ * Handles Theme (Light/Dark), Language (EN/AR), and Smart Search
  */
+
+const perfumeCatalog = [
+  { 
+    name: "Vulcain Fire", 
+    brand: "French Avenue", 
+    inspiredBy: ["God of Fire", "SHL", "Stephane Humbert Lucas"], 
+    type: "Branded Dupe", 
+    notes: "Mango, Lemon, Amber", 
+    price: "450 DH", 
+    image: "assets/images/vulcain-fire.jpg", 
+    url: "#" 
+  },
+  { 
+    name: "Baroque Rouge 540", 
+    brand: "Maison Alhambra", 
+    inspiredBy: ["Baccarat Rouge", "MFK", "540"], 
+    type: "Branded Dupe", 
+    notes: "Saffron, Jasmine, Cedar", 
+    price: "350 DH", 
+    image: "assets/images/baroque.jpg", 
+    url: "#" 
+  },
+  { 
+    name: "Pure Musk Tahara", 
+    brand: "El Balghiti", 
+    inspiredBy: ["White Musk", "Clean"], 
+    type: "Thick Musk", 
+    notes: "White Lotus, Vanilla, Musk", 
+    price: "150 DH", 
+    image: "assets/images/tahara.jpg", 
+    url: "#" 
+  },
+  { 
+    name: "Ombre Leather Extract", 
+    brand: "Custom Atelier", 
+    inspiredBy: ["Tom Ford", "Ombre Leather"], 
+    type: "Custom Blend", 
+    notes: "Cardamom, Leather, Patchouli", 
+    price: "250 DH", 
+    image: "assets/images/ombre.jpg", 
+    url: "#" 
+  }
+];
 
 const translations = {
   en: {
@@ -646,6 +689,97 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Smart Search Logic ---
+  const searchOverlay = document.getElementById('search-overlay');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  const closeSearchBtn = document.getElementById('close-search');
+  const searchTriggers = document.querySelectorAll('[aria-label="Search"], .search-trigger');
+
+  const openSearch = () => {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove('hidden');
+    searchOverlay.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    if (searchInput) {
+      searchInput.value = '';
+      setTimeout(() => searchInput.focus(), 100);
+    }
+    if (searchResults) {
+      searchResults.innerHTML = '';
+    }
+  };
+
+  const closeSearch = () => {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove('flex');
+    searchOverlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+
+  searchTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openSearch();
+    });
+  });
+
+  if (closeSearchBtn) {
+    closeSearchBtn.addEventListener('click', closeSearch);
+  }
+
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) {
+        closeSearch();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && searchOverlay && !searchOverlay.classList.contains('hidden')) {
+      closeSearch();
+    }
+  });
+
+  if (searchInput && searchResults) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+
+      if (!query) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const matches = perfumeCatalog.filter(product => {
+        const nameMatch = product.name.toLowerCase().includes(query);
+        const brandMatch = product.brand.toLowerCase().includes(query);
+        const inspiredMatch = Array.isArray(product.inspiredBy) && product.inspiredBy.some(item => item.toLowerCase().includes(query));
+        return nameMatch || brandMatch || inspiredMatch;
+      });
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = `<p class='text-white/70 text-center mt-10 text-lg'>We are currently sourcing this DNA. Contact us for custom blending.</p>`;
+      } else {
+        const isPhp = typeof themeUri !== 'undefined';
+        searchResults.innerHTML = matches.map(product => {
+          const imgPath = isPhp && !product.image.startsWith('http') ? `${themeUri}/${product.image}` : product.image;
+          return `
+            <a href="${product.url}" class="flex items-center gap-6 p-4 hover:bg-white/10 transition-colors border-b border-white/10 group cursor-pointer">
+              <img src="${imgPath}" alt="${product.name}" class="w-16 h-16 object-cover rounded-md shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <div class="flex flex-col">
+                <span class="text-xl text-white font-montserrat font-medium">${product.name}</span>
+                <span class="text-sm text-gray-400 font-mono">${product.brand} • ${product.type}</span>
+                <span class="text-xs italic text-gray-500 font-cormorant mt-1">${product.notes}</span>
+              </div>
+              <span class="text-lg text-white font-semibold ml-auto font-mono">${product.price}</span>
+            </a>
+          `;
+        }).join('');
+      }
+    });
+  }
+
   // --- Theme Toggle Logic ---
   const themeToggleBtns = document.querySelectorAll('.theme-toggle');
   const themeIcons = document.querySelectorAll('.theme-icon');
