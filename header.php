@@ -134,7 +134,7 @@
   <!-- ═══════════════════════════════════════════════════════
        SEARCH OVERLAY
        ═══════════════════════════════════════════════════════ -->
-  <div id="search-overlay" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex-col items-center pt-24 px-4">
+  <div id="search-overlay" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden flex-col items-center pt-24 px-4">
     <!-- Close Button -->
     <button id="close-search" class="absolute top-8 right-8 text-white/70 hover:text-white text-3xl font-mono cursor-pointer transition-colors p-2 outline-none" aria-label="Close search">✕</button>
 
