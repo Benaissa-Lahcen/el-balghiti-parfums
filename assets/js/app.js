@@ -514,7 +514,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const searchResults = document.getElementById('search-results');
   const closeSearchBtn = document.getElementById('close-search');
-  const searchTriggers = document.querySelectorAll('[aria-label="Search"], .search-trigger');
 
   const openSearch = () => {
     if (!searchOverlay) return;
@@ -537,11 +536,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   };
 
-  searchTriggers.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Use event delegation on document body for search triggers
+  document.body.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.search-trigger');
+    if (trigger) {
       e.preventDefault();
+      e.stopPropagation();
       openSearch();
-    });
+    }
   });
 
   if (closeSearchBtn) {
