@@ -39,12 +39,12 @@
               </svg>
             </button>
             
-            <button class="md:hidden text-[var(--t-text)] cursor-pointer search-trigger" aria-label="Search">
+            <button class="md:hidden text-[var(--t-text)] cursor-pointer search-trigger" aria-label="Search" onclick="openSearchOverlay()">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </button>
 
             <!-- Desktop Search Box -->
-            <div class="hidden md:flex items-center gap-2 text-xs tracking-wider text-[var(--t-text-muted)] cursor-pointer hover:text-[var(--t-text)] transition-colors search-trigger">
+            <div class="hidden md:flex items-center gap-2 text-xs tracking-wider text-[var(--t-text-muted)] cursor-pointer hover:text-[var(--t-text)] transition-colors search-trigger" onclick="openSearchOverlay()">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               <span class="font-mono uppercase text-[0.7rem] tracking-widest">Search</span>
             </div>
@@ -134,13 +134,35 @@
   <!-- ═══════════════════════════════════════════════════════
        SEARCH OVERLAY
        ═══════════════════════════════════════════════════════ -->
-  <div id="search-overlay" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden flex-col items-center pt-24 px-4">
+  <div id="search-overlay" class="fixed inset-0 backdrop-blur-md flex-col items-center pt-24 px-4" style="z-index:9999; background:rgba(0,0,0,0.92); display:none;">
     <!-- Close Button -->
-    <button id="close-search" class="absolute top-8 right-8 text-white/70 hover:text-white text-3xl font-mono cursor-pointer transition-colors p-2 outline-none" aria-label="Close search">✕</button>
+    <button id="close-search" class="absolute top-8 right-8 text-white/70 hover:text-white text-3xl font-mono cursor-pointer transition-colors p-2 outline-none" aria-label="Close search" onclick="closeSearchOverlay()">✕</button>
 
     <!-- Search Box Container -->
     <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
-      <input type="text" id="search-input" placeholder="Search by fragrance name, brand, or inspired-by note..." class="bg-transparent border-b-2 border-white/30 text-white text-2xl md:text-4xl outline-none placeholder-white/50 w-full max-w-4xl px-4 py-2 text-center font-montserrat">
-      <div id="search-results" class="max-w-4xl mx-auto mt-8 flex flex-col gap-2 w-full px-4 overflow-y-auto max-h-[70vh]"></div>
+      <input type="text" id="search-input" placeholder="Search by fragrance name, brand, or inspired-by note..." class="bg-transparent border-b-2 border-white/30 text-white text-2xl md:text-4xl outline-none placeholder-white/50 w-full max-w-4xl px-4 py-2 text-center font-montserrat" style="color:white; font-size:2rem;">
+      <div id="search-results" class="max-w-4xl mx-auto mt-8 flex flex-col gap-2 w-full px-4 overflow-y-auto" style="max-height:70vh;"></div>
     </div>
   </div>
+
+  <script>
+    function openSearchOverlay() {
+      var overlay = document.getElementById('search-overlay');
+      if (!overlay) return;
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      var input = document.getElementById('search-input');
+      if (input) { input.value = ''; setTimeout(function(){ input.focus(); }, 150); }
+      var results = document.getElementById('search-results');
+      if (results) results.innerHTML = '';
+    }
+    function closeSearchOverlay() {
+      var overlay = document.getElementById('search-overlay');
+      if (!overlay) return;
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSearchOverlay();
+    });
+  </script>
