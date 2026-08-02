@@ -147,15 +147,19 @@
           <img id="main-product-image" src="assets/images/vulcain-fire.jpg" alt="Vulcan Feu French Avenue bottle" class="max-h-[90%] max-w-[90%] object-contain transition-all duration-700 hover:scale-105">
         </div>
 
-        <!-- Thumbnail Gallery -->
-        <div class="flex gap-4">
-          <!-- Thumbnail 1 (Main Bottle) -->
-          <button class="w-20 h-20 border-2 border-[var(--t-text)] bg-[var(--t-bg-secondary)] p-2 flex items-center justify-center overflow-hidden cursor-pointer thumbnail-btn rounded-sm" onclick="changeProductImage('assets/images/vulcain-fire.jpg', this)">
+        <!-- Thumbnail Gallery (User Photos Only) -->
+        <div class="flex gap-3 sm:gap-4">
+          <!-- Thumbnail 1: White Studio Shot -->
+          <button class="w-16 h-16 sm:w-20 sm:h-20 border-2 border-[var(--t-text)] bg-[var(--t-bg-secondary)] p-1.5 flex items-center justify-center overflow-hidden cursor-pointer thumbnail-btn rounded-sm" onclick="changeProductImage('assets/images/vulcain-fire.jpg', this)">
             <img src="assets/images/vulcain-fire.jpg" alt="Vulcan Feu bottle front" class="max-h-full max-w-full object-contain">
           </button>
-          <!-- Thumbnail 2 (Mood & Notes) -->
-          <button class="w-20 h-20 border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] p-2 flex items-center justify-center overflow-hidden cursor-pointer thumbnail-btn rounded-sm" onclick="changeProductImage('assets/images/vulcain-feu-mood.png', this)">
-            <img src="assets/images/vulcain-feu-mood.png" alt="Vulcan Feu notes moodboard" class="max-h-full max-w-full object-cover">
+          <!-- Thumbnail 2: Dark Geode Cinematic Shot -->
+          <button class="w-16 h-16 sm:w-20 sm:h-20 border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] p-1.5 flex items-center justify-center overflow-hidden cursor-pointer thumbnail-btn rounded-sm" onclick="changeProductImage('assets/images/vulcain-feu-photo2.jpg', this)">
+            <img src="assets/images/vulcain-feu-photo2.jpg" alt="Vulcan Feu dark geode shot" class="max-h-full max-w-full object-cover">
+          </button>
+          <!-- Thumbnail 3: Infographic Bottle & Notes Shot -->
+          <button class="w-16 h-16 sm:w-20 sm:h-20 border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] p-1.5 flex items-center justify-center overflow-hidden cursor-pointer thumbnail-btn rounded-sm" onclick="changeProductImage('assets/images/vulcain-feu-photo3.jpg', this)">
+            <img src="assets/images/vulcain-feu-photo3.jpg" alt="Vulcan Feu notes infographic" class="max-h-full max-w-full object-cover">
           </button>
         </div>
 
@@ -272,19 +276,19 @@
             <h3 class="font-montserrat font-semibold text-[0.65rem] tracking-wider uppercase text-[var(--t-text-muted)] mb-3">TOP NOTES</h3>
             <div class="flex flex-wrap gap-x-6 gap-y-3">
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-mango.jpg" alt="Mango" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-mango.jpg" alt="Mango" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Mango</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-lemon.jpg" alt="Lemon" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-lemon.jpg" alt="Lemon" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Zesty Lemon</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-pinkpepper.jpg" alt="Pink Pepper" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-pinkpepper.jpg" alt="Pink Pepper" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Pink Pepper</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-ginger.jpg" alt="Ginger" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-ginger.jpg" alt="Ginger" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Ginger</span>
               </div>
             </div>
@@ -295,11 +299,11 @@
             <h3 class="font-montserrat font-semibold text-[0.65rem] tracking-wider uppercase text-[var(--t-text-muted)] mb-3">HEART NOTES</h3>
             <div class="flex flex-wrap gap-x-6 gap-y-3">
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-jasmine.jpg" alt="Jasmine" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-jasmine.jpg" alt="Jasmine" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Jasmine</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-drywood.jpg" alt="Dry Wood" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-drywood.jpg" alt="Dry Wood" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Dry Wood Accord</span>
               </div>
             </div>
@@ -310,15 +314,15 @@
             <h3 class="font-montserrat font-semibold text-[0.65rem] tracking-wider uppercase text-[var(--t-text-muted)] mb-3">BASE NOTES</h3>
             <div class="flex flex-wrap gap-x-6 gap-y-3">
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-amber.png" alt="Amber" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-amber.png" alt="Amber" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Golden Amber</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-musk.png" alt="Musk" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-musk.png" alt="Musk" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">White Musk</span>
               </div>
               <div class="flex items-center gap-2">
-                <img src="assets/images/note-oud.png" alt="Oud" class="w-8 h-8 rounded-full border border-[var(--t-border-subtle)] object-cover shadow-sm">
+                <img src="assets/images/note-oud.png" alt="Oud" style="width:32px; height:32px; min-width:32px; min-height:32px; max-width:32px; max-height:32px; border-radius:50%; object-fit:cover; display:inline-block;" class="border border-[var(--t-border-subtle)] shadow-sm">
                 <span class="font-cormorant text-base text-[var(--t-text-soft)]">Oud & Cedar</span>
               </div>
             </div>
