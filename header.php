@@ -170,13 +170,13 @@
     </div>
 
     <!-- Search Overlay Main Body -->
-    <div class="max-w-7xl mx-auto w-full px-4 sm:px-8 py-8 sm:py-12 flex-1">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-10 flex-1">
+      <div style="display:flex; flex-wrap:wrap; gap:2.5rem; width:100%;">
         
         <!-- Left Column: Popular Searches List -->
-        <div id="popular-searches-col" class="lg:col-span-3 border-b lg:border-b-0 lg:border-r border-black/10 pb-8 lg:pb-0 lg:pr-8">
-          <h3 class="font-mono text-[0.65rem] sm:text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-6">Popular Searches</h3>
-          <ul class="flex flex-wrap lg:flex-col gap-2.5 sm:gap-3 text-xs sm:text-sm font-montserrat uppercase tracking-wider">
+        <div id="popular-searches-col" style="flex:0 0 240px; border-right:1px solid rgba(0,0,0,0.1); padding-right:1.5rem;">
+          <h3 class="font-mono text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-6">Popular Searches</h3>
+          <ul style="display:flex; flex-direction:column; gap:0.75rem; list-style:none; padding:0; margin:0;" class="font-montserrat uppercase tracking-wider text-xs sm:text-sm">
             <li><button type="button" onclick="setSearchQuery('Oud Al-Balghiti')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Oud Al-Balghiti</button></li>
             <li><button type="button" onclick="setSearchQuery('Rose de Fès')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Rose de Fès</button></li>
             <li><button type="button" onclick="setSearchQuery('Ambre Saharien')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Ambre Saharien</button></li>
@@ -189,11 +189,11 @@
         </div>
 
         <!-- Right Column: Suggested Products / Results Grid -->
-        <div class="lg:col-span-9 flex flex-col">
-          <div id="search-results-header" class="flex justify-between items-center mb-6">
-            <h3 id="search-results-title" class="font-mono text-[0.65rem] sm:text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold">Suggested Creations</h3>
+        <div style="flex:1 1 0%; min-width:280px; display:flex; flex-direction:column;">
+          <div id="search-results-header" style="margin-bottom:1.5rem;">
+            <h3 id="search-results-title" class="font-mono text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold">Suggested Creations</h3>
           </div>
-          <div id="search-results" class="w-full">
+          <div id="search-results" style="width:100%;">
             <!-- Dynamically populated -->
           </div>
         </div>
@@ -318,18 +318,18 @@
         var textColor = isDark ? '#FFFFFF' : '#0A0A0A';
         var borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
 
-        searchResults.innerHTML = '<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">' + matches.map(function(product) {
+        searchResults.innerHTML = '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:1.5rem; width:100%;">' + matches.map(function(product) {
           var imgPath = isPhp && !product.image.startsWith('http') ? themeUri + '/' + product.image : product.image;
           var targetUrl = isPhp ? (product.url === '#' ? '#' : '<?php echo home_url("/"); ?>' + product.url.replace('.html', '/')) : product.url;
           return `
-            <a href="${targetUrl}" class="group block p-3.5 sm:p-4 rounded-sm transition-all cursor-pointer text-left" style="background-color:${cardBg}; border:1px solid ${borderColor};">
-              <div class="w-full aspect-square overflow-hidden rounded-xs mb-3 flex items-center justify-center" style="background-color:${imgBg};">
-                <img src="${imgPath}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <a href="${targetUrl}" class="group block p-4 rounded-sm transition-all cursor-pointer text-left" style="background-color:${cardBg}; border:1px solid ${borderColor}; text-decoration:none;">
+              <div style="width:100%; aspect-ratio:1/1; overflow:hidden; border-radius:2px; margin-bottom:0.75rem; display:flex; align-items:center; justify-content:center; background-color:${imgBg};">
+                <img src="${imgPath}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="width:100%; height:100%; object-fit:cover;">
               </div>
               <span class="block font-mono text-[0.6rem] uppercase tracking-widest text-gray-400 mb-0.5 truncate">${product.brand}</span>
-              <h4 class="font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-wider group-hover:underline truncate" style="color:${textColor};">${product.name}</h4>
-              <p class="font-cormorant italic text-[0.75rem] text-gray-400 truncate mt-0.5">${product.notes}</p>
-              <span class="block font-mono text-xs font-bold mt-2" style="color:${textColor};">${product.price}</span>
+              <h4 class="font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-wider group-hover:underline truncate" style="color:${textColor}; margin:0;">${product.name}</h4>
+              <p class="font-cormorant italic text-[0.75rem] text-gray-400 truncate mt-0.5" style="margin-top:0.25rem; margin-bottom:0;">${product.notes}</p>
+              <span class="block font-mono text-xs font-bold mt-2" style="color:${textColor}; margin-top:0.5rem;">${product.price}</span>
             </a>
           `;
         }).join('') + '</div>';
