@@ -70,17 +70,18 @@ get_header(); ?>
         </div>
       </article>
 
-      <!-- Card 4 -->
+      <!-- Card 4: Vulcan Feu -->
       <article class="product-card group">
-        <a href="#" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Neroli d'Atlas">
-          <div class="aspect-[4/5] bg-[var(--t-border)] relative">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bottle-amber.png" alt="Neroli d'Atlas placeholder" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-luminosity">
+        <a href="<?php echo home_url('/product-vulcan-feu/'); ?>" class="product-image-link block mb-6 overflow-hidden relative" aria-label="Discover Vulcan Feu">
+          <div class="aspect-[4/5] bg-[var(--t-border)] relative flex items-center justify-center p-4">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vulcain-fire.jpg" alt="Vulcan Feu French Avenue" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
           </div>
         </a>
         <div class="text-center">
-          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2" data-i18n="neroliTitle">Néroli d'Atlas</h3>
-          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4" data-i18n="neroliNotes">Neroli, Cedarwood, Musk</p>
-          <a href="#" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]" data-i18n="discover">Discover</a>
+          <span class="block font-mono text-[0.6rem] uppercase tracking-widest text-[var(--t-text-muted)] mb-1">French Avenue • 370 DH</span>
+          <h3 class="font-montserrat font-medium text-xs tracking-[0.3em] uppercase text-[var(--t-text)] mb-2">Vulcan Feu</h3>
+          <p class="font-cormorant text-lg italic text-[var(--t-text-secondary)] mb-4">Mango, Zesty Lemon, Amber & Dry Wood</p>
+          <a href="<?php echo home_url('/product-vulcan-feu/'); ?>" class="product-discover text-[0.6rem] tracking-[0.25em] uppercase text-[var(--t-text-muted)] hover:text-[var(--t-text)]">Discover</a>
         </div>
       </article>
 
