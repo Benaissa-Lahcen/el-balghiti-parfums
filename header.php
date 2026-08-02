@@ -132,15 +132,15 @@
   </header>
 
   <!-- ═══════════════════════════════════════════════════════
-       BYREDO-STYLE SEARCH OVERLAY
+       BYREDO-STYLE SEARCH OVERLAY (SOLID OPAQUE)
        ═══════════════════════════════════════════════════════ -->
-  <div id="search-overlay" class="fixed inset-0 bg-[#FAF9F6] dark:bg-[#0F0F0F] text-[#0A0A0A] dark:text-[#F9F9F7] overflow-y-auto flex-col" style="z-index:9999; display:none;">
+  <div id="search-overlay" class="fixed inset-0 overflow-y-auto flex-col" style="z-index:9999; background-color:#FAF9F6; color:#0A0A0A; display:none;">
     
     <!-- Top Search Header Bar -->
-    <div class="w-full border-b border-black/10 dark:border-white/10 px-4 sm:px-8 py-4 sticky top-0 bg-[#FAF9F6]/95 dark:bg-[#0F0F0F]/95 backdrop-blur-md z-10 flex items-center justify-between gap-4 sm:gap-6">
+    <div id="search-header-bar" class="w-full border-b border-black/10 px-4 sm:px-8 py-4 sticky top-0 backdrop-blur-md z-10 flex items-center justify-between gap-4 sm:gap-6" style="background-color:#FAF9F6;">
       
       <!-- Back / Close Button (Left) -->
-      <button onclick="closeSearchOverlay()" class="flex items-center gap-2 text-[var(--t-text)] hover:opacity-60 transition-opacity cursor-pointer py-2 px-1 outline-none group" aria-label="Close search">
+      <button onclick="closeSearchOverlay()" class="flex items-center gap-2 text-inherit hover:opacity-60 transition-opacity cursor-pointer py-2 px-1 outline-none group" aria-label="Close search">
         <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
         </svg>
@@ -148,7 +148,7 @@
       </button>
 
       <!-- Center Search Bar Pill -->
-      <div class="flex-1 max-w-2xl mx-auto relative flex items-center bg-[#EDEDE9] dark:bg-[#1C1C1C] rounded-full px-4 py-2.5 sm:py-3 transition-all focus-within:ring-1 focus-within:ring-black/30 dark:focus-within:ring-white/30">
+      <div id="search-pill" class="flex-1 max-w-2xl mx-auto relative flex items-center rounded-full px-4 py-2.5 sm:py-3 transition-all border border-black/10" style="background-color:#EDEDE9;">
         <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 shrink-0 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
@@ -157,13 +157,14 @@
           id="search-input" 
           oninput="handleSearchInput(this.value)" 
           placeholder="What are you looking for?" 
-          class="w-full bg-transparent text-xs sm:text-sm md:text-base outline-none text-[#0A0A0A] dark:text-white placeholder:text-gray-400 font-montserrat tracking-wide"
+          class="w-full bg-transparent text-xs sm:text-sm md:text-base outline-none placeholder:text-gray-400 font-montserrat tracking-wide"
+          style="color:inherit;"
         >
         <button id="clear-search-btn" onclick="clearSearchInput()" class="hidden text-gray-400 hover:text-black dark:hover:text-white p-1 text-xs font-mono">✕</button>
       </div>
 
       <!-- Right Esc / Cancel text -->
-      <button onclick="closeSearchOverlay()" class="text-xs font-mono uppercase tracking-widest hover:opacity-60 transition-opacity p-2 text-gray-500">
+      <button onclick="closeSearchOverlay()" class="text-xs font-mono uppercase tracking-widest hover:opacity-60 transition-opacity p-2 text-gray-400">
         Esc
       </button>
     </div>
@@ -173,17 +174,17 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         <!-- Left Column: Popular Searches List -->
-        <div class="lg:col-span-3 border-b lg:border-b-0 lg:border-r border-black/10 dark:border-white/10 pb-8 lg:pb-0 lg:pr-8">
+        <div id="popular-searches-col" class="lg:col-span-3 border-b lg:border-b-0 lg:border-r border-black/10 pb-8 lg:pb-0 lg:pr-8">
           <h3 class="font-mono text-[0.65rem] sm:text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-6">Popular Searches</h3>
           <ul class="flex flex-wrap lg:flex-col gap-2.5 sm:gap-3 text-xs sm:text-sm font-montserrat uppercase tracking-wider">
-            <li><button type="button" onclick="setSearchQuery('Oud Al-Balghiti')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Oud Al-Balghiti</button></li>
-            <li><button type="button" onclick="setSearchQuery('Rose de Fès')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Rose de Fès</button></li>
-            <li><button type="button" onclick="setSearchQuery('Ambre Saharien')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Ambre Saharien</button></li>
-            <li><button type="button" onclick="setSearchQuery('Vulcain Fire')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Vulcain Fire</button></li>
-            <li><button type="button" onclick="setSearchQuery('Baroque Rouge 540')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Baroque Rouge 540</button></li>
-            <li><button type="button" onclick="setSearchQuery('Pure Musk Tahara')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Pure Musk Tahara</button></li>
-            <li><button type="button" onclick="setSearchQuery('Ombre Leather')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Ombre Leather Extract</button></li>
-            <li><button type="button" onclick="setSearchQuery('Discovery Set')" class="text-left text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Discovery Set</button></li>
+            <li><button type="button" onclick="setSearchQuery('Oud Al-Balghiti')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Oud Al-Balghiti</button></li>
+            <li><button type="button" onclick="setSearchQuery('Rose de Fès')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Rose de Fès</button></li>
+            <li><button type="button" onclick="setSearchQuery('Ambre Saharien')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Ambre Saharien</button></li>
+            <li><button type="button" onclick="setSearchQuery('Vulcain Fire')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Vulcain Fire</button></li>
+            <li><button type="button" onclick="setSearchQuery('Baroque Rouge 540')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Baroque Rouge 540</button></li>
+            <li><button type="button" onclick="setSearchQuery('Pure Musk Tahara')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Pure Musk Tahara</button></li>
+            <li><button type="button" onclick="setSearchQuery('Ombre Leather')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Ombre Leather Extract</button></li>
+            <li><button type="button" onclick="setSearchQuery('Discovery Set')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Discovery Set</button></li>
           </ul>
         </div>
 
@@ -218,7 +219,26 @@
 
     function openSearchOverlay() {
       var overlay = document.getElementById('search-overlay');
+      var headerBar = document.getElementById('search-header-bar');
+      var searchPill = document.getElementById('search-pill');
+      var popCol = document.getElementById('popular-searches-col');
       if (!overlay) return;
+
+      var isDark = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+      if (isDark) {
+        overlay.style.backgroundColor = '#0D0D0D';
+        overlay.style.color = '#F9F9F7';
+        if (headerBar) { headerBar.style.backgroundColor = '#0D0D0D'; headerBar.style.borderColor = 'rgba(255,255,255,0.1)'; }
+        if (searchPill) { searchPill.style.backgroundColor = '#1C1C1C'; searchPill.style.borderColor = 'rgba(255,255,255,0.1)'; }
+        if (popCol) { popCol.style.borderColor = 'rgba(255,255,255,0.1)'; }
+      } else {
+        overlay.style.backgroundColor = '#FAF9F6';
+        overlay.style.color = '#0A0A0A';
+        if (headerBar) { headerBar.style.backgroundColor = '#FAF9F6'; headerBar.style.borderColor = 'rgba(0,0,0,0.1)'; }
+        if (searchPill) { searchPill.style.backgroundColor = '#EDEDE9'; searchPill.style.borderColor = 'rgba(0,0,0,0.08)'; }
+        if (popCol) { popCol.style.borderColor = 'rgba(0,0,0,0.1)'; }
+      }
+
       overlay.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       var input = document.getElementById('search-input');
@@ -289,21 +309,27 @@
       }
 
       if (matches.length === 0) {
-        searchResults.innerHTML = "<p class='text-gray-500 dark:text-gray-400 text-center py-16 text-xs sm:text-sm font-montserrat tracking-wider uppercase'>We are currently sourcing this DNA. Contact us for custom blending.</p>";
+        searchResults.innerHTML = "<p class='text-gray-400 text-center py-16 text-xs sm:text-sm font-montserrat tracking-wider uppercase'>We are currently sourcing this DNA. Contact us for custom blending.</p>";
       } else {
         var isPhp = typeof themeUri !== 'undefined';
+        var isDark = document.body.classList.contains('dark') || document.documentElement.classList.contains('dark');
+        var cardBg = isDark ? '#161616' : '#EDEDE9';
+        var imgBg = isDark ? '#121212' : '#E3E3DE';
+        var textColor = isDark ? '#FFFFFF' : '#0A0A0A';
+        var borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+
         searchResults.innerHTML = '<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">' + matches.map(function(product) {
           var imgPath = isPhp && !product.image.startsWith('http') ? themeUri + '/' + product.image : product.image;
           var targetUrl = isPhp ? (product.url === '#' ? '#' : '<?php echo home_url("/"); ?>' + product.url.replace('.html', '/')) : product.url;
           return `
-            <a href="${targetUrl}" class="group block bg-[#EDEDE9]/50 dark:bg-[#161616] p-3.5 sm:p-4 rounded-sm border border-black/5 dark:border-white/5 hover:border-black/20 dark:hover:border-white/20 transition-all cursor-pointer text-left">
-              <div class="w-full aspect-square bg-[#EDEDE9] dark:bg-[#121212] overflow-hidden rounded-xs mb-3 flex items-center justify-center">
+            <a href="${targetUrl}" class="group block p-3.5 sm:p-4 rounded-sm transition-all cursor-pointer text-left" style="background-color:${cardBg}; border:1px solid ${borderColor};">
+              <div class="w-full aspect-square overflow-hidden rounded-xs mb-3 flex items-center justify-center" style="background-color:${imgBg};">
                 <img src="${imgPath}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               </div>
               <span class="block font-mono text-[0.6rem] uppercase tracking-widest text-gray-400 mb-0.5 truncate">${product.brand}</span>
-              <h4 class="font-montserrat font-semibold text-xs sm:text-sm text-[#0A0A0A] dark:text-white uppercase tracking-wider group-hover:underline truncate">${product.name}</h4>
-              <p class="font-cormorant italic text-[0.75rem] text-gray-500 dark:text-gray-400 truncate mt-0.5">${product.notes}</p>
-              <span class="block font-mono text-xs font-bold text-[#0A0A0A] dark:text-white mt-2">${product.price}</span>
+              <h4 class="font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-wider group-hover:underline truncate" style="color:${textColor};">${product.name}</h4>
+              <p class="font-cormorant italic text-[0.75rem] text-gray-400 truncate mt-0.5">${product.notes}</p>
+              <span class="block font-mono text-xs font-bold mt-2" style="color:${textColor};">${product.price}</span>
             </a>
           `;
         }).join('') + '</div>';
