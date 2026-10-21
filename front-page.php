@@ -3,52 +3,52 @@
   <!-- ═══════════════════════════════════════════════════════
        MAIN HOMEPAGE CONTENT — TWIN FRAGRANCE STYLE
        ═══════════════════════════════════════════════════════ -->
-  <main class="pt-[95px] md:pt-[105px]">
+  <main class="pt-[115px] sm:pt-[125px] md:pt-[135px]">
 
     <!-- 1. HERO — TWIN FRAGRANCE PANORAMIC LUXURY BANNER -->
-    <section class="w-full relative overflow-hidden bg-black" aria-label="Hero Banner">
-      <div class="w-full relative min-h-[380px] sm:min-h-[480px] md:min-h-[580px] lg:min-h-[640px] flex items-center justify-center overflow-hidden">
-        <img
-          src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-luxury-banner.jpg"
-          alt="El Balghiti Haute Parfumerie"
-          class="absolute inset-0 w-full h-full object-cover object-center filter brightness-90 contrast-[1.05] transform transition-transform duration-1000 scale-100 hover:scale-105"
-        >
-        <!-- Cinematic multi-layer gradient overlay for optimal blending and contrast -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/75 pointer-events-none"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/70 via-black/40 to-transparent pointer-events-none"></div>
+    <section class="hero-twin-banner w-full relative overflow-hidden bg-black" aria-label="Hero Banner" style="min-height: 580px; height: 80vh; max-height: 860px;">
+      <!-- Background Image -->
+      <img
+        src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-luxury-banner.jpg"
+        alt="El Balghiti Haute Parfumerie"
+        class="absolute inset-0 w-full h-full object-cover object-center filter brightness-90 contrast-[1.05] transform transition-transform duration-1000 scale-100 hover:scale-105 pointer-events-none"
+        style="object-position: center center;"
+      >
+      <!-- Cinematic multi-layer gradient overlay for optimal blending and contrast -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/75 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/70 via-black/40 to-transparent pointer-events-none"></div>
 
-        <!-- Text & CTA Content (Scaled up & balanced) -->
-        <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center text-center px-4 sm:px-6 py-12 sm:py-16">
-          
-          <div class="inline-flex items-center gap-2 sm:gap-3 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-3 sm:mb-4 shadow-lg">
-            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-            <span class="text-amber-200 font-montserrat font-bold text-[0.68rem] sm:text-xs md:text-sm tracking-[0.35em] uppercase">
-              Maison de Haute Parfumerie
-            </span>
-          </div>
-
-          <h1 class="text-white font-montserrat font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-[0.18em] sm:tracking-[0.22em] uppercase leading-none drop-shadow-[0_8px_32px_rgba(0,0,0,0.95)]">
-            EL BALGHITI
-          </h1>
-
-          <!-- Gold Hairline Divider -->
-          <div class="w-24 sm:w-40 md:w-56 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent my-3 sm:my-5 opacity-90"></div>
-
-          <p class="text-white/95 font-montserrat font-medium text-xs sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.25em] uppercase max-w-2xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-            Extraits de Parfum • Blends & Collections Niche
-          </p>
-
-          <!-- Hero Action Buttons -->
-          <div class="mt-7 sm:mt-9 flex flex-wrap items-center justify-center gap-3.5 sm:gap-5">
-            <a href="<?php echo home_url('/shop/'); ?>" class="px-7 sm:px-10 py-3 sm:py-4 bg-white text-black font-montserrat font-extrabold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-amber-100 transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
-              Catalogue Complet
-            </a>
-            <a href="<?php echo home_url('/packs/'); ?>" class="px-7 sm:px-10 py-3 sm:py-4 bg-black/60 backdrop-blur-md border border-white/50 text-white font-montserrat font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
-              Nos Packs
-            </a>
-          </div>
-
+      <!-- Text & CTA Content (Scaled up & balanced) -->
+      <div class="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center text-center px-4 sm:px-6 py-12 sm:py-16">
+        
+        <div class="inline-flex items-center gap-2 sm:gap-3 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-3 sm:mb-4 shadow-lg">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="text-amber-200 font-montserrat font-bold text-[0.68rem] sm:text-xs md:text-sm tracking-[0.35em] uppercase">
+            Maison de Haute Parfumerie
+          </span>
         </div>
+
+        <h1 class="text-white font-montserrat font-black uppercase leading-none drop-shadow-[0_8px_32px_rgba(0,0,0,0.95)]" style="font-size: clamp(2.4rem, 7vw, 6.5rem); letter-spacing: clamp(0.12em, 2vw, 0.22em);">
+          EL BALGHITI
+        </h1>
+
+        <!-- Gold Hairline Divider -->
+        <div class="w-24 sm:w-40 md:w-56 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent my-3 sm:my-5 opacity-90"></div>
+
+        <p class="text-white/95 font-montserrat font-medium uppercase max-w-2xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]" style="font-size: clamp(0.75rem, 2vw, 1.25rem); letter-spacing: clamp(0.18em, 1vw, 0.28em);">
+          Extraits de Parfum • Blends & Collections Niche
+        </p>
+
+        <!-- Hero Action Buttons -->
+        <div class="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <a href="<?php echo home_url('/shop/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-white text-black font-montserrat font-extrabold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-amber-100 transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
+            Catalogue Complet
+          </a>
+          <a href="<?php echo home_url('/packs/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-black/60 backdrop-blur-md border border-white/50 text-white font-montserrat font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
+            Nos Packs
+          </a>
+        </div>
+
       </div>
     </section>
 

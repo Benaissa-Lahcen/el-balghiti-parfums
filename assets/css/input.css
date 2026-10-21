@@ -422,7 +422,26 @@ html[dir="rtl"] .hero-subtitle {
       rgba(10, 10, 10, 0.4) 100%);
 }
 
+/* ─── Twin Fragrance Panoramic Hero Banner ─── */
+.hero-twin-banner {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  height: 80vh;
+  max-height: 860px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
 
+@media (max-width: 768px) {
+  .hero-twin-banner {
+    min-height: 520px;
+    height: 75vh;
+  }
+}
 
 .hero-content {
   position: relative;
