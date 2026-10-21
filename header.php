@@ -21,8 +21,8 @@
        ═══════════════════════════════════════════════════════ -->
   <header id="main-header" class="w-full fixed top-0 left-0 z-50 bg-[var(--t-bg)] border-b border-[var(--t-border-subtle)]">
     <!-- Top Monospace Promo Banner -->
-    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase" data-i18n="promoBannerText">
-      Every El Balghiti creation is fresh hand-blended.
+    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.62rem] sm:text-[0.68rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase font-semibold" data-i18n="promoBannerText">
+      LIVRAISON GRATUITE +500 DH
     </div>
 
     <!-- Navigation Bar -->
@@ -79,12 +79,12 @@
           </div>
         </div>
 
-        <!-- Row 2: Desktop centered category links -->
-        <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
-          <a href="<?php echo home_url('/shop/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
-          <a href="<?php echo home_url('/packs/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="packs">Packs</a>
-          <a href="<?php echo home_url('/our-story/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
-          <a href="<?php echo home_url('/#atelier-section'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+        <!-- Row 2: Desktop centered category links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
+        <div class="hidden md:flex items-center justify-center gap-6 sm:gap-8 py-2 border-t border-[var(--t-border-subtle)] text-[0.72rem] tracking-[0.2em] font-montserrat uppercase font-semibold">
+          <a href="<?php echo home_url('/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full <?php echo is_front_page() ? 'bg-black/10 dark:bg-white/15 text-[var(--t-text)]' : 'text-[var(--t-text-secondary)]'; ?>">ACCUEIL</a>
+          <a href="<?php echo home_url('/shop/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CATALOGUE</a>
+          <a href="<?php echo home_url('/packs/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">PACKS</a>
+          <a href="<?php echo home_url('/contact/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CONTACT</a>
         </div>
 
       </div>
@@ -103,12 +103,12 @@
             </button>
           </div>
 
-          <!-- Links -->
+          <!-- Links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
-            <a href="<?php echo home_url('/shop/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
-            <a href="<?php echo home_url('/packs/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="packs">Packs</a>
-            <a href="<?php echo home_url('/our-story/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
-            <a href="<?php echo home_url('/#atelier-section'); ?>" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+            <a href="<?php echo home_url('/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">ACCUEIL</a>
+            <a href="<?php echo home_url('/shop/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">CATALOGUE</a>
+            <a href="<?php echo home_url('/packs/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">PACKS</a>
+            <a href="<?php echo home_url('/contact/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">CONTACT</a>
           </div>
         </div>
 

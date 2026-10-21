@@ -27,8 +27,9 @@
 <body class="bg-[var(--t-bg)] text-[var(--t-text)] min-h-screen flex flex-col transition-colors duration-500 font-montserrat">
 
   <!-- Promo announcement banner -->
-  <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase z-50 transition-colors" data-i18n="promoBannerText">
-    Every El Balghiti creation is fresh hand-blended.
+  <!-- Promo announcement banner -->
+  <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.62rem] sm:text-[0.68rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase z-50 transition-colors font-semibold" data-i18n="promoBannerText">
+    LIVRAISON GRATUITE +500 DH
   </div>
 
   <!-- Global Header -->
@@ -83,12 +84,12 @@
           </div>
         </div>
 
-        <!-- Desktop navigation -->
-        <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
-          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
-          <a href="packs.html" class="hover:text-[var(--t-text-muted)] transition-colors font-bold border-b border-[var(--t-text)]" data-i18n="packs">Packs</a>
-          <a href="our-story.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
-          <a href="index.html#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+        <!-- Desktop navigation (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
+        <div class="hidden md:flex items-center justify-center gap-6 sm:gap-8 py-2 border-t border-[var(--t-border-subtle)] text-[0.72rem] tracking-[0.2em] font-montserrat uppercase font-semibold">
+          <a href="index.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">ACCUEIL</a>
+          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CATALOGUE</a>
+          <a href="packs.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full bg-black/10 dark:bg-white/15 text-[var(--t-text)]">PACKS</a>
+          <a href="contact.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CONTACT</a>
         </div>
 
       </div>
@@ -106,11 +107,12 @@
             </button>
           </div>
 
+          <!-- Links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
-            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
-            <a href="packs.html" class="mobile-link text-[var(--t-text)] font-semibold border-b border-[var(--t-text)] w-max" data-i18n="packs">Packs</a>
-            <a href="our-story.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
-            <a href="index.html#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+            <a href="index.html" class="mobile-link text-[var(--t-text)] font-semibold">ACCUEIL</a>
+            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold">CATALOGUE</a>
+            <a href="packs.html" class="mobile-link text-[var(--t-text)] font-semibold">PACKS</a>
+            <a href="contact.html" class="mobile-link text-[var(--t-text)] font-semibold">CONTACT</a>
           </div>
         </div>
 

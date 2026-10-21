@@ -26,8 +26,8 @@
        ═══════════════════════════════════════════════════════ -->
   <header id="main-header" class="w-full fixed top-0 left-0 z-50 bg-[var(--t-bg)] border-b border-[var(--t-border-subtle)]">
     <!-- Top Monospace Promo Banner -->
-    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase" data-i18n="promoBannerText">
-      Every El Balghiti creation is fresh hand-blended.
+    <div class="w-full bg-black dark:bg-[#151515] text-white py-2 text-center text-[0.62rem] sm:text-[0.68rem] tracking-[0.2em] sm:tracking-[0.25em] font-mono uppercase font-semibold" data-i18n="promoBannerText">
+      LIVRAISON GRATUITE +500 DH
     </div>
 
     <!-- Navigation Bar -->
@@ -84,12 +84,12 @@
           </div>
         </div>
 
-        <!-- Row 2: Desktop centered category links -->
-        <div class="hidden md:flex items-center justify-center gap-10 py-1.5 border-t border-[var(--t-border-subtle)] text-[0.7rem] tracking-[0.2em] font-montserrat uppercase">
-          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="collections">Collections</a>
-          <a href="packs.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="packs">Packs</a>
-          <a href="our-story.html" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="ourStoryLink">Our Story</a>
-          <a href="#atelier-section" class="hover:text-[var(--t-text-muted)] transition-colors" data-i18n="about">About</a>
+        <!-- Row 2: Desktop centered category links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
+        <div class="hidden md:flex items-center justify-center gap-6 sm:gap-8 py-2 border-t border-[var(--t-border-subtle)] text-[0.72rem] tracking-[0.2em] font-montserrat uppercase font-semibold">
+          <a href="index.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full bg-black/10 dark:bg-white/15 text-[var(--t-text)]">ACCUEIL</a>
+          <a href="shop.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CATALOGUE</a>
+          <a href="packs.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">PACKS</a>
+          <a href="contact.html" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CONTACT</a>
         </div>
 
       </div>
@@ -108,12 +108,12 @@
             </button>
           </div>
 
-          <!-- Links -->
+          <!-- Links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
-            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="collections">Collections</a>
-            <a href="packs.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="packs">Packs</a>
-            <a href="our-story.html" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="ourStoryLink">Our Story</a>
-            <a href="#atelier-section" class="mobile-link text-[var(--t-text)] font-semibold" data-i18n="about">About</a>
+            <a href="index.html" class="mobile-link text-[var(--t-text)] font-semibold">ACCUEIL</a>
+            <a href="shop.html" class="mobile-link text-[var(--t-text)] font-semibold">CATALOGUE</a>
+            <a href="packs.html" class="mobile-link text-[var(--t-text)] font-semibold">PACKS</a>
+            <a href="contact.html" class="mobile-link text-[var(--t-text)] font-semibold">CONTACT</a>
           </div>
         </div>
 
@@ -347,120 +347,618 @@
   </script>
 
   <!-- ═══════════════════════════════════════════════════════
-       HERO — Cinematic Full-screen
+       MAIN HOMEPAGE CONTENT — TWIN FRAGRANCE STYLE
        ═══════════════════════════════════════════════════════ -->
-  <main>
-    <section class="hero-cinematic" id="hero-section" aria-label="Hero">
+  <main class="pt-[95px] md:pt-[105px]">
 
-      <!-- Background Image with Ken Burns cinematic animation -->
-      <div class="hero-image-wrapper" id="hero-image-container" aria-hidden="true">
+    <!-- 1. HERO — TWIN FRAGRANCE PANORAMIC LUXURY BANNER -->
+    <section class="w-full relative overflow-hidden bg-black" aria-label="Hero Banner">
+      <div class="w-full relative aspect-[16/7] min-h-[280px] sm:min-h-[380px] md:min-h-[480px] flex items-center justify-center overflow-hidden">
         <img
-          src="assets/images/hero-bg.png"
-          alt=""
-          class="hero-image"
-          id="hero-image"
+          src="assets/images/hero-luxury-banner.jpg"
+          alt="El Balghiti Haute Parfumerie"
+          class="w-full h-full object-cover object-center filter brightness-95 transform transition-transform duration-1000 hover:scale-102"
         >
-      </div>
-
-      <!-- Gradient Overlay -->
-      <div class="hero-overlay-gradient" aria-hidden="true"></div>
-
-      <!-- Centered Content -->
-      <div class="hero-content" id="hero-content">
-        <h1 class="hero-logo text-4xl sm:text-6xl md:text-7xl tracking-[0.35em]">EL BALGHITI</h1>
-        <div class="hero-divider" aria-hidden="true"></div>
-        <p class="hero-subtitle text-xs sm:text-sm tracking-[0.4em] md:tracking-[0.65em]" data-i18n="heroSubtitle">Maison de Parfum</p>
-      </div>
-
-      <!-- Scroll to Discover -->
-      <div class="scroll-indicator" id="scroll-indicator" aria-label="Scroll to discover">
-        <span class="scroll-indicator-text" data-i18n="discover">Discover</span>
-        <div class="scroll-indicator-line" aria-hidden="true"></div>
-      </div>
-
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         THE ART OF EXTRACTION (Replaced Brand Philosophy)
-         ═══════════════════════════════════════════════════════ -->
-    <section class="atelier-section" id="atelier-section" aria-label="Craftsmanship">
-      <div class="atelier-inner grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Image Side -->
-        <div class="atelier-image-wrapper">
-          <img src="assets/images/craftsmanship.png" alt="Perfume ingredients processing" class="atelier-image">
-        </div>
-        <!-- Text Side -->
-        <div class="atelier-content md:px-16">
-          <h2 class="atelier-title text-sm md:text-base tracking-[0.45em]" data-i18n="atelierTitle">The Art of Extraction</h2>
-          <p class="atelier-text text-xl sm:text-2xl lg:text-3xl" data-i18n="atelierText">
-            Crafted in the heart of Morocco, our extraits de parfum are an intimate study of raw materials, shadows, and skin. We do not blend for the masses; we bottle memories.
+        <!-- Soft gradient overlay for text legibility -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/35 pointer-events-none"></div>
+        
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <span class="text-white/80 font-mono text-[0.65rem] sm:text-xs md:text-sm tracking-[0.35em] uppercase mb-2 drop-shadow">
+            Maison de Haute Parfumerie
+          </span>
+          <h1 class="text-white font-montserrat font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-[0.25em] uppercase drop-shadow-xl">
+            EL BALGHITI
+          </h1>
+          <p class="text-white/90 font-mono text-[0.68rem] sm:text-xs md:text-sm tracking-[0.3em] uppercase mt-3 max-w-xl drop-shadow">
+            Extraits de Parfum • Blends & Collections Niche
           </p>
-          <a href="#" class="product-discover mt-8 text-xs md:text-sm" data-i18n="discover">Discover</a>
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a href="shop.html" class="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-black font-montserrat font-bold text-xs uppercase tracking-widest rounded-full hover:bg-white/90 transition-all shadow-lg hover:scale-105">
+              Catalogue Complet
+            </a>
+            <a href="packs.html" class="px-6 sm:px-8 py-2.5 sm:py-3 bg-black/50 backdrop-blur-md border border-white/40 text-white font-montserrat font-semibold text-xs uppercase tracking-widest rounded-full hover:bg-black/70 transition-all hover:scale-105">
+              Nos Packs
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════
-         FEATURED COLLECTION
-         ═══════════════════════════════════════════════════════ -->
-    <section class="collection-section" id="collection-section" aria-label="Signature Collection">
-      <div class="collection-inner">
+    <!-- 2. COLLECTIONS (TWIN FRAGRANCE STYLE) -->
+    <section class="w-full py-12 sm:py-16 px-4 sm:px-8 max-w-7xl mx-auto" aria-label="Collections">
+      <div class="mb-8 flex items-baseline justify-between border-b border-[var(--t-border-subtle)] pb-4">
+        <div>
+          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight">
+            Collections
+          </h2>
+          <p class="font-mono text-xs text-[var(--t-text-muted)] tracking-wider mt-1 uppercase">
+            Formats nomades, coffrets découverte & flacons signatures
+          </p>
+        </div>
+        <a href="shop.html" class="font-mono text-xs uppercase tracking-widest text-[var(--t-text-muted)] hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 font-semibold">
+          <span>Tout afficher</span>
+          <span>→</span>
+        </a>
+      </div>
 
-        <!-- Section Header -->
-        <div class="collection-header mb-12 md:mb-20" id="collection-header">
-          <span class="collection-title text-xs md:text-sm tracking-[0.45em]" data-i18n="signatureScents">Signature Scents</span>
+      <!-- Grid of 6 Collection Cards matching screenshot -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        
+        <!-- Card 1: 10 ML HOMMES -->
+        <a href="shop.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-gray-100/90 to-gray-50/60 dark:from-zinc-900/90 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            10 ML<br>HOMMES
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-10ml-hommes.jpg" alt="10 ML Hommes Decant" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
+            <span>10 ML HOMMES</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Card 2: 10 ML FEMMES -->
+        <a href="shop.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-pink-100/70 to-pink-50/40 dark:from-rose-950/25 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            10 ML<br>FEMMES
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-10ml-femmes.jpg" alt="10 ML Femmes Decant" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
+            <span>10 ML FEMMES</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Card 3: PACK DECANTE GRATUITE HOMMES -->
+        <a href="packs.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-amber-100/60 to-gray-50/60 dark:from-amber-950/20 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            PACK DECANTE<br>GRATUITE HOMMES
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-pack-hommes.jpg" alt="Pack Decante Gratuite Hommes" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.65rem] sm:text-[0.72rem] tracking-wider uppercase">
+            <span>PACK HOMMES</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Card 4: PACK DECANTE GRATUITE FEMMES -->
+        <a href="packs.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-rose-100/60 to-gray-50/60 dark:from-rose-950/20 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            PACK DECANTE<br>GRATUITE FEMMES
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-pack-femmes.jpg" alt="Pack Decante Gratuite Femmes" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.65rem] sm:text-[0.72rem] tracking-wider uppercase">
+            <span>PACK FEMMES</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Card 5: PARFUM COMPLET -->
+        <a href="shop.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-slate-100/80 to-gray-50/60 dark:from-zinc-900 dark:to-zinc-950 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            PARFUM<br>COMPLET
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-parfum-complet.jpg" alt="Parfum Complet" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
+            <span>PARFUM COMPLET</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+        <!-- Card 6: PARFUM NICHE -->
+        <a href="product-vulcan-feu.html" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-stone-100/80 to-gray-50/60 dark:from-stone-900/40 dark:to-zinc-950 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+            PARFUM<br>NICHE
+          </div>
+          <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
+            <img src="assets/images/collection-parfum-niche.jpg" alt="Parfum Niche" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
+            <span>PARFUM NICHE</span>
+            <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- 3. TOP 3 BEST-SELLING FRAGRANCES (TWIN FRAGRANCE PRODUCT SHOWCASE STYLE) -->
+    <section class="w-full py-12 sm:py-16 px-4 sm:px-8 max-w-7xl mx-auto border-t border-[var(--t-border-subtle)]" aria-label="Top 3 Fragrances">
+      
+      <!-- Section Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold">
+            Sélection Prisée
+          </span>
+          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mt-1">
+            Top 3 Des Ventes
+          </h2>
+          <p class="font-sans text-xs sm:text-sm text-[var(--t-text-secondary)] mt-1.5 max-w-xl">
+            Les créations les plus commandées de notre atelier avec livraison express et garantie authenticité.
+          </p>
         </div>
 
-        <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-16" id="product-grid">
-
-          <!-- Card 1 — Oud Al-Balghiti -->
-          <article class="product-card" id="product-oud">
-            <a href="product-oud.html" class="product-image-link" aria-label="Discover Oud Al-Balghiti">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-oud.png" alt="Oud Al-Balghiti perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="oudTitle">Oud Al-Balghiti</h3>
-              <p class="product-notes" data-i18n="oudNotes">Oud, Leather, Patchouli</p>
-              <a href="product-oud.html" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
-          <!-- Card 2 — Rose de Fès -->
-          <article class="product-card" id="product-rose">
-            <a href="#" class="product-image-link" aria-label="Discover Rose de Fès">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-rose.png" alt="Rose de Fès perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="roseTitle">Rose de Fès</h3>
-              <p class="product-notes" data-i18n="roseNotes">Damask Rose, Saffron, Amber</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
-          <!-- Card 3 — Ambre Saharien -->
-          <article class="product-card" id="product-amber">
-            <a href="#" class="product-image-link" aria-label="Discover Ambre Saharien">
-              <div class="product-image-wrapper">
-                <img src="assets/images/bottle-amber.png" alt="Ambre Saharien perfume bottle" class="product-image">
-              </div>
-            </a>
-            <div class="product-info">
-              <h3 class="product-title" data-i18n="amberTitle">Ambre Saharien</h3>
-              <p class="product-notes" data-i18n="amberNotes">Amber, Benzoin, Vanilla Absolute</p>
-              <a href="#" class="product-discover" data-i18n="discover">Discover</a>
-            </div>
-          </article>
-
+        <!-- Interactive Switcher Tabs -->
+        <div class="flex items-center gap-2 p-1.5 bg-black/5 dark:bg-white/5 rounded-xl border border-[var(--t-border-subtle)] self-start md:self-auto overflow-x-auto max-w-full">
+          <button onclick="switchTopSeller(1)" id="ts-tab-1" class="px-4 py-2 rounded-lg text-xs font-montserrat font-bold uppercase tracking-wider transition-all cursor-pointer bg-[var(--t-text)] text-[var(--t-bg)] shadow-sm whitespace-nowrap">
+            1. Vulcan Feu
+          </button>
+          <button onclick="switchTopSeller(2)" id="ts-tab-2" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap">
+            2. Oud Al-Balghiti
+          </button>
+          <button onclick="switchTopSeller(3)" id="ts-tab-3" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap">
+            3. Baroque Rouge
+          </button>
         </div>
+      </div>
+
+      <!-- SHOWCASE 1: VULCAN FEU (ACTIVE BY DEFAULT) -->
+      <div id="ts-showcase-1" class="top-seller-block grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start p-6 sm:p-10 rounded-3xl border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] shadow-sm">
+        
+        <!-- Left: Product Photos Gallery with Thumbnails -->
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="w-full aspect-[4/3] sm:aspect-square max-h-[460px] bg-[var(--t-bg)] border border-[var(--t-border-subtle)] rounded-2xl flex items-center justify-center p-6 sm:p-8 overflow-hidden shadow-inner relative group">
+            <img id="ts1-main-img" src="assets/images/vulcain-fire.jpg" alt="Vulcan Feu - French Avenue" class="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105">
+            <span class="absolute top-4 left-4 bg-black/75 dark:bg-white/90 text-white dark:text-black font-mono text-[0.65rem] font-bold px-3 py-1 rounded-full uppercase tracking-widest backdrop-blur-xs">
+              N°1 Best Seller
+            </span>
+          </div>
+
+          <!-- Thumbnails Strip (User Photos) -->
+          <div class="flex gap-3 overflow-x-auto pb-1">
+            <button onclick="changeTsImage('ts1-main-img', 'assets/images/vulcain-fire.jpg', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 border-[var(--t-text)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/vulcain-fire.jpg" alt="Vulcan Feu front" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="changeTsImage('ts1-main-img', 'assets/images/vulcain-feu-photo2.jpg', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/vulcain-feu-photo2.jpg" alt="Vulcan Feu geode" class="max-h-full max-w-full object-cover rounded-md">
+            </button>
+            <button onclick="changeTsImage('ts1-main-img', 'assets/images/vulcain-feu-photo3.jpg', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/vulcain-feu-photo3.jpg" alt="Vulcan Feu notes" class="max-h-full max-w-full object-cover rounded-md">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Information & Buy Actions (Matching Reference Image) -->
+        <div class="lg:col-span-5 flex flex-col justify-between h-full">
+          <div>
+            <!-- Brand Tag -->
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold mb-1">
+              FRENCH AVENUE PARIS • EL BALGHITI
+            </div>
+
+            <!-- Product Title -->
+            <h3 class="font-montserrat font-extrabold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mb-2">
+              Vulcan Feu
+            </h3>
+
+            <!-- Inspired by Subtitle -->
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+              Inspiré par Stephane Humbert Lucas — God of Fire (Mangue, Citron, Ambre & Bois Chaud)
+            </p>
+
+            <!-- Price & Promotion Badge -->
+            <div class="flex items-center gap-3 mb-2 flex-wrap">
+              <span class="font-mono text-base sm:text-lg text-[var(--t-text-muted)] line-through">
+                450.00 DH
+              </span>
+              <span class="font-mono text-2xl sm:text-3xl font-extrabold text-[var(--t-text)]">
+                370.00 DH
+              </span>
+              <span class="bg-[#2563eb] text-white font-mono text-[0.65rem] font-bold px-2.5 py-1 rounded uppercase tracking-wider">
+                Promotion (-18%)
+              </span>
+            </div>
+
+            <!-- Shipping note -->
+            <p class="font-sans text-xs text-[var(--t-text-muted)] leading-relaxed mb-6">
+              Frais d'expédition calculés à l'étape de paiement • <span class="text-[var(--t-text)] font-semibold">Livraison offerte dès 500 DH</span>
+            </p>
+
+            <!-- Quantity Selector -->
+            <div class="mb-6">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+                Quantité
+              </label>
+              <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
+                <button type="button" onclick="adjustQty('ts1-qty', -1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">−</button>
+                <input type="number" id="ts1-qty" value="1" min="1" max="10" class="w-12 text-center font-mono font-bold text-sm bg-transparent border-none outline-none text-[var(--t-text)]" readonly>
+                <button type="button" onclick="adjustQty('ts1-qty', 1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">+</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons (BUY & Ajouter au Panier) -->
+            <div class="flex flex-col gap-3 mb-6">
+              <!-- Primary BUY button (Twin Fragrance style) -->
+              <button onclick="directBuy('Vulcan Feu', 370, 'assets/images/vulcain-fire.jpg', 'ts1-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
+                <span>BUY — 370 DH</span>
+              </button>
+
+              <!-- Secondary Ajouter au panier button -->
+              <button onclick="addToCartDirect('Vulcan Feu', 370, 'assets/images/vulcain-fire.jpg', 'ts1-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+
+          <!-- Utility Links: Partager & Afficher tous les détails -->
+          <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
+            <button onclick="shareProduct('Vulcan Feu')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
+              <span>Partager</span>
+            </button>
+            <a href="product-vulcan-feu.html" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
+              <span>Afficher tous les détails</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SHOWCASE 2: OUD AL-BALGHITI (SWITCHABLE) -->
+      <div id="ts-showcase-2" class="top-seller-block hidden grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start p-6 sm:p-10 rounded-3xl border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] shadow-sm">
+        
+        <!-- Left: Product Photos Gallery with Thumbnails -->
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="w-full aspect-[4/3] sm:aspect-square max-h-[460px] bg-[var(--t-bg)] border border-[var(--t-border-subtle)] rounded-2xl flex items-center justify-center p-6 sm:p-8 overflow-hidden shadow-inner relative group">
+            <img id="ts2-main-img" src="assets/images/bottle-oud.png" alt="Oud Al-Balghiti - Extrait de Parfum" class="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105">
+            <span class="absolute top-4 left-4 bg-black/75 dark:bg-white/90 text-white dark:text-black font-mono text-[0.65rem] font-bold px-3 py-1 rounded-full uppercase tracking-widest backdrop-blur-xs">
+              N°2 Signature Scents
+            </span>
+          </div>
+
+          <!-- Thumbnails Strip -->
+          <div class="flex gap-3 overflow-x-auto pb-1">
+            <button onclick="changeTsImage('ts2-main-img', 'assets/images/bottle-oud.png', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 border-[var(--t-text)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/bottle-oud.png" alt="Oud bottle" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="changeTsImage('ts2-main-img', 'assets/images/note-leather.png', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/note-leather.png" alt="Cuir marocain" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="changeTsImage('ts2-main-img', 'assets/images/note-oud.png', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/note-oud.png" alt="Oud note" class="max-h-full max-w-full object-contain">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Information & Buy Actions -->
+        <div class="lg:col-span-5 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold mb-1">
+              MAISON EL BALGHITI • SIGNATURE EXTRAIT
+            </div>
+
+            <h3 class="font-montserrat font-extrabold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mb-2">
+              Oud Al-Balghiti
+            </h3>
+
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+              Inspiré par Le Labo Thé Noir 29 & Cuir Marocain (Oud d'Asie, Cuir de Fès, Figue Noire)
+            </p>
+
+            <div class="flex items-center gap-3 mb-2 flex-wrap">
+              <span class="font-mono text-base sm:text-lg text-[var(--t-text-muted)] line-through">
+                550.00 DH
+              </span>
+              <span class="font-mono text-2xl sm:text-3xl font-extrabold text-[var(--t-text)]">
+                450.00 DH
+              </span>
+              <span class="bg-[#2563eb] text-white font-mono text-[0.65rem] font-bold px-2.5 py-1 rounded uppercase tracking-wider">
+                Promotion (-18%)
+              </span>
+            </div>
+
+            <p class="font-sans text-xs text-[var(--t-text-muted)] leading-relaxed mb-6">
+              Frais d'expédition calculés à l'étape de paiement • <span class="text-[var(--t-text)] font-semibold">Livraison offerte dès 500 DH</span>
+            </p>
+
+            <!-- Quantity Selector -->
+            <div class="mb-6">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+                Quantité
+              </label>
+              <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
+                <button type="button" onclick="adjustQty('ts2-qty', -1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">−</button>
+                <input type="number" id="ts2-qty" value="1" min="1" max="10" class="w-12 text-center font-mono font-bold text-sm bg-transparent border-none outline-none text-[var(--t-text)]" readonly>
+                <button type="button" onclick="adjustQty('ts2-qty', 1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">+</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-3 mb-6">
+              <button onclick="directBuy('Oud Al-Balghiti', 450, 'assets/images/bottle-oud.png', 'ts2-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
+                <span>BUY — 450 DH</span>
+              </button>
+
+              <button onclick="addToCartDirect('Oud Al-Balghiti', 450, 'assets/images/bottle-oud.png', 'ts2-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
+            <button onclick="shareProduct('Oud Al-Balghiti')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
+              <span>Partager</span>
+            </button>
+            <a href="product-oud.html" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
+              <span>Afficher tous les détails</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SHOWCASE 3: BAROQUE ROUGE 540 (SWITCHABLE) -->
+      <div id="ts-showcase-3" class="top-seller-block hidden grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start p-6 sm:p-10 rounded-3xl border border-[var(--t-border-subtle)] bg-[var(--t-bg-secondary)] shadow-sm">
+        
+        <!-- Left: Product Photos Gallery with Thumbnails -->
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="w-full aspect-[4/3] sm:aspect-square max-h-[460px] bg-[var(--t-bg)] border border-[var(--t-border-subtle)] rounded-2xl flex items-center justify-center p-6 sm:p-8 overflow-hidden shadow-inner relative group">
+            <img id="ts3-main-img" src="assets/images/baroque.jpg" alt="Baroque Rouge 540" class="max-h-full max-w-full object-contain transition-transform duration-700 group-hover:scale-105 rounded-xl">
+            <span class="absolute top-4 left-4 bg-black/75 dark:bg-white/90 text-white dark:text-black font-mono text-[0.65rem] font-bold px-3 py-1 rounded-full uppercase tracking-widest backdrop-blur-xs">
+              N°3 Best Seller
+            </span>
+          </div>
+
+          <!-- Thumbnails Strip -->
+          <div class="flex gap-3 overflow-x-auto pb-1">
+            <button onclick="changeTsImage('ts3-main-img', 'assets/images/baroque.jpg', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 border-[var(--t-text)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/baroque.jpg" alt="Baroque bottle" class="max-h-full max-w-full object-contain rounded-md">
+            </button>
+            <button onclick="changeTsImage('ts3-main-img', 'assets/images/note-amber.png', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/note-amber.png" alt="Ambre gris" class="max-h-full max-w-full object-contain">
+            </button>
+            <button onclick="changeTsImage('ts3-main-img', 'assets/images/note-jasmine.jpg', this)" class="ts-thumb-btn w-16 h-16 sm:w-20 sm:h-20 rounded-xl border border-[var(--t-border-subtle)] bg-[var(--t-bg)] p-1.5 flex items-center justify-center cursor-pointer shrink-0">
+              <img src="assets/images/note-jasmine.jpg" alt="Jasmin grandiflorum" class="max-h-full max-w-full object-cover rounded-md">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Information & Buy Actions -->
+        <div class="lg:col-span-5 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold mb-1">
+              MAISON ALHAMBRA • DUPE LUXE
+            </div>
+
+            <h3 class="font-montserrat font-extrabold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mb-2">
+              Baroque Rouge 540
+            </h3>
+
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+              Inspiré par Maison Francis Kurkdjian — Baccarat Rouge 540 (Safran Rouge, Jasmin & Bois de Cèdre)
+            </p>
+
+            <div class="flex items-center gap-3 mb-2 flex-wrap">
+              <span class="font-mono text-base sm:text-lg text-[var(--t-text-muted)] line-through">
+                420.00 DH
+              </span>
+              <span class="font-mono text-2xl sm:text-3xl font-extrabold text-[var(--t-text)]">
+                350.00 DH
+              </span>
+              <span class="bg-[#2563eb] text-white font-mono text-[0.65rem] font-bold px-2.5 py-1 rounded uppercase tracking-wider">
+                Promotion (-17%)
+              </span>
+            </div>
+
+            <p class="font-sans text-xs text-[var(--t-text-muted)] leading-relaxed mb-6">
+              Frais d'expédition calculés à l'étape de paiement • <span class="text-[var(--t-text)] font-semibold">Livraison offerte dès 500 DH</span>
+            </p>
+
+            <!-- Quantity Selector -->
+            <div class="mb-6">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+                Quantité
+              </label>
+              <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
+                <button type="button" onclick="adjustQty('ts3-qty', -1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">−</button>
+                <input type="number" id="ts3-qty" value="1" min="1" max="10" class="w-12 text-center font-mono font-bold text-sm bg-transparent border-none outline-none text-[var(--t-text)]" readonly>
+                <button type="button" onclick="adjustQty('ts3-qty', 1)" class="w-9 h-9 flex items-center justify-center text-base font-bold text-[var(--t-text)] hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors cursor-pointer">+</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-3 mb-6">
+              <button onclick="directBuy('Baroque Rouge 540', 350, 'assets/images/baroque.jpg', 'ts3-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
+                <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
+                <span>BUY — 350 DH</span>
+              </button>
+
+              <button onclick="addToCartDirect('Baroque Rouge 540', 350, 'assets/images/baroque.jpg', 'ts3-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
+            <button onclick="shareProduct('Baroque Rouge 540')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
+              <span>Partager</span>
+            </button>
+            <a href="shop.html" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
+              <span>Afficher tous les détails</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. TRUST & PAYMENT BADGES (MATCHING REFERENCE FOOTER) -->
+    <section class="w-full py-8 border-t border-[var(--t-border-subtle)] bg-[var(--t-bg)]" aria-label="Trust and payments">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Social Follow -->
+        <div class="flex items-center gap-4 text-xs font-mono tracking-widest text-[var(--t-text-muted)] uppercase">
+          <span>Suivez-nous :</span>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="text-[var(--t-text)] hover:opacity-75 transition-opacity font-bold flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <span>•</span>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="text-[var(--t-text)] hover:opacity-75 transition-opacity font-bold flex items-center gap-1">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 2.89 3.5 2.71 1.25-.06 2.37-.86 2.82-2.02.2-.46.26-.97.26-1.47V.02z"/></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+
+        <!-- Payment Badges (Clean SVG / CSS icons) -->
+        <div class="flex items-center gap-2.5 flex-wrap justify-center">
+          <!-- Visa -->
+          <span class="px-2.5 py-1 bg-white border border-gray-200 rounded text-[0.65rem] font-bold text-[#1A1F71] shadow-xs">VISA</span>
+          <!-- Mastercard -->
+          <span class="px-2.5 py-1 bg-white border border-gray-200 rounded text-[0.65rem] font-bold text-[#EB001B] shadow-xs">Mastercard</span>
+          <!-- CMI -->
+          <span class="px-2.5 py-1 bg-white border border-gray-200 rounded text-[0.65rem] font-bold text-[#006699] shadow-xs">CMI</span>
+          <!-- PayPal -->
+          <span class="px-2.5 py-1 bg-white border border-gray-200 rounded text-[0.65rem] font-bold text-[#003087] shadow-xs">PayPal</span>
+          <!-- Cash on Delivery -->
+          <span class="px-2.5 py-1 bg-[#10b981]/10 border border-[#10b981]/30 rounded text-[0.65rem] font-bold text-[#059669]">Cash on Delivery</span>
+        </div>
+
       </div>
     </section>
 
   </main>
+
+  <!-- Interactive JavaScript for Showcase Gallery & Switcher -->
+  <script>
+    function switchTopSeller(index) {
+      // Hide all showcases
+      document.querySelectorAll('.top-seller-block').forEach(b => {
+        b.classList.add('hidden');
+        b.classList.remove('grid');
+      });
+      // Show selected showcase
+      const target = document.getElementById('ts-showcase-' + index);
+      if (target) {
+        target.classList.remove('hidden');
+        target.classList.add('grid');
+      }
+      // Update tab styles
+      [1, 2, 3].forEach(i => {
+        const tab = document.getElementById('ts-tab-' + i);
+        if (tab) {
+          if (i === index) {
+            tab.className = 'px-4 py-2 rounded-lg text-xs font-montserrat font-bold uppercase tracking-wider transition-all cursor-pointer bg-[var(--t-text)] text-[var(--t-bg)] shadow-sm whitespace-nowrap';
+          } else {
+            tab.className = 'px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap';
+          }
+        }
+      });
+    }
+
+    function changeTsImage(mainImgId, src, btn) {
+      const mainImg = document.getElementById(mainImgId);
+      if (mainImg) {
+        mainImg.src = src;
+      }
+      const parent = btn.parentElement;
+      if (parent) {
+        parent.querySelectorAll('.ts-thumb-btn').forEach(b => {
+          b.classList.remove('border-2', 'border-[var(--t-text)]');
+          b.classList.add('border', 'border-[var(--t-border-subtle)]');
+        });
+        btn.classList.remove('border', 'border-[var(--t-border-subtle)]');
+        btn.classList.add('border-2', 'border-[var(--t-text)]');
+      }
+    }
+
+    function adjustQty(inputId, delta) {
+      const input = document.getElementById(inputId);
+      if (input) {
+        let val = parseInt(input.value) || 1;
+        val = Math.max(1, Math.min(10, val + delta));
+        input.value = val;
+      }
+    }
+
+    function directBuy(name, price, image, qtyId) {
+      const qtyInput = document.getElementById(qtyId);
+      const qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+      
+      // Save direct item to sessionStorage for checkout
+      sessionStorage.setItem('direct_checkout_item', JSON.stringify({
+        name: name,
+        price: price,
+        image: image,
+        quantity: qty
+      }));
+
+      // Redirect directly to checkout
+      window.location.href = 'checkout.html';
+    }
+
+    function addToCartDirect(name, price, image, qtyId) {
+      const qtyInput = document.getElementById(qtyId);
+      const qty = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+
+      // Add to window.cart if available
+      if (typeof window.addToCart === 'function') {
+        for (let i = 0; i < qty; i++) {
+          window.addToCart(name, price + ' DH', image);
+        }
+      } else {
+        alert(qty + 'x ' + name + ' ajouté au panier !');
+      }
+    }
+
+    function shareProduct(name) {
+      if (navigator.share) {
+        navigator.share({
+          title: name + ' — El Balghiti Parfums',
+          text: 'Découvrez ' + name + ' chez El Balghiti Parfums.',
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert('Lien copié dans le presse-papiers !');
+        });
+      }
+    }
+  </script>
+
+  <!-- Floating WhatsApp / Contact Chat Pill (Twin Fragrance Style) -->
+  <a href="https://wa.me/212600000000?text=Bonjour%20El%20Balghiti%20Parfums,%20je%20souhaite%20des%20renseignements" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 font-montserrat font-bold text-xs uppercase tracking-wider hover:scale-105 transition-all" aria-label="Chat with us on WhatsApp">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347m-4.636 1.948c-.287-.14-.68-.276-1.127-.478-1.554-.698-2.883-2.029-3.585-3.583-.2-.447-.338-.84-.478-1.127m0 0c-.149-.298-.223-.496-.347-.57-.124-.074-.273-.074-.422-.074s-.322.015-.471.015c-.149 0-.396.06-.603.284-.207.224-.792.774-.792 1.887 0 1.113.81 2.188.924 2.34.113.153 1.579 2.457 3.856 3.418 2.277.96 2.277.64 2.689.601.413-.039 1.332-.544 1.52-.1.07-.188.528-.188.752 0 .224-.074.348-.124.472z"/></svg>
+    <span>Chat</span>
+  </a>
 
   <!-- ═══════════════════════════════════════════════════════
        FOOTER (Le Labo Style Newsletter & Accordions)

@@ -196,7 +196,7 @@ const perfumeCatalog = [
 
 const translations = {
   en: {
-    promoBannerText: "Every El Balghiti creation is fresh hand-blended.",
+    promoBannerText: "LIVRAISON GRATUITE +500 DH",
     collections: "Collections",
     about: "About",
     cart: "Cart (0)",
@@ -425,7 +425,7 @@ const translations = {
     addCustomPackBtn: "ADD CUSTOM PACK TO CART",
     packs: "Packs"
   }, ar: {
-    promoBannerText: "كل ابتكار من البلغيتي يتم خلطه يدوياً طازجاً.",
+    promoBannerText: "توصيل مجاني للطلبات فوق 500 درهم",
     collections: "المجموعات",
     about: "عنا",
     cart: "سلة التسوق (0)",
