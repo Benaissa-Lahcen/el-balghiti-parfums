@@ -46,7 +46,7 @@
             <!-- Desktop Search Box -->
             <div class="hidden md:flex items-center gap-2 text-xs tracking-wider text-[var(--t-text-muted)] cursor-pointer hover:text-[var(--t-text)] transition-colors search-trigger" onclick="openSearchOverlay()">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-              <span class="font-mono uppercase text-[0.7rem] tracking-widest">Search</span>
+              <span class="font-mono uppercase text-[0.7rem] tracking-widest" data-i18n="navSearch">Search</span>
             </div>
           </div>
 
@@ -69,7 +69,7 @@
 
             <!-- Desktop-only Lang / Theme Toggles (Sleek text-based) -->
             <div class="hidden md:flex items-center gap-4 border-l border-[var(--t-border-subtle)] pl-4">
-              <button class="lang-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
+              <button onclick="window.toggleLanguage()" class="lang-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
                 <span class="lang-text">AR</span>
               </button>
               <button class="theme-toggle hover:underline text-[var(--t-text)] font-semibold cursor-pointer">
@@ -81,10 +81,10 @@
 
         <!-- Row 2: Desktop centered category links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
         <div class="hidden md:flex items-center justify-center gap-6 sm:gap-8 py-2 border-t border-[var(--t-border-subtle)] text-[0.72rem] tracking-[0.2em] font-montserrat uppercase font-semibold">
-          <a href="<?php echo home_url('/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full <?php echo is_front_page() ? 'bg-black/10 dark:bg-white/15 text-[var(--t-text)]' : 'text-[var(--t-text-secondary)]'; ?>">ACCUEIL</a>
-          <a href="<?php echo home_url('/shop/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CATALOGUE</a>
-          <a href="<?php echo home_url('/packs/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">PACKS</a>
-          <a href="<?php echo home_url('/contact/'); ?>" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CONTACT</a>
+          <a href="<?php echo home_url('/'); ?>" data-i18n="navAccueil" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full <?php echo is_front_page() ? 'bg-black/10 dark:bg-white/15 text-[var(--t-text)]' : 'text-[var(--t-text-secondary)]'; ?>">ACCUEIL</a>
+          <a href="<?php echo home_url('/shop/'); ?>" data-i18n="navCatalogue" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CATALOGUE</a>
+          <a href="<?php echo home_url('/packs/'); ?>" data-i18n="navPacks" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">PACKS</a>
+          <a href="<?php echo home_url('/contact/'); ?>" data-i18n="navContact" class="hover:text-[var(--t-text-muted)] transition-colors px-3.5 py-1 rounded-full text-[var(--t-text-secondary)]">CONTACT</a>
         </div>
 
       </div>
@@ -105,23 +105,23 @@
 
           <!-- Links (Only 4 options: ACCUEIL, CATALOGUE, PACKS, CONTACT) -->
           <div class="mobile-menu-links flex flex-col gap-6 font-montserrat text-lg uppercase tracking-wider">
-            <a href="<?php echo home_url('/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">ACCUEIL</a>
-            <a href="<?php echo home_url('/shop/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">CATALOGUE</a>
-            <a href="<?php echo home_url('/packs/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">PACKS</a>
-            <a href="<?php echo home_url('/contact/'); ?>" class="mobile-link text-[var(--t-text)] font-semibold">CONTACT</a>
+            <a href="<?php echo home_url('/'); ?>" data-i18n="navAccueil" class="mobile-link text-[var(--t-text)] font-semibold">ACCUEIL</a>
+            <a href="<?php echo home_url('/shop/'); ?>" data-i18n="navCatalogue" class="mobile-link text-[var(--t-text)] font-semibold">CATALOGUE</a>
+            <a href="<?php echo home_url('/packs/'); ?>" data-i18n="navPacks" class="mobile-link text-[var(--t-text)] font-semibold">PACKS</a>
+            <a href="<?php echo home_url('/contact/'); ?>" data-i18n="navContact" class="mobile-link text-[var(--t-text)] font-semibold">CONTACT</a>
           </div>
         </div>
 
         <!-- Drawer Footer: Toggles -->
         <div class="flex flex-col gap-4 border-t border-[var(--t-border-subtle)] pt-6 font-mono text-xs uppercase tracking-widest">
           <div class="flex items-center justify-between">
-            <span class="text-[var(--t-text-muted)]">Language</span>
-            <button class="lang-toggle text-[var(--t-text)] font-semibold cursor-pointer">
+            <span class="text-[var(--t-text-muted)]" data-i18n="mobileLangLabel">Language</span>
+            <button onclick="window.toggleLanguage()" class="lang-toggle text-[var(--t-text)] font-semibold cursor-pointer">
               <span class="lang-text">AR</span>
             </button>
           </div>
           <div class="flex items-center justify-between">
-            <span class="text-[var(--t-text-muted)]">Theme</span>
+            <span class="text-[var(--t-text-muted)]" data-i18n="mobileThemeLabel">Theme</span>
             <button class="theme-toggle text-[var(--t-text)] font-semibold cursor-pointer">
               <span class="theme-text">DARK</span>
             </button>
@@ -144,7 +144,7 @@
         <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
         </svg>
-        <span class="font-mono text-xs uppercase tracking-widest hidden sm:inline-block">Back</span>
+        <span class="font-mono text-xs uppercase tracking-widest hidden sm:inline-block" data-i18n="searchBack">Back</span>
       </button>
 
       <!-- Center Search Bar Pill -->
@@ -157,6 +157,7 @@
           id="search-input" 
           oninput="handleSearchInput(this.value)" 
           placeholder="What are you looking for?" 
+          data-i18n-placeholder="searchPlaceholder"
           class="w-full bg-transparent text-xs sm:text-sm md:text-base outline-none placeholder:text-gray-400 font-montserrat tracking-wide"
           style="color:inherit;"
         >
@@ -175,7 +176,7 @@
         
         <!-- Left Column: Popular Searches List -->
         <div id="popular-searches-col" style="flex:0 0 240px; border-right:1px solid rgba(0,0,0,0.1); padding-right:1.5rem;">
-          <h3 class="font-mono text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-6">Popular Searches</h3>
+          <h3 class="font-mono text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-6" data-i18n="popularSearches">Popular Searches</h3>
           <ul style="display:flex; flex-direction:column; gap:0.75rem; list-style:none; padding:0; margin:0;" class="font-montserrat uppercase tracking-wider text-xs sm:text-sm">
             <li><button type="button" onclick="setSearchQuery('Oud Al-Balghiti')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Oud Al-Balghiti</button></li>
             <li><button type="button" onclick="setSearchQuery('Rose de Fès')" class="text-left text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors py-1 cursor-pointer">Rose de Fès</button></li>

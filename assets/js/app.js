@@ -243,7 +243,81 @@ const translations = {
     scentLostCherry: "Inspired by Lost Cherry",
     customSetLabel: "CUSTOM SET",
     addCustomPackBtn: "ADD CUSTOM PACK TO CART",
-    packs: "Packs"
+    packs: "Packs",
+
+    // ── Homepage & Global Navigation Keys ──
+    navAccueil: "ACCUEIL",
+    navCatalogue: "CATALOGUE",
+    navPacks: "PACKS",
+    navContact: "CONTACT",
+    navSearch: "Search",
+    mobileLangLabel: "Language",
+    mobileThemeLabel: "Theme",
+    
+    // Hero Banner
+    heroMaison: "Maison de Haute Parfumerie",
+    heroSubtitle: "Extraits de Parfum • Blends & Collections Niche",
+    heroCatalogBtn: "Catalogue Complet",
+    heroPacksBtn: "Nos Packs",
+
+    // Collections Grid
+    collectionsTitle: "Collections",
+    collectionsSubtitle: "Formats nomades, coffrets découverte & flacons signatures",
+    viewAll: "Tout afficher",
+    col10mlMen: "10 ML HOMMES",
+    col10mlMenTop: "10 ML<br>HOMMES",
+    col10mlWomen: "10 ML FEMMES",
+    col10mlWomenTop: "10 ML<br>FEMMES",
+    colPackMen: "PACK HOMMES",
+    colPackMenFull: "PACK DECANTE<br>GRATUITE HOMMES",
+    colPackWomen: "PACK FEMMES",
+    colPackWomenFull: "PACK DECANTE<br>GRATUITE FEMMES",
+    colFullPerfume: "PARFUM COMPLET",
+    colFullPerfumeTop: "PARFUM<br>COMPLET",
+    colNichePerfume: "PARFUM NICHE",
+    colNichePerfumeTop: "PARFUM<br>NICHE",
+
+    // Top 3 Best-Sellers Showcase
+    topSellersTag: "Sélection Prisée",
+    topSellersTitle: "Top 3 Des Ventes",
+    topSellersDesc: "Les créations les plus commandées de notre atelier avec livraison express et garantie authenticité.",
+    tsTab1: "1. Vulcan Feu",
+    tsTab2: "2. Oud Al-Balghiti",
+    tsTab3: "3. Baroque Rouge",
+    tsVulcanSub: "Inspiré par Stephane Humbert Lucas — God of Fire (Mangue, Citron, Ambre & Bois Chaud)",
+    tsOudSub: "Inspiré par Le Labo Thé Noir 29 & Cuir Marocain (Oud d'Asie, Cuir de Fès, Figue Noire)",
+    tsBaroqueSub: "Inspiré par Maison Francis Kurkdjian — Baccarat Rouge 540 (Safran Rouge, Jasmin & Bois de Cèdre)",
+    quantityLabel: "Quantité",
+    orderNowBtn: "COMMANDER MAINTENANT",
+    addToCartBtn: "Ajouter au panier",
+    featureFastDelivery: "Livraison Express 24-48h partout au Maroc",
+    featureCod: "Paiement à la livraison accepté",
+    featureGuaranteed: "100% Extrait de Parfum Concentré & Garanti",
+    productShare: "Partager",
+    productDetails: "Afficher tous les détails",
+
+    // Social & Search
+    followUs: "Suivez-nous :",
+    searchBack: "Back",
+    searchPlaceholder: "What are you looking for?",
+    popularSearches: "Popular Searches",
+
+    // Footer Accordions & Links
+    footerAboutUs: "About Us",
+    footerAtelier: "Our Atelier",
+    footerRefill: "Refill Program",
+    footerCraftsmanship: "Craftsmanship",
+    footerContact: "Contact Us",
+    footerShipping: "Shipping & Returns",
+    footerFaq: "Faq",
+    footerAppointments: "Boutique Appointments",
+    footerPrivacy: "Privacy Policy",
+    footerTerms: "Terms of Service",
+    footerAccessibility: "Accessibility Statement",
+    footerAddress: "RUE DES APOTHÉCAIRES, CASABLANCA",
+    footerHoursTitle: "BOUTIQUE HOURS:",
+    footerHours: "MON - SAT: 10:00 AM - 7:00 PM",
+    allRightsReserved: "© 2026 El Balghiti Parfums. All Rights Reserved."
   }, ar: {
     promoBannerText: "توصيل مجاني للطلبات فوق 500 درهم",
     collections: "المجموعات",
@@ -472,11 +546,85 @@ const translations = {
     scentLostCherry: "مستوحى من لوست شيري",
     customSetLabel: "مجموعة مخصصة",
     addCustomPackBtn: "إضافة المجموعة المخصصة للسلة",
-    packs: "المجموعات"
+    packs: "المجموعات",
+
+    // ── Homepage & Global Navigation Keys ──
+    navAccueil: "الرئيسية",
+    navCatalogue: "الكتالوج",
+    navPacks: "الباقات",
+    navContact: "اتصل بنا",
+    navSearch: "بحث",
+    mobileLangLabel: "اللغة",
+    mobileThemeLabel: "المظهر",
+    
+    // Hero Banner
+    heroMaison: "دار العطور الراقية",
+    heroSubtitle: "خلاصات عطور مركزة • تركيبات ومجموعات نيش",
+    heroCatalogBtn: "الكتالوج الكامل",
+    heroPacksBtn: "باقاتنا",
+
+    // Collections Grid
+    collectionsTitle: "المجموعات",
+    collectionsSubtitle: "أحجام السفر، باقات الاستكشاف والزجاجات الفاخرة",
+    viewAll: "عرض الكل",
+    col10mlMen: "10 مل للرجال",
+    col10mlMenTop: "10 مل<br>للرجال",
+    col10mlWomen: "10 مل للنساء",
+    col10mlWomenTop: "10 مل<br>للنساء",
+    colPackMen: "باقة الرجال",
+    colPackMenFull: "باقة ديكونت<br>مجانية للرجال",
+    colPackWomen: "باقة النساء",
+    colPackWomenFull: "باقة ديكونت<br>مجانية للنساء",
+    colFullPerfume: "عطر كامل",
+    colFullPerfumeTop: "عطر<br>كامل",
+    colNichePerfume: "عطور نيش",
+    colNichePerfumeTop: "عطور<br>نيش",
+
+    // Top 3 Best-Sellers Showcase
+    topSellersTag: "المختارات الأكثر طلباً",
+    topSellersTitle: "أفضل 3 مبيعات",
+    topSellersDesc: "الإبداعات الأكثر طلباً من ورشتنا مع توصيل سريع وضمان الأصالة.",
+    tsTab1: "١. فولكان فيو",
+    tsTab2: "٢. عود البلغيتي",
+    tsTab3: "٣. باروك روج",
+    tsVulcanSub: "مستوحى من ستيفان هومبرت لوكاس — غود أوف فاير (مانجو، ليمون، عنبر وزنجبيل)",
+    tsOudSub: "مستوحى من لو لابو تي نوار 29 (عود، جلد، باتشولي وشاي أسود)",
+    tsBaroqueSub: "مستوحى من ميزون فرانسيس كوركدجيان باكارات روج 540 (زعفران، ياسمين، أرز وعنبر غريس)",
+    quantityLabel: "الكمية",
+    orderNowBtn: "اطلب الآن",
+    addToCartBtn: "أضف إلى السلة",
+    featureFastDelivery: "توصيل سريع 24-48 ساعة في جميع أنحاء المغرب",
+    featureCod: "الدفع عند الاستلام متاح",
+    featureGuaranteed: "100% خلاصة عطر مركزة ومضمونة",
+    productShare: "مشاركة",
+    productDetails: "عرض كافة التفاصيل",
+
+    // Social & Search
+    followUs: "تابعونا :",
+    searchBack: "رجوع",
+    searchPlaceholder: "ما الذي تبحث عنه؟",
+    popularSearches: "عمليات البحث الشائعة",
+
+    // Footer Accordions & Links
+    footerAboutUs: "من نحن",
+    footerAtelier: "ورشتنا",
+    footerRefill: "برنامج إعادة التعبئة",
+    footerCraftsmanship: "الحرفية والإتقان",
+    footerContact: "اتصل بنا",
+    footerShipping: "الشحن والإرجاع",
+    footerFaq: "الأسئلة الشائعة",
+    footerAppointments: "مواعيد البوتيك",
+    footerPrivacy: "سياسة الخصوصية",
+    footerTerms: "شروط الخدمة",
+    footerAccessibility: "بيان إمكانية الوصول",
+    footerAddress: "شارع العطارين، الدار البيضاء",
+    footerHoursTitle: "ساعات عمل البوتيك:",
+    footerHours: "الإثنين - السبت: 10:00 صباحاً - 7:00 مساءً",
+    allRightsReserved: "© 2026 عطور البلغيتي. جميع الحقوق محفوظة."
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
   // --- Smart Search Logic ---
   const searchOverlay = document.getElementById('search-overlay');
   const searchInput = document.getElementById('search-input');
@@ -617,11 +765,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Language Toggle Logic ---
-  const langToggleBtns = document.querySelectorAll('.lang-toggle');
-  
   let currentLang = localStorage.getItem('lang') || 'en';
 
-  const applyLanguage = (lang) => {
+  window.applyLanguage = function(lang) {
+    currentLang = lang;
     // 1. Update Direction and Classes
     if (lang === 'ar') {
       document.documentElement.setAttribute('dir', 'rtl');
@@ -634,7 +781,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Update all language toggle buttons' texts
-    langToggleBtns.forEach(btn => {
+    document.querySelectorAll('.lang-toggle').forEach(btn => {
       const langText = btn.querySelector('.lang-text') || btn;
       langText.textContent = lang === 'ar' ? 'EN' : 'AR';
     });
@@ -643,8 +790,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang] && translations[lang][key]) {
-        el.textContent = translations[lang][key];
+      if (translations[lang] && typeof translations[lang][key] !== 'undefined') {
+        const val = translations[lang][key];
+        if (val.indexOf('<') !== -1) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
       }
     });
 
@@ -673,14 +825,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  applyLanguage(currentLang);
+  window.toggleLanguage = function() {
+    let lang = localStorage.getItem('lang') || 'en';
+    lang = lang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('lang', lang);
+    window.applyLanguage(lang);
+  };
 
-  langToggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'ar' : 'en';
-      localStorage.setItem('lang', currentLang);
-      applyLanguage(currentLang);
-    });
+  window.applyLanguage(currentLang);
+
+  document.querySelectorAll('.lang-toggle').forEach(btn => {
+    btn.onclick = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      window.toggleLanguage();
+    };
   });
 
   // --- Mobile Menu Logic ---
@@ -1021,7 +1182,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
       if (cart.length > 0) {
-        window.location.href = 'checkout.html';
+        const targetUrl = typeof window.checkoutUrl !== 'undefined' ? window.checkoutUrl : 'checkout.html';
+        window.location.href = targetUrl;
       } else {
         const lang = localStorage.getItem('lang') || 'en';
         alert(lang === 'ar' ? 'سلتك فارغة حالياً.' : 'Your cart is currently empty.');
@@ -1233,4 +1395,10 @@ document.addEventListener('DOMContentLoaded', () => {
       openCartDrawer();
     });
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

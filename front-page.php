@@ -23,7 +23,7 @@
         
         <div class="inline-flex items-center gap-2 sm:gap-3 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-3 sm:mb-4 shadow-lg">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-          <span class="text-amber-200 font-montserrat font-bold text-[0.68rem] sm:text-xs md:text-sm tracking-[0.35em] uppercase">
+          <span class="text-amber-200 font-montserrat font-bold text-[0.68rem] sm:text-xs md:text-sm tracking-[0.35em] uppercase" data-i18n="heroMaison">
             Maison de Haute Parfumerie
           </span>
         </div>
@@ -35,16 +35,16 @@
         <!-- Gold Hairline Divider -->
         <div class="w-24 sm:w-40 md:w-56 h-[2px] bg-gradient-to-r from-transparent via-amber-400 to-transparent my-3 sm:my-5 opacity-90"></div>
 
-        <p class="text-white/95 font-montserrat font-medium uppercase max-w-2xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]" style="font-size: clamp(0.75rem, 2vw, 1.25rem); letter-spacing: clamp(0.18em, 1vw, 0.28em);">
+        <p class="text-white/95 font-montserrat font-medium uppercase max-w-2xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]" style="font-size: clamp(0.75rem, 2vw, 1.25rem); letter-spacing: clamp(0.18em, 1vw, 0.28em);" data-i18n="heroSubtitle">
           Extraits de Parfum • Blends & Collections Niche
         </p>
 
         <!-- Hero Action Buttons -->
         <div class="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          <a href="<?php echo home_url('/shop/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-white text-black font-montserrat font-extrabold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-amber-100 transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
+          <a href="<?php echo home_url('/shop/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-white text-black font-montserrat font-extrabold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-amber-100 transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95" data-i18n="heroCatalogBtn">
             Catalogue Complet
           </a>
-          <a href="<?php echo home_url('/packs/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-black/60 backdrop-blur-md border border-white/50 text-white font-montserrat font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95">
+          <a href="<?php echo home_url('/packs/'); ?>" class="px-8 sm:px-12 py-3.5 sm:py-4 bg-black/60 backdrop-blur-md border border-white/50 text-white font-montserrat font-bold text-xs sm:text-sm uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all shadow-[0_6px_25px_rgba(0,0,0,0.6)] hover:scale-105 active:scale-95" data-i18n="heroPacksBtn">
             Nos Packs
           </a>
         </div>
@@ -56,15 +56,15 @@
     <section class="w-full py-12 sm:py-16 px-4 sm:px-8 max-w-7xl mx-auto" aria-label="Collections">
       <div class="mb-8 flex items-baseline justify-between border-b border-[var(--t-border-subtle)] pb-4">
         <div>
-          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight">
+          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight" data-i18n="collectionsTitle">
             Collections
           </h2>
-          <p class="font-mono text-xs text-[var(--t-text-muted)] tracking-wider mt-1 uppercase">
+          <p class="font-mono text-xs text-[var(--t-text-muted)] tracking-wider mt-1 uppercase" data-i18n="collectionsSubtitle">
             Formats nomades, coffrets découverte & flacons signatures
           </p>
         </div>
         <a href="<?php echo home_url('/shop/'); ?>" class="font-mono text-xs uppercase tracking-widest text-[var(--t-text-muted)] hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 font-semibold">
-          <span>Tout afficher</span>
+          <span data-i18n="viewAll">Tout afficher</span>
           <span>→</span>
         </a>
       </div>
@@ -74,84 +74,84 @@
         
         <!-- Card 1: 10 ML HOMMES -->
         <a href="<?php echo home_url('/shop/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-gray-100/90 to-gray-50/60 dark:from-zinc-900/90 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="col10mlMenTop">
             10 ML<br>HOMMES
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-10ml-hommes.jpg" alt="10 ML Hommes Decant" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
-            <span>10 ML HOMMES</span>
+            <span data-i18n="col10mlMen">10 ML HOMMES</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
 
         <!-- Card 2: 10 ML FEMMES -->
         <a href="<?php echo home_url('/shop/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-pink-100/70 to-pink-50/40 dark:from-rose-950/25 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="col10mlWomenTop">
             10 ML<br>FEMMES
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-10ml-femmes.jpg" alt="10 ML Femmes Decant" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
-            <span>10 ML FEMMES</span>
+            <span data-i18n="col10mlWomen">10 ML FEMMES</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
 
         <!-- Card 3: PACK DECANTE GRATUITE HOMMES -->
         <a href="<?php echo home_url('/packs/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-amber-100/60 to-gray-50/60 dark:from-amber-950/20 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="colPackMenFull">
             PACK DECANTE<br>GRATUITE HOMMES
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-pack-hommes.jpg" alt="Pack Decante Gratuite Hommes" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.65rem] sm:text-[0.72rem] tracking-wider uppercase">
-            <span>PACK HOMMES</span>
+            <span data-i18n="colPackMen">PACK HOMMES</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
 
         <!-- Card 4: PACK DECANTE GRATUITE FEMMES -->
         <a href="<?php echo home_url('/packs/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-rose-100/60 to-gray-50/60 dark:from-rose-950/20 dark:to-zinc-950/70 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-[0.68rem] sm:text-xs tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="colPackWomenFull">
             PACK DECANTE<br>GRATUITE FEMMES
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-pack-femmes.jpg" alt="Pack Decante Gratuite Femmes" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.65rem] sm:text-[0.72rem] tracking-wider uppercase">
-            <span>PACK FEMMES</span>
+            <span data-i18n="colPackWomen">PACK FEMMES</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
 
         <!-- Card 5: PARFUM COMPLET -->
         <a href="<?php echo home_url('/shop/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-slate-100/80 to-gray-50/60 dark:from-zinc-900 dark:to-zinc-950 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="colFullPerfumeTop">
             PARFUM<br>COMPLET
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-parfum-complet.jpg" alt="Parfum Complet" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
-            <span>PARFUM COMPLET</span>
+            <span data-i18n="colFullPerfume">PARFUM COMPLET</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
 
         <!-- Card 6: PARFUM NICHE -->
         <a href="<?php echo home_url('/product-vulcan-feu/'); ?>" class="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border border-[var(--t-border-subtle)] bg-gradient-to-b from-stone-100/80 to-gray-50/60 dark:from-stone-900/40 dark:to-zinc-950 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2">
+          <div class="text-center font-montserrat font-extrabold text-xs sm:text-sm tracking-wider uppercase text-[var(--t-text)] leading-tight mb-2" data-i18n="colNichePerfumeTop">
             PARFUM<br>NICHE
           </div>
           <div class="w-full aspect-[4/5] sm:aspect-square flex items-center justify-center overflow-hidden my-3">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/collection-parfum-niche.jpg" alt="Parfum Niche" class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-500 rounded-lg">
           </div>
           <div class="mt-2 flex items-center justify-between text-[var(--t-text)] font-montserrat font-bold text-[0.68rem] sm:text-xs tracking-wider uppercase">
-            <span>PARFUM NICHE</span>
+            <span data-i18n="colNichePerfume">PARFUM NICHE</span>
             <span class="group-hover:translate-x-1.5 transition-transform font-bold">→</span>
           </div>
         </a>
@@ -165,26 +165,26 @@
       <!-- Section Header & Filter Tabs -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
-          <span class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold">
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-[var(--t-text-muted)] font-semibold" data-i18n="topSellersTag">
             Sélection Prisée
           </span>
-          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mt-1">
+          <h2 class="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl text-[var(--t-text)] tracking-tight mt-1" data-i18n="topSellersTitle">
             Top 3 Des Ventes
           </h2>
-          <p class="font-sans text-xs sm:text-sm text-[var(--t-text-secondary)] mt-1.5 max-w-xl">
+          <p class="font-sans text-xs sm:text-sm text-[var(--t-text-secondary)] mt-1.5 max-w-xl" data-i18n="topSellersDesc">
             Les créations les plus commandées de notre atelier avec livraison express et garantie authenticité.
           </p>
         </div>
 
         <!-- Interactive Switcher Tabs -->
         <div class="flex items-center gap-2 p-1.5 bg-black/5 dark:bg-white/5 rounded-xl border border-[var(--t-border-subtle)] self-start md:self-auto overflow-x-auto max-w-full">
-          <button onclick="switchTopSeller(1)" id="ts-tab-1" class="px-4 py-2 rounded-lg text-xs font-montserrat font-bold uppercase tracking-wider transition-all cursor-pointer bg-[var(--t-text)] text-[var(--t-bg)] shadow-sm whitespace-nowrap">
+          <button onclick="switchTopSeller(1)" id="ts-tab-1" class="px-4 py-2 rounded-lg text-xs font-montserrat font-bold uppercase tracking-wider transition-all cursor-pointer bg-[var(--t-text)] text-[var(--t-bg)] shadow-sm whitespace-nowrap" data-i18n="tsTab1">
             1. Vulcan Feu
           </button>
-          <button onclick="switchTopSeller(2)" id="ts-tab-2" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap">
+          <button onclick="switchTopSeller(2)" id="ts-tab-2" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap" data-i18n="tsTab2">
             2. Oud Al-Balghiti
           </button>
-          <button onclick="switchTopSeller(3)" id="ts-tab-3" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap">
+          <button onclick="switchTopSeller(3)" id="ts-tab-3" class="px-4 py-2 rounded-lg text-xs font-montserrat font-semibold uppercase tracking-wider transition-all cursor-pointer text-[var(--t-text-muted)] hover:text-[var(--t-text)] whitespace-nowrap" data-i18n="tsTab3">
             3. Baroque Rouge
           </button>
         </div>
@@ -227,7 +227,7 @@
               Vulcan Feu
             </h3>
 
-            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4" data-i18n="tsVulcanSub">
               Inspiré par Stephane Humbert Lucas — God of Fire (Mangue, Citron, Ambre & Bois Chaud)
             </p>
 
@@ -249,7 +249,7 @@
 
             <!-- Quantity Selector -->
             <div class="mb-6">
-              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold" data-i18n="quantityLabel">
                 Quantité
               </label>
               <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
@@ -263,10 +263,10 @@
             <div class="flex flex-col gap-3 mb-6">
               <button onclick="directBuy('Vulcan Feu', 370, '<?php echo get_template_directory_uri(); ?>/assets/images/vulcain-fire.jpg', 'ts1-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
                 <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
-                <span>BUY — 370 DH</span>
+                <span data-i18n="orderNowBtn">COMMANDER MAINTENANT</span> <span class="font-mono">— 370 DH</span>
               </button>
 
-              <button onclick="addToCartDirect('Vulcan Feu', 370, '<?php echo get_template_directory_uri(); ?>/assets/images/vulcain-fire.jpg', 'ts1-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+              <button onclick="addToCartDirect('Vulcan Feu', 370, '<?php echo get_template_directory_uri(); ?>/assets/images/vulcain-fire.jpg', 'ts1-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer" data-i18n="addToCartBtn">
                 Ajouter au panier
               </button>
             </div>
@@ -276,10 +276,10 @@
           <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
             <button onclick="shareProduct('Vulcan Feu')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
-              <span>Partager</span>
+              <span data-i18n="productShare">Partager</span>
             </button>
             <a href="<?php echo home_url('/product-vulcan-feu/'); ?>" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
-              <span>Afficher tous les détails</span>
+              <span data-i18n="productDetails">Afficher tous les détails</span>
               <span>→</span>
             </a>
           </div>
@@ -324,7 +324,7 @@
               Oud Al-Balghiti
             </h3>
 
-            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4" data-i18n="tsOudSub">
               Inspiré par Le Labo Thé Noir 29 & Cuir Marocain (Oud d'Asie, Cuir de Fès, Figue Noire)
             </p>
 
@@ -346,7 +346,7 @@
 
             <!-- Quantity Selector -->
             <div class="mb-6">
-              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold" data-i18n="quantityLabel">
                 Quantité
               </label>
               <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
@@ -360,10 +360,10 @@
             <div class="flex flex-col gap-3 mb-6">
               <button onclick="directBuy('Oud Al-Balghiti', 450, '<?php echo get_template_directory_uri(); ?>/assets/images/bottle-oud.png', 'ts2-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
                 <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
-                <span>BUY — 450 DH</span>
+                <span data-i18n="orderNowBtn">COMMANDER MAINTENANT</span> <span class="font-mono">— 450 DH</span>
               </button>
 
-              <button onclick="addToCartDirect('Oud Al-Balghiti', 450, '<?php echo get_template_directory_uri(); ?>/assets/images/bottle-oud.png', 'ts2-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+              <button onclick="addToCartDirect('Oud Al-Balghiti', 450, '<?php echo get_template_directory_uri(); ?>/assets/images/bottle-oud.png', 'ts2-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer" data-i18n="addToCartBtn">
                 Ajouter au panier
               </button>
             </div>
@@ -372,10 +372,10 @@
           <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
             <button onclick="shareProduct('Oud Al-Balghiti')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
-              <span>Partager</span>
+              <span data-i18n="productShare">Partager</span>
             </button>
             <a href="<?php echo home_url('/product-oud/'); ?>" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
-              <span>Afficher tous les détails</span>
+              <span data-i18n="productDetails">Afficher tous les détails</span>
               <span>→</span>
             </a>
           </div>
@@ -420,7 +420,7 @@
               Baroque Rouge 540
             </h3>
 
-            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4">
+            <p class="font-cormorant italic text-base sm:text-lg text-[var(--t-text-secondary)] mb-4" data-i18n="tsBaroqueSub">
               Inspiré par Maison Francis Kurkdjian — Baccarat Rouge 540 (Safran Rouge, Jasmin & Bois de Cèdre)
             </p>
 
@@ -442,7 +442,7 @@
 
             <!-- Quantity Selector -->
             <div class="mb-6">
-              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold">
+              <label class="block font-mono text-xs uppercase tracking-wider text-[var(--t-text-muted)] mb-2 font-semibold" data-i18n="quantityLabel">
                 Quantité
               </label>
               <div class="inline-flex items-center border border-[var(--t-border)] rounded-xl bg-[var(--t-bg)] p-1 shadow-sm">
@@ -456,10 +456,10 @@
             <div class="flex flex-col gap-3 mb-6">
               <button onclick="directBuy('Baroque Rouge 540', 350, '<?php echo get_template_directory_uri(); ?>/assets/images/baroque.jpg', 'ts3-qty')" class="w-full py-4 bg-black dark:bg-white text-white dark:text-black font-montserrat font-extrabold text-xs tracking-[0.25em] uppercase rounded-xl flex items-center justify-center gap-2.5 hover:opacity-90 transition-all shadow-md cursor-pointer hover:scale-[1.01]">
                 <svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>
-                <span>BUY — 350 DH</span>
+                <span data-i18n="orderNowBtn">COMMANDER MAINTENANT</span> <span class="font-mono">— 350 DH</span>
               </button>
 
-              <button onclick="addToCartDirect('Baroque Rouge 540', 350, '<?php echo get_template_directory_uri(); ?>/assets/images/baroque.jpg', 'ts3-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer">
+              <button onclick="addToCartDirect('Baroque Rouge 540', 350, '<?php echo get_template_directory_uri(); ?>/assets/images/baroque.jpg', 'ts3-qty')" class="w-full py-3.5 bg-transparent border border-black/80 dark:border-white/80 text-[var(--t-text)] font-montserrat font-bold text-xs tracking-[0.2em] uppercase rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer" data-i18n="addToCartBtn">
                 Ajouter au panier
               </button>
             </div>
@@ -468,10 +468,10 @@
           <div class="flex items-center justify-between pt-4 border-t border-[var(--t-border-subtle)] text-xs font-mono uppercase tracking-wider text-[var(--t-text-muted)]">
             <button onclick="shareProduct('Baroque Rouge 540')" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1.5 cursor-pointer">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" /></svg>
-              <span>Partager</span>
+              <span data-i18n="productShare">Partager</span>
             </button>
             <a href="<?php echo home_url('/shop/'); ?>" class="hover:text-[var(--t-text)] transition-colors flex items-center gap-1 font-semibold text-[var(--t-text)]">
-              <span>Afficher tous les détails</span>
+              <span data-i18n="productDetails">Afficher tous les détails</span>
               <span>→</span>
             </a>
           </div>
@@ -487,7 +487,7 @@
         
         <!-- Social Follow -->
         <div class="flex items-center gap-4 text-xs font-mono tracking-widest text-[var(--t-text-muted)] uppercase">
-          <span>Suivez-nous :</span>
+          <span data-i18n="followUs">Suivez-nous :</span>
           <a href="https://instagram.com" target="_blank" rel="noopener" class="text-[var(--t-text)] hover:opacity-75 transition-opacity font-bold flex items-center gap-1.5">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             <span>Instagram</span>
