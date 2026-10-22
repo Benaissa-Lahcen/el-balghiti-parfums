@@ -210,40 +210,35 @@
     }
 
     // ─────────────────────────────────────────────────────────────
-    // AUTHENTICATION
+    // AUTHENTICATION (Strict Production Cloud Mode)
     // ─────────────────────────────────────────────────────────────
     async login(email, password) {
-      // 1. Master bypass password allows immediate access in all situations
-      if (password === 'admin123' || password === 'admin' || password === 'balghiti2026') {
-        const user = { email: email || 'admin@elbalghiti.com', id: 'master-admin' };
-        localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: user.email, time: Date.now(), mode: 'master' }));
-        return { user, mode: 'master' };
+      if (!this.isCloudConnected()) {
+        throw new Error('Supabase n\'est pas encore configuré. Veuillez saisir vos clés Cloud dans les paramètres.');
       }
 
-      // 2. Supabase Cloud Auth
-      if (this.isCloudConnected()) {
-        try {
-          const { data, error } = await this.client.auth.signInWithPassword({
-            email: email.trim(),
-            password: password
-          });
-          if (error) throw error;
-          localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: data.user.email, time: Date.now(), mode: 'cloud' }));
-          return { user: data.user, mode: 'cloud' };
-        } catch (err) {
-          if (err.message && err.message.toLowerCase().includes('invalid path')) {
-            // Self-heal URL and retry once
-            const currentCfg = this.getConfig();
-            const cleanUrl = this.sanitizeUrl(currentCfg.url);
-            if (cleanUrl && cleanUrl !== currentCfg.url) {
-              this.saveConfig(cleanUrl, currentCfg.key);
-              return this.login(email, password);
-            }
+      try {
+        const { data, error } = await this.client.auth.signInWithPassword({
+          email: email.trim(),
+          password: password
+        });
+        if (error) throw error;
+        localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: data.user.email, time: Date.now() }));
+        return { user: data.user, mode: 'cloud' };
+      } catch (err) {
+        if (err.message && err.message.toLowerCase().includes('invalid path')) {
+          // Self-heal URL and retry once
+          const currentCfg = this.getConfig();
+          const cleanUrl = this.sanitizeUrl(currentCfg.url);
+          if (cleanUrl && cleanUrl !== currentCfg.url) {
+            this.saveConfig(cleanUrl, currentCfg.key);
+            return this.login(email, password);
           }
-          throw err;
         }
-      } else {
-        throw new Error('Mot de passe incorrect (Mode Démo : admin123 ou configurez Supabase)');
+        if (err.message && (err.message.toLowerCase().includes('invalid login credentials') || err.message.toLowerCase().includes('invalid_grant'))) {
+          throw new Error('Email ou mot de passe incorrect.');
+        }
+        throw err;
       }
     }
 
@@ -261,11 +256,14 @@
 
     async isAuthenticated() {
       if (this.isCloudConnected()) {
-        const { data } = await this.client.auth.getSession();
-        if (data && data.session) return true;
+        try {
+          const { data } = await this.client.auth.getSession();
+          if (data && data.session && data.session.user) return true;
+        } catch (e) {
+          return false;
+        }
       }
-      const localAuth = localStorage.getItem(this.STORAGE_KEY_AUTH);
-      return !!localAuth;
+      return false;
     }
 
     // ─────────────────────────────────────────────────────────────
