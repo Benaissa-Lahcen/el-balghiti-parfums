@@ -25,8 +25,8 @@ get_header(); ?>
       </div>
     </section>
 
-    <!-- Catalog Grid (6 Items) -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-16">
+    <!-- Catalog Grid (Dynamically Synced with Admin / Supabase) -->
+    <section id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 md:gap-x-12 lg:gap-x-16">
       
       <!-- Card 1 -->
       <article class="product-card group">

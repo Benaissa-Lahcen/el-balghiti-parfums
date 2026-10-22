@@ -1,4 +1,4 @@
-﻿  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
        FOOTER (Le Labo Style Newsletter & Accordions)
        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <footer class="w-full border-t border-[var(--t-border-subtle)] bg-[var(--t-bg)] mt-20 pt-16 pb-12 px-6 md:px-16">
@@ -179,7 +179,10 @@
     window.themeUri = "<?php echo get_template_directory_uri(); ?>";
     window.checkoutUrl = "<?php echo home_url('/checkout/'); ?>";
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/supabase-client.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/catalog-sync.js"></script>
   <?php wp_footer(); ?>
 </body>
 </html>
