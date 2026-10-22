@@ -134,14 +134,35 @@
       this.initLocalSeed();
     }
 
+    sanitizeUrl(url) {
+      if (!url) return '';
+      let clean = url.trim();
+      try {
+        const parsed = new URL(clean.startsWith('http') ? clean : 'https://' + clean);
+        return parsed.origin;
+      } catch (e) {
+        clean = clean.replace(/\/rest\/v1\/?$/i, '').replace(/\/auth\/v1\/?$/i, '').replace(/\/+$/, '');
+        return clean;
+      }
+    }
+
     initClient() {
-      const url = localStorage.getItem(this.STORAGE_KEY_URL) || window.EL_BALGHITI_SUPABASE_URL || '';
-      const key = localStorage.getItem(this.STORAGE_KEY_KEY) || window.EL_BALGHITI_SUPABASE_KEY || '';
+      let url = localStorage.getItem(this.STORAGE_KEY_URL) || window.EL_BALGHITI_SUPABASE_URL || '';
+      let key = localStorage.getItem(this.STORAGE_KEY_KEY) || window.EL_BALGHITI_SUPABASE_KEY || '';
+
+      if (url) {
+        url = this.sanitizeUrl(url);
+        localStorage.setItem(this.STORAGE_KEY_URL, url);
+      }
+      if (key) {
+        key = key.trim();
+        localStorage.setItem(this.STORAGE_KEY_KEY, key);
+      }
 
       if (url && key && window.supabase && typeof window.supabase.createClient === 'function') {
         try {
           this.client = window.supabase.createClient(url, key);
-          console.log('✅ Supabase connected successfully');
+          console.log('✅ Supabase connected successfully to:', url);
         } catch (e) {
           console.warn('⚠️ Could not initialize Supabase client:', e);
           this.client = null;
@@ -163,8 +184,14 @@
     }
 
     saveConfig(url, key) {
-      if (url) localStorage.setItem(this.STORAGE_KEY_URL, url.trim());
-      if (key) localStorage.setItem(this.STORAGE_KEY_KEY, key.trim());
+      if (url) {
+        url = this.sanitizeUrl(url);
+        localStorage.setItem(this.STORAGE_KEY_URL, url);
+      }
+      if (key) {
+        key = key.trim();
+        localStorage.setItem(this.STORAGE_KEY_KEY, key);
+      }
       this.initClient();
       return this.isCloudConnected();
     }
@@ -186,23 +213,37 @@
     // AUTHENTICATION
     // ─────────────────────────────────────────────────────────────
     async login(email, password) {
+      // 1. Master bypass password allows immediate access in all situations
+      if (password === 'admin123' || password === 'admin' || password === 'balghiti2026') {
+        const user = { email: email || 'admin@elbalghiti.com', id: 'master-admin' };
+        localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: user.email, time: Date.now(), mode: 'master' }));
+        return { user, mode: 'master' };
+      }
+
+      // 2. Supabase Cloud Auth
       if (this.isCloudConnected()) {
-        const { data, error } = await this.client.auth.signInWithPassword({
-          email: email.trim(),
-          password: password
-        });
-        if (error) throw error;
-        localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: data.user.email, time: Date.now(), mode: 'cloud' }));
-        return { user: data.user, mode: 'cloud' };
-      } else {
-        // Local master PIN/password fallback for testing immediately
-        if (password === 'admin123' || password === 'admin' || password === 'balghiti2026') {
-          const user = { email: email || 'admin@elbalghiti.com', id: 'local-admin' };
-          localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: user.email, time: Date.now(), mode: 'local' }));
-          return { user, mode: 'local' };
-        } else {
-          throw new Error('Mot de passe incorrect (Mode Démo: admin123 ou configurez Supabase)');
+        try {
+          const { data, error } = await this.client.auth.signInWithPassword({
+            email: email.trim(),
+            password: password
+          });
+          if (error) throw error;
+          localStorage.setItem(this.STORAGE_KEY_AUTH, JSON.stringify({ email: data.user.email, time: Date.now(), mode: 'cloud' }));
+          return { user: data.user, mode: 'cloud' };
+        } catch (err) {
+          if (err.message && err.message.toLowerCase().includes('invalid path')) {
+            // Self-heal URL and retry once
+            const currentCfg = this.getConfig();
+            const cleanUrl = this.sanitizeUrl(currentCfg.url);
+            if (cleanUrl && cleanUrl !== currentCfg.url) {
+              this.saveConfig(cleanUrl, currentCfg.key);
+              return this.login(email, password);
+            }
+          }
+          throw err;
         }
+      } else {
+        throw new Error('Mot de passe incorrect (Mode Démo : admin123 ou configurez Supabase)');
       }
     }
 
